@@ -207,9 +207,9 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 							nomTotal = nomTotal..statut_color[tonumber(TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"])].." ( "..STATUTRPSMALL[tonumber(TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"])].." )";
 						end
 						if UnitIsAFK("player") then
-							nomTotal = "|cffffffff(AFK) "..nomTotal;
+							nomTotal = "|cffffffff(AUS) "..nomTotal;
 						elseif UnitIsDND("player") then
-							nomTotal = "|cffff9900(DND) "..nomTotal;
+							nomTotal = "|cffff9900(NM) "..nomTotal;
 						end
 						infoTab[i] = nomTotal;
 						if TRP_Module_Configuration["Modules"]["Tooltip"]["SousTitre"] then
@@ -231,7 +231,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						if TRP_Module_Configuration["Modules"]["Tooltip"]["Guilde"] and GetGuildInfo("player") ~= nil then
 							i = i + 1;
 							local guilde, grade = GetGuildInfo("player");
-							infoTab[i] = "|cffffffff"..grade.." of |cffff8000"..guilde;
+							infoTab[i] = "|cffffffff"..grade.." de |cffff8000"..guilde;
 						end
 						if TRP_Module_Configuration["Modules"]["Registre"]["bShowAlignement"] and TRP_Module_Configuration["Modules"]["Tooltip"]["Alignement"] then
 								local texteMorale,texteEthique,vertMorale,rougeMorale,vertEthique,rougeEthique = getNameAndColorAlignement(Joueur);

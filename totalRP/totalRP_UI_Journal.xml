@@ -455,7 +455,7 @@
 							DocumentsSlot1Edit:SetScript("OnClick", 
 								function(self,button,down)
 									if TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Lock"] and TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"] ~= Joueur then
-										TRPError("The document author have locked the document, you can't edit it.");
+										TRPError("El autor del documento lo ha bloqueado, no puedes editarlo.");
 									else
 										PanelOpen("FicheJoueurOngletDocument","DocumentsPanelModifier",DocumentsSlot1ID:GetText());
 									end
@@ -465,11 +465,11 @@
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 									if TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Lock"] then
 										if TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"] ~= Joueur then
-											GameTooltip:AddLine("Document Locked",1,0,0);
-											GameTooltip:AddLine("Document locked by the author,|cffffffff "..TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"],1,0.5,0);
+											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
+											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"],1,0.5,0);
 										else
 											GameTooltip:AddLine("Edit",1,1,1);
-											GameTooltip:AddLine("You have locked this document",1,0.75,0);
+											GameTooltip:AddLine("Has bloqueado el documento",1,0.75,0);
 										end
 									else
 										GameTooltip:AddLine("Edit",1,1,1);
@@ -484,13 +484,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"] == Joueur then
 								GameTooltip:AddLine(DocumentsTexts["YOUCREATEUR"],0,1,0);
-								GameTooltip:AddLine("Consult the document",1,1,1);
+								GameTooltip:AddLine("Consulta el documento",1,1,1);
 							else
 								GameTooltip:AddLine(DocumentsTexts["CREATEUR"]..TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"],1,0.75,0);
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Give the document to "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -507,7 +507,7 @@
 							DocumentsSlot2Edit:SetScript("OnClick", 
 								function(self,button,down)
 									if TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Lock"] and TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"] ~= Joueur then
-										TRPError("The document author have locked the document, you can't edit it.");
+										TRPError("El autor del documento lo ha bloqueado, no puedes editarlo.");
 									else
 										PanelOpen("FicheJoueurOngletDocument","DocumentsPanelModifier",DocumentsSlot2ID:GetText());
 									end
@@ -517,11 +517,11 @@
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 									if TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Lock"] then
 										if TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"] ~= Joueur then
-											GameTooltip:AddLine("Document Locked",1,0,0);
-											GameTooltip:AddLine("Document locked by the author,|cffffffff "..TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"],1,0.5,0);
+											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
+											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"],1,0.5,0);
 										else
-											GameTooltip:AddLine("Edit",1,1,1);
-											GameTooltip:AddLine("You have locked this document",1,0.75,0);
+											GameTooltip:AddLine("Editar",1,1,1);
+											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
 										GameTooltip:AddLine("Edit",1,1,1);
@@ -536,13 +536,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"] == Joueur then
 								GameTooltip:AddLine(DocumentsTexts["YOUCREATEUR"],0,1,0);
-								GameTooltip:AddLine("Consult the document",1,1,1);
+								GameTooltip:AddLine("Consulta el documento",1,1,1);
 							else
 								GameTooltip:AddLine(DocumentsTexts["CREATEUR"]..TRP_Module_Documents[DocumentsSlot2ID:GetText()]["Createur"],1,0.75,0);
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Give the document to "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 
@@ -560,7 +560,7 @@
 							DocumentsSlot3Edit:SetScript("OnClick", 
 								function(self,button,down)
 									if TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Lock"] and TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"] ~= Joueur then
-										TRPError("The document author have locked the document, you can't edit it.");
+										TRPError("El autor del documento lo ha bloqueado, no puedes editarlo.");
 									else
 										PanelOpen("FicheJoueurOngletDocument","DocumentsPanelModifier",DocumentsSlot3ID:GetText());
 									end
@@ -589,13 +589,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"] == Joueur then
 								GameTooltip:AddLine(DocumentsTexts["YOUCREATEUR"],0,1,0);
-								GameTooltip:AddLine("Consult the document",1,1,1);
+								GameTooltip:AddLine("Consulta el documento",1,1,1);
 							else
 								GameTooltip:AddLine(DocumentsTexts["CREATEUR"]..TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"],1,0.75,0);
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Give the document to "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 
@@ -623,8 +623,8 @@
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 									if TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Lock"] then
 										if TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"] ~= Joueur then
-											GameTooltip:AddLine("Document Locked",1,0,0);
-											GameTooltip:AddLine("Document locked by the author,|cffffffff "..TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"],1,0.5,0);
+											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
+											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"],1,0.5,0);
 										else
 											GameTooltip:AddLine("Edit",1,1,1);
 											GameTooltip:AddLine("You have locked this document",1,0.75,0);
@@ -642,13 +642,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"] == Joueur then
 								GameTooltip:AddLine(DocumentsTexts["YOUCREATEUR"],0,1,0);
-								GameTooltip:AddLine("Consult the document",1,1,1);
+								GameTooltip:AddLine("Consulta el documento",1,1,1);
 							else
 								GameTooltip:AddLine(DocumentsTexts["CREATEUR"]..TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"],1,0.75,0);
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Give the document to "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -694,13 +694,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"] == Joueur then
 								GameTooltip:AddLine(DocumentsTexts["YOUCREATEUR"],0,1,0);
-								GameTooltip:AddLine("Consult the document",1,1,1);
+								GameTooltip:AddLine("Consulta el documento",1,1,1);
 							else
 								GameTooltip:AddLine(DocumentsTexts["CREATEUR"]..TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"],1,0.75,0);
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Give the document to "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -715,9 +715,9 @@
 						</OnLoad>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-							GameTooltip:AddLine("New Document",1,1,1);
-							GameTooltip:AddLine("Left-click: Create a new document",0,1,0);
-							GameTooltip:AddLine("Right-click Create from ...",0,1,0);
+							GameTooltip:AddLine("Nuevo Documento",1,1,1);
+							GameTooltip:AddLine("Click-izq: Crear un nuevo documento",0,1,0);
+							GameTooltip:AddLine("Click-der Crear desde ...",0,1,0);
 							GameTooltip:Show()
 						</OnEnter>
 						<OnLeave>
@@ -948,7 +948,7 @@
 										<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-1520"/></Offset></Anchor></Anchors>
 										<Color r="1" g="1" b="1"/>
 									</FontString>
-									<FontString name="PanelDocumentEditOptions" inherits="GameFontNormalHuge" justifyH="CENTER" text="|cffffaa00Additional Options">
+									<FontString name="PanelDocumentEditOptions" inherits="GameFontNormalHuge" justifyH="CENTER" text="|cffffaa00Opciones Adicionales">
 										<Size><AbsDimension x="300" y="0"/></Size>
 										<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-1675"/></Offset></Anchor></Anchors>
 										<Color r="1" g="1" b="1"/>
@@ -1921,7 +1921,7 @@
 									</Anchors>
 									<Scripts>
 										<OnLoad>
-											CreaDocuCheckBoxLockText:SetText("Lock the document");
+											CreaDocuCheckBoxLockText:SetText("Bloquear el documento");
 										</OnLoad>
 										<OnClick>
 											

@@ -380,11 +380,11 @@ function SlashCmdList.TOTALRP(msg, editbox)
 			sendMessage("{o}Command 'Item' : Invalid Parameter: Item ID.");
 		end
 	else
-		sendMessage("{j}List of valid commands of Total RP :");
+		sendMessage("{j}Lista de los comandos válidos of Total RP :");
 		sendMessage("{j}--------------------------------");
 		sendMessage("{j}/trp statusrp #status");
 		sendMessage("{j}/trp character #slot");
-		sendMessage("{j}/trp currently \"Current Description\"");
+		sendMessage("{j}/trp currently \"Descripción Actual\"");
 		sendMessage("{j}/trp localSound \\Path\\");
 		sendMessage("{j}/trp globalSound \\Path\\");
 		sendMessage("{j}/trp item #Id");

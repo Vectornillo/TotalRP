@@ -137,9 +137,9 @@ function ShowInventaire(SacType)
 		elseif SacType == 2 then
 			PanelInventaireListeEmpty:SetText(SACEMPTY);
 		elseif SacType == 3 then
-			PanelInventaireListeEmpty:SetText("No package received");
+			PanelInventaireListeEmpty:SetText("Ningún paquete recibido");
 		elseif SacType == 4 then
-			PanelInventaireListeEmpty:SetText("No pending package");
+			PanelInventaireListeEmpty:SetText("Sin paquetes pendientes");
 		else
 			PanelInventaireListeEmpty:SetText(SACEMPTY);
 		end
@@ -171,11 +171,11 @@ function ShowInventaire(SacType)
 			GameTooltip:AddLine(" ",1,1,1);
 			decouperForTooltip("\""..TRP_SacsADos[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["SacADos"]]["Description"].."\"",35,1,0.75,0);
 			GameTooltip:AddLine(" ",1,1,1);
-			GameTooltip:AddLine("Bag weight : "..(TRP_SacsADos[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["SacADos"]]["Poids"]/1000).." kg",1,1,1);
+			GameTooltip:AddLine("Peso de la bolsa : "..(TRP_SacsADos[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["SacADos"]]["Poids"]/1000).." kg",1,1,1);
 			GameTooltip:Show();
 		end);
 		PoidsTotal = PoidsTotal + (TRP_SacsADos[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["SacADos"]]["Poids"]);
-		PanelCoffreSacFramePoidsMax:SetText("Weight max. : 30 kg");
+		PanelCoffreSacFramePoidsMax:SetText("Pero máximo : 30 kg");
 	elseif SacType == 2 then --Coffre Monture
 		InventaireOngletCoffre:Disable();
 		InventaireOngletCoffreIcon:SetAlpha(0.5);
@@ -190,11 +190,11 @@ function ShowInventaire(SacType)
 			GameTooltip:AddLine(" ",1,1,1);
 			decouperForTooltip("\""..TRP_CoffreMonture[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Monture"]]["Description"].."\"",35,1,0.75,0);
 			GameTooltip:AddLine(" ",1,1,1);
-			GameTooltip:AddLine("Safe weight : "..(TRP_CoffreMonture[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Monture"]]["Poids"]/1000).." kg",1,1,1);
+			GameTooltip:AddLine("Peso de la alforja : "..(TRP_CoffreMonture[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Monture"]]["Poids"]/1000).." kg",1,1,1);
 			GameTooltip:Show();
 		end);
 		PoidsTotal = PoidsTotal + (TRP_CoffreMonture[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Monture"]]["Poids"]);
-		PanelCoffreSacFramePoidsMax:SetText("Weight max. : 150 kg");
+		PanelCoffreSacFramePoidsMax:SetText("Peso máximo : 150 kg");
 	elseif SacType == 3 then -- Boite aux lettre
 		FicheJoueurPanelTitle:SetText("Inventory : Mailbox (In)");
 		PanelCoffreSacFrameType:SetText("Mailbox");
@@ -251,7 +251,7 @@ function ShowInventaire(SacType)
 				end
 			end
 			GameTooltip:AddLine(" ",1,1,1);
-			GameTooltip:AddLine("Coordinates : ",1,1,1);
+			GameTooltip:AddLine("Coordenadas : ",1,1,1);
 			GameTooltip:AddLine("< "..planque["CoordX"].." - "..planque["CoordY"].." >",1,1,1);
 			GameTooltip:Show();
 		end);
@@ -262,7 +262,7 @@ function ShowInventaire(SacType)
 	
 	--Calcul du poids :
 	if not FindPlanqueTab or not FindPlanqueTab[SacType] then
-		PanelCoffreSacFramePoids:SetText("Total weight : "..(PoidsTotal/1000).." kg");
+		PanelCoffreSacFramePoids:SetText("Peso total : "..(PoidsTotal/1000).." kg");
 		PanelCoffreSacFramePoids:Show();
 	else
 		PanelCoffreSacFramePoids:Hide();
@@ -302,9 +302,9 @@ function listerPlanques()
 			liste = liste.."\n------------------------\n\n";
 	end);
 	if liste == "" then
-		TRPError("You don't have any hiding place.");
+		TRPError("No tienes ningún escondrijo.");
 	else
-		setManualAide("Hiding places List",liste);
+		setManualAide("Lista de escondrijos",liste);
 	end
 end
 
@@ -329,9 +329,9 @@ function DeletePlanque()
 		end);
 		
 		PanelOpen("FicheJoueurOngletInventaire","InventaireOngletSacADos");
-		sendMessage("{j}The hiding place has been destroyed.");
+		sendMessage("{j}El escondrijo ha sido destruído.");
 		if plop then
-			sendMessage("{j}One or more items have been destroyed.");
+			sendMessage("{j}Uno o más items han sido destruídos.");
 		end
 	else
 		TRPError(DeleteMessages["DELETEPLANQUEWARN"]);
@@ -375,10 +375,10 @@ function CreerPlanque(commentaire)
 		if commentaire and commentaire ~= "" then
 			TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][ID]["Commentaire"] = commentaire;
 		end
-		sendMessage("{v}You create a new hiding place.");
+		sendMessage("{v}Has creado un nuevo escondrijo.");
 		PanelOpen("FicheJoueurOngletInventaire","InventaireOngletPlanques");
 	else
-		TRPError("You already have a hiding place here.");
+		TRPError("Ya tienes un escondrijo aquí.");
 	end
 end
 
@@ -631,7 +631,7 @@ function ChargerSliderCoffreVertical(num)
 								if ArgentText:GetText() == "ENVOI" then
 									GameTooltip:SetOwner(ObjetPersoSlot1, "ANCHOR_CURSOR");
 									GameTooltip:AddLine(objetID["Nom"], 1, 1, 1);
-									GameTooltip:AddLine("< Unsent Packages >", 1, 1, 1);
+									GameTooltip:AddLine("<Paquetes sin enviar>", 1, 1, 1);
 									GameTooltip:AddLine("From "..CoffreTab[objet][4], 0, 1, 0);
 									if CoffreTab[objet][5] ~= nil and CoffreTab[objet][5] ~= "" then
 										decouperForTooltip("\""..CoffreTab[objet][5].."\"",30,1,0.85,1);
@@ -640,7 +640,7 @@ function ChargerSliderCoffreVertical(num)
 								elseif ArgentText:GetText() == "RECEPTION" then
 									GameTooltip:SetOwner(ObjetPersoSlot1, "ANCHOR_CURSOR");
 									GameTooltip:AddLine(objetID["nom"], 1, 1, 1);
-									GameTooltip:AddLine("< Unread Packages >", 1, 1, 1);
+									GameTooltip:AddLine("<Paquetes sin leer>", 1, 1, 1);
 									GameTooltip:AddLine("From "..CoffreTab[objet][4], 0, 1, 0);
 									if CoffreTab[objet][5] ~= nil and CoffreTab[objet][5] ~= "" then
 										decouperForTooltip("\""..CoffreTab[objet][5].."\"",30,1,0.85,1);
@@ -730,10 +730,10 @@ function envoiToPerso(ID,Cible,Royaumes,Charges,Qte)
 			end
 			i = i+1;
 		end
-		sendMessage("{v}You sent a package to "..cible.." of the realm \""..Royaumes.."\".");
+		sendMessage("{v}Has enviado un paquete a "..Cible.." del reino \""..Royaumes.."\".");
 		refreshInventaire();
 	else
-		TRPError("Internal error: character non existent.\nMe = "..tostring(Cible).."\nrealm = "..tostring(Royaumes))
+		TRPError("Error interno: el personaje no existe.\nMe = "..tostring(Cible).."\nrealm = "..tostring(Royaumes))
 	end
 end
 
@@ -759,9 +759,9 @@ function envoyerCourrier(slot)
 		end
 		message = message.."|"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Commentaire"];
 		TRPSecureSendAddonMessage("SDC",message,TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"]);
-		sendMessage("{j}Attempt to send a package to "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"].." ...");
+		sendMessage("{j}Tratando de enviar un paquete a "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"].." ...");
 	else
-		TRPError("Internal error: send mail slot non existent.\nSlot "..slot);
+		TRPError("Error interno: ranuna de envío no existnte.\nSlot "..slot);
 	end
 end
 
@@ -773,7 +773,7 @@ function recupCourrier(slot)
 		if canReceiveObjet(ID,Qte) ~= 2 then
 			GetObjets(ID,-1,Qte,Charges);
 			deleteCourrier(slot,1);
-			sendMessage("{v}You picked up your package.");
+			sendMessage("{v}Has recogido tu paquete.");
 		else
 			TRPError(ExchangeError["CANTUNIQUESELF"]);
 		end
@@ -802,7 +802,7 @@ function receiveCourrier(ID,Qte,Charges,Comment,From,SlotTarget)
 		ProceedObjetRefExchange(1,ID,"","","");
 	end
 	TRPSecureSendAddonMessage("COK",SlotTarget,From);
-	sendMessage("{v}You have received a package from "..From..". Go to a mailbox to retrieve it.");
+	sendMessage("{v}Has recibido un paquete de "..From..". Ve a un buzón a recogerlo.");
 	refreshInventaire();
 end
 
@@ -811,10 +811,10 @@ function OKCourrier(tab, sender)
 	if TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot] then
 		wipe(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]);
 		TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot] = nil;
-		sendMessage("{v}"..sender.." has succefuly received your package.");
+		sendMessage("{v}"..sender.." ha recibido satisfactoriamente tu paquete.");
 		refreshInventaire();
 	else
-		TRPError("Internal error: Unable to delete the package sent.\nSlot "..slot);
+		TRPError("Error interno: No se pudo eliminar el paquete enviado.\nSlot "..slot);
 	end
 end
 
@@ -832,26 +832,26 @@ function sendCourrier(ID,Qte,Charges,Comment,For)
 		end
 		i = i+1;
 	end
-	sendMessage("{j}Your package is now waiting to be sent.");
+	sendMessage("{j}Tu paquete está ahora esperando a ser enviado.");
 end
 
 function CheckCourrier()
 	local count = 0;
-	local Message = "{v}Courrier:";
+	local Message = "{v}Buzón:";
 	table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["InBox"], function()
 		count = count + 1;
 	end);
 	if count > 0 then
-		Message = Message.."\n\n{j}You have "..count.." packages awaiting to be sent. Go to the mailbox.";
+		Message = Message.."\n\n{j}Tienes "..count.." paquete(s) esperando a ser enviados. Ve al buzón.";
 	end
 	count = 0;
 	table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"], function()
 		count = count + 1;
 	end);
 	if count > 0 then
-		Message = Message.."\n\n{j}You have "..count.." packages awaiting to be retreived. Go to the mailbox.";
+		Message = Message.."\n\n{j}Tienes "..count.." paquetes esperando a ser recogidos. Ve al buzón.";
 	end
-	if Message ~= "{v}Courrier:" then
+	if Message ~= "{v}Buzón:" then
 		StaticPopupDialogs["TRP_TEXT_ONLY_SHADE"].text = setTRPColorToString(TRP_ENTETE..Message);
 		TRP_ShowStaticPopup("TRP_TEXT_ONLY_SHADE");
 	end
@@ -869,7 +869,7 @@ function ShowObjectTo(slot,cible)
 			objet = TRP_Objects[ID];
 		end
 		TRPSecureSendAddonMessage("SOA",ID.."|"..charges,cible);
-		SendChatMessage("is showing ["..objet["Nom"].."] to "..cible..".","EMOTE");
+		SendChatMessage("está mostrando ["..objet["Nom"].."] a "..cible..".","EMOTE");
 	end
 end
 
@@ -934,7 +934,7 @@ function ShowObjetDone(ID,sender)
 	Message = Message.."{v}|TInterface\\ICONS\\"..objet["Icone"]..".blp:50:50|t".."\n["..objet["Nom"].."]\n";
 	Message = Message.."\n{w}Description :\n{o}\""..objet["Description"].."\"\n\n";
 	if tonumber(objet["Poids"]) ~= 0 then
-		Message = Message.."{w}Weight : {o}"..objet["Poids"].." grams\n\n";
+		Message = Message.."{w}Peso : {o}"..objet["Poids"].." gramos\n\n";
 	end
 	if TRP_ObjetCategorie[objet["Type"]] and TRP_ObjetCategorie[objet["Type"]].SousCategorie[objet["SousType"]] then
 		Message = Message.."{w}< "..TRP_ObjetCategorie[objet["Type"]].Nom.." >\n< "..TRP_ObjetCategorie[objet["Type"]].SousCategorie[objet["SousType"]].." >"
@@ -1024,9 +1024,9 @@ function AskingObjet(objet,sender)
 			ExchangeTarget = sender;
 			local iconeTex = "|TInterface\\ICONS\\"..TRP_Objects[ID]["Icone"]..".blp:35:35|t\n";
 			if charges and tonumber(charges) ~= 0 then
-				Message = Message.." wants to give you :\n\n"..iconeTex..Qte.."x     "..Nom.."\n["..charges.." charge(s)] \n\n{o}Do you accept ?";
+				Message = Message.." quiere darte :\n\n"..iconeTex..Qte.."x     "..Nom.."\n["..charges.." carga(s)] \n\n{o}¿Aceptas?";
 			else
-				Message = Message.." wants to give you :\n\n"..iconeTex..Qte.."x     "..Nom.." \n\n{o}Do you accept ?";
+				Message = Message.." quiere darte :\n\n"..iconeTex..Qte.."x     "..Nom.." \n\n{o}¿Aceptas?";
 			end
 			StaticPopupDialogs["TRP_OBJ_ASKING"].text = setTRPColorToString(TRP_ENTETE.." \n "..Message);
 			TRP_ShowStaticPopup("TRP_OBJ_ASKING",nil,nil,ID,Nom,Qte,charges);
@@ -1040,9 +1040,9 @@ function AskingObjet(objet,sender)
 			iconeTex = "|TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[ID]["Icone"]..".blp:35:35|t\n";
 		end
 		if charges and tonumber(charges) ~= 0 then
-			Message = Message.." wants to give you :\n\n"..iconeTex..Qte.."x     "..Nom.."\n["..charges.." charge(s)] \n\n{o}Do you accept ?";
+			Message = Message.." quiere darte :\n\n"..iconeTex..Qte.."x     "..Nom.."\n["..charges.." carga(s)] \n\n{o}¿Aceptas?";
 		else
-			Message = Message.." wants to give you :\n\n"..iconeTex..Qte.."x     "..Nom.." \n\n{o}Do you accept ?";
+			Message = Message.." quiere darte :\n\n"..iconeTex..Qte.."x     "..Nom.." \n\n{o}¿Aceptas?";
 		end
 		StaticPopupDialogs["TRP_OBJ_ASKING"].text = setTRPColorToString(TRP_ENTETE.." \n "..Message);
 		TRP_ShowStaticPopup("TRP_OBJ_ASKING",nil,nil,ID,Nom,Qte,charges);
@@ -1070,7 +1070,7 @@ function GiveObjectDone(objet,sender)
 					end
 					refreshInventaire();
 					ok = true;
-					sendMessage("{j} "..Qte.."x{v}["..object["Nom"].."]{j} given to "..sender..".");
+					sendMessage("{j} "..Qte.."x{v}["..object["Nom"].."]{j} entregado a "..sender..".");
 				end
 			end
 		end
@@ -1106,7 +1106,7 @@ function ProceedObjetExchange(num,ID,Nom,Qte,Charges)
 			local code = canReceiveObjet(ID,Qte);
 			if code == 1 then -- OK !
 				GetObjets(ID,"-1",tonumber(Qte),Charges);
-				sendMessage("{j} "..Qte.."x{v}["..Nom.."]{j} added to the backpack (received from "..targetSave..").");
+				sendMessage("{j} "..Qte.."x{v}["..Nom.."]{j} añadido a la mochila (recibido de "..targetSave..").");
 				if Charges then
 					TRPSecureSendAddonMessage("GOD",ID.."|"..Qte.."|"..Charges,targetSave);
 				else
@@ -1163,9 +1163,9 @@ function VerifierInventaire(texte)
 			if not SlotFound then
 				retour = false;
 				if ObjectFound then
-					TRPError("Missing component : ["..ObjectFound["Nom"].."].")
+					TRPError("Falta componente : ["..ObjectFound["Nom"].."].")
 				else
-					TRPError("Missing component.")
+					TRPError("Falta componente.")
 				end
 				return;
 			elseif bDelete == "1" then
@@ -1192,7 +1192,7 @@ function UseObjet(SlotNum)
 			if objet["Utilisable"]["Cooldown"] then
 				if TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]] then
 					if time() < tonumber(TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]]) then
-						TRPError("The item is not ready yet.");
+						TRPError("El item no está preparado todavía.");
 						return;
 					end
 				end
@@ -1200,19 +1200,19 @@ function UseObjet(SlotNum)
 			if objet["Utilisable"]["Conditions"] then
 				if objet["Utilisable"]["Conditions"]["User"] then
 					if not VerifierConditions(objet["Utilisable"]["Conditions"]["User"],"player") then
-						TRPError("You can't use this item.");
+						TRPError("No puedes usar este item.");
 						return;
 					end
 				end
 				if objet["Utilisable"]["Conditions"]["Cible"] then
 					local nom = UnitName("target");
 					if not nom then
-						TRPError("You don't have any target.");
+						TRPError("No tienes ningún objetivo.");
 						return;
 					end
 					if objet["Utilisable"]["Conditions"]["Cible"]["Tests"] then
 						if not VerifierConditions(objet["Utilisable"]["Conditions"]["Cible"]["Tests"],"target") then
-							TRPError("Incorrect target.");
+							TRPError("Objetivo incorrecto.");
 							return;
 						end
 					end
@@ -1232,7 +1232,7 @@ function UseObjet(SlotNum)
 					can = canReceiveObjet(objet["Utilisable"]["ObjectOnUse"],1);
 				end
 				if can == 2 then
-					TRPError("You can not have more unity of this object.");
+					TRPError("No puedes tener más unidades de este objeto.");
 					return;
 				end
 			end
@@ -1291,7 +1291,7 @@ function UseObjet(SlotNum)
 						GetObjets(objet["Utilisable"]["ObjectOnUse"],slot["Sac"],1,nil);
 					end
 				else
-					TRPError("Error: You do not have the associated item of this item.");
+					TRPError("Error: No tienes el item asociado a este.");
 				end
 			end
 			-- On Death
@@ -1303,7 +1303,7 @@ function UseObjet(SlotNum)
 						GetObjets(objet["Utilisable"]["ObjectOnDeath"],slot["Sac"],1,nil);
 					end
 				else
-					TRPError("Error: You do not have the associated item of this item.");
+					TRPError("Error: No tienes el item asociado a este.");
 				end
 			end
 			
@@ -1324,7 +1324,7 @@ function UseObjet(SlotNum)
 					PanelOpen("FicheJoueurOngletInventaire");
 					afficheDocument(objet["Utilisable"]["LierAuDoc"]);
 				else
-					TRPError("Error: You do not have the associated document of this item.");
+					TRPError("Error: No tienes el documento asociado a este item.");
 				end
 			elseif MainInventaireFrame:IsVisible() then
 				refreshInventaire();
@@ -1361,7 +1361,7 @@ function proceedDeleteObject(Slot,num)
 		if not num then return end;
 		local objet = GetObjectWithID(TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]);
 		if objet and objet["Nom"] then
-			sendMessage("{j} "..num.."x{v}["..objet["Nom"].."]{j} removed from your inventory.");
+			sendMessage("{j} "..num.."x{v}["..objet["Nom"].."]{j} ha sido eliminado de tu inventario.");
 		end
 		TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] = TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] - num;
 		if TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] < 1 then
@@ -1594,7 +1594,7 @@ function refreshInventaire()
 			if DetectPlanque() ~= nil then
 				InventaireOpen("InventaireOngletPlanques");
 			else
-				TRPError("You are too far from your hiding place.");
+				TRPError("Estás muy lejos de tu escondrijo.");
 				InventaireOpen("InventaireOngletSacADos");
 			end
 		elseif ArgentText:GetText() == "ENVOI" then
@@ -1724,35 +1724,35 @@ function SetObjetTooltip(tableauInventaire,bouton,bTransaction,Prix,PrixMax,bPla
 						message = minutes.." min";
 					end
 				else
-					message = secondes.." sec";
+					message = secondes.." seg";
 				end
-				GameTooltip:AddLine( "Cooldown : "..message,1,1,1);
+				GameTooltip:AddLine( "Tiempo Reutil. : "..message,1,1,1);
 			end
 		end
 		
 		if objet["Utilisable"] ~= nil and objet["Utilisable"]["LierAuDoc"] ~= nil then
 			GameTooltip:AddLine(" ", 1, 1, 1);
-			GameTooltip:AddLine(" Related document : ", 0, 0.5, 1);
+			GameTooltip:AddLine(" Documento relacionado : ", 0, 0.5, 1);
 			if TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]] ~= nil then
 				GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteIcone"]..".blp:45:45|t", 0, 0.75, 1);
 				if TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteTitre"] ~= "" then
-					GameTooltip:AddLine("   Title : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteTitre"]), 0, 0.75, 1);
+					GameTooltip:AddLine("   Título : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteTitre"]), 0, 0.75, 1);
 				end
 				if TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteAuteur"] ~= "" then
-					GameTooltip:AddLine("   Author : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteAuteur"]), 0, 0.75, 1);
+					GameTooltip:AddLine("   Autor : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteAuteur"]), 0, 0.75, 1);
 				end
 				if TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteDate"] ~= "" then
-					GameTooltip:AddLine("   Date : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteDate"]), 0, 0.75, 1);
+					GameTooltip:AddLine("   Fecha : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteDate"]), 0, 0.75, 1);
 				end
 			else
-				GameTooltip:AddLine(" Error: you do not have the \ ninformationof the associated document.", 1, 0, 0);
+				GameTooltip:AddLine(" Error: No tienes la information\ndel documento asociado.", 1, 0, 0);
 			end
 		end
 		
 		if TRP_Module_Configuration["Modules"]["Tooltip"]["AideInventaire"] and not bTransaction and not bPlanque then
 			GameTooltip:AddLine(" ", 1, 1, 1);
-			GameTooltip:AddLine(CLICGAUCHEMAJ.." : ".."Prepare a package",1,0.4,1);
-			GameTooltip:AddLine(CLICGAUCHEALT.." : ".."Send to ... (Account)",0.4,1,0.7);
+			GameTooltip:AddLine(CLICGAUCHEMAJ.." : ".."Preparar un paquete",1,0.4,1);
+			GameTooltip:AddLine(CLICGAUCHEALT.." : ".."Enviar a ... (Cuenta)",0.4,1,0.7);
 
 			if tableauInventaire["Sac"] == "-1" then -- Depuis sac à dos
 				if IsMounted() then
@@ -1777,7 +1777,7 @@ function SetObjetTooltip(tableauInventaire,bouton,bTransaction,Prix,PrixMax,bPla
 				and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") 
 				and CheckInteractDistance("target",3) ~= nil then
 				GameTooltip:AddLine(CLICGAUCHECTRL.." : "..DONNER..UnitName("target"), 0.5, 0.5,1);
-				GameTooltip:AddLine("Right click + Alt".." : ".."Show to "..UnitName("target"), 0.5, 0.5,1);
+				GameTooltip:AddLine("Click Der + Alt".." : ".."Mostrar a "..UnitName("target"), 0.5, 0.5,1);
 			end
 			GameTooltip:AddLine(CLICDROIT.." : "..JETEROBJET,1,0.4,0.4);
 		end

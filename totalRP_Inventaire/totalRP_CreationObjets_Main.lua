@@ -39,13 +39,13 @@
 		GameTooltip:AddLine(" Associated Document : ", 0, 0.5, 1);
 		GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteIcone"]..".blp:45:45|t", 0, 0.75, 1);
 		if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"] ~= "" then
-			GameTooltip:AddLine("   Title : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"], 0, 0.75, 1);
+			GameTooltip:AddLine("   Título : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"], 0, 0.75, 1);
 		end
 		if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"] ~= "" then
-			GameTooltip:AddLine("   Author : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"], 0, 0.75, 1);
+			GameTooltip:AddLine("   Autor : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"], 0, 0.75, 1);
 		end
 		if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"] ~= "" then
-			GameTooltip:AddLine("   Date : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"], 0, 0.75, 1);
+			GameTooltip:AddLine("   Fecha : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"], 0, 0.75, 1);
 		end
 	end
 	
@@ -67,34 +67,34 @@ function SetObjetPersoTooltip(ID)
 		decouperForTooltip("\""..setTRPColorToString(objet["Description"].."\"",true),30,1,0.75,0);
 		if not objet["Lock"] or objet["Auteur"] == Joueur then
 			GameTooltip:AddLine(" ", 1, 1, 1);
-			GameTooltip:AddLine("Caracteristics :", 0, 0.6, 1);
+			GameTooltip:AddLine("Características :", 0, 0.6, 1);
 			if objet["Poids"] ~= 0 then
-				GameTooltip:AddLine("   Weight : |cffffffff"..objet["Poids"].." gram(s)", 0, 0.75, 1);
+				GameTooltip:AddLine("   Peso : |cffffffff"..objet["Poids"].." gramo(s)", 0, 0.75, 1);
 			end
 			if objet["Valeur"] ~= 0 then
-				GameTooltip:AddLine("   Value : |cffffffff"..objet["Valeur"].." pieces of gold", 0, 0.75, 1);
+				GameTooltip:AddLine("   Valor : |cffffffff"..objet["Valeur"].." monedas de oro", 0, 0.75, 1);
 			end
 			if objet["Unique"] ~= nil then
-				GameTooltip:AddLine("   Unique : |cffffffff"..objet["Unique"].." units at max", 0, 0.75, 1);
+				GameTooltip:AddLine("   Único : |cffffffff"..objet["Unique"].." unidades como máximo", 0, 0.75, 1);
 			end
 			if objet["Utilisable"] ~= nil then
-				GameTooltip:AddLine("   Utilisation :", 0, 0.6, 1);
+				GameTooltip:AddLine("   Utilización :", 0, 0.6, 1);
 				if objet["Utilisable"]["Charges"] ~= 0 then
-					GameTooltip:AddLine("      Charge(s) : |cffffffff"..objet["Utilisable"]["Charges"], 0, 0.75, 1);
+					GameTooltip:AddLine("      Carga(s) : |cffffffff"..objet["Utilisable"]["Charges"], 0, 0.75, 1);
 				else
-					GameTooltip:AddLine("      Charge(s) : |cffffffffInfinite", 0, 0.75, 1);
+					GameTooltip:AddLine("      Carga(s) : |cffffffffInfinitas", 0, 0.75, 1);
 				end
 				if objet["Utilisable"]["EmotePrivateOnUse"] ~= nil and objet["Utilisable"]["EmotePrivateOnUse"] ~= "" then
-					GameTooltip:AddLine("      On Use message : |cffffaa00\""..string.sub(objet["Utilisable"]["EmotePrivateOnUse"],1,35).."...\"", 0, 0.75, 1);
+					GameTooltip:AddLine("      Mensaje al usar : |cffffaa00\""..string.sub(objet["Utilisable"]["EmotePrivateOnUse"],1,35).."...\"", 0, 0.75, 1);
 				end
 				if objet["Utilisable"]["EmotePublicOnUse"] ~= nil and objet["Utilisable"]["EmotePublicOnUse"] ~= "" then
-					GameTooltip:AddLine("      On Use Emote : |cffffaa00\""..Joueur.." "..string.sub(objet["Utilisable"]["EmotePublicOnUse"],1,35).."...\"", 0, 0.75, 1);
+					GameTooltip:AddLine("      Emote al usar : |cffffaa00\""..Joueur.." "..string.sub(objet["Utilisable"]["EmotePublicOnUse"],1,35).."...\"", 0, 0.75, 1);
 				end
 				if objet["Utilisable"]["EmotePrivateOnDeath"] ~= nil and objet["Utilisable"]["EmotePrivateOnDeath"] ~= "" then
-					GameTooltip:AddLine("      On Discharge Message : |cffffaa00\""..string.sub(objet["Utilisable"]["EmotePrivateOnDeath"],1,35).."...\"", 0, 0.75, 1);
+					GameTooltip:AddLine("      Mensaje del descargar : |cffffaa00\""..string.sub(objet["Utilisable"]["EmotePrivateOnDeath"],1,35).."...\"", 0, 0.75, 1);
 				end
 				if objet["Utilisable"]["EmotePublicOnDeath"] ~= nil and objet["Utilisable"]["EmotePublicOnDeath"] ~= "" then
-					GameTooltip:AddLine("      On Discharge Emote : |cffffaa00\""..Joueur.." "..string.sub(objet["Utilisable"]["EmotePublicOnDeath"],1,35).."...\"", 0, 0.75, 1);
+					GameTooltip:AddLine("      Emote al descargar : |cffffaa00\""..Joueur.." "..string.sub(objet["Utilisable"]["EmotePublicOnDeath"],1,35).."...\"", 0, 0.75, 1);
 				end
 			end
 		end
@@ -102,11 +102,11 @@ function SetObjetPersoTooltip(ID)
 		GameTooltip:AddLine(" ", 0, 1, 0);
 		if objet["Lock"] then
 			if objet["Auteur"] == Joueur then
-				GameTooltip:AddLine("< You have locked this item >", 1, 0.25, 0.25);
+				GameTooltip:AddLine("<Has bloqueado este item>", 1, 0.25, 0.25);
 				GameTooltip:AddLine(" ", 0, 1, 0);
 				GameTooltip:AddLine(CLICGAUCHE.." : "..EDITEROBJET, 0,1,0);
 			else
-				GameTooltip:AddLine("< This item has been locked by its creator >", 1, 0.25, 0.25);
+				GameTooltip:AddLine("<Este item ha sido bloqueado por su creador>", 1, 0.25, 0.25);
 				GameTooltip:AddLine(" ", 0, 1, 0);
 			end
 		else
@@ -549,7 +549,7 @@ function EditObjetPerso(ID)
 	if TRP_Module_ObjetsPerso[ID] == nil then
 		TRPError("Internal error : edition d'un objet inexistant");
 	elseif TRP_Module_ObjetsPerso[ID]["Lock"] and TRP_Module_ObjetsPerso[ID]["Auteur"] ~= Joueur then
-		TRPError("Item locked : You have to be the creator in order to edit it.");
+		TRPError("Item bloqueado : Tienes que ser el creador para poder editarlo.");
 	else
 		AfficheEditObjetPerso(ID, (TRP_Module_ObjetsPerso[ID]["Auteur"] ~= Joueur));
 	end

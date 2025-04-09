@@ -1109,7 +1109,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso0Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso0Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso0Delete:Show();
@@ -1126,7 +1126,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso1Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso1Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso1Delete:Show();
@@ -1143,7 +1143,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso2Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso2Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso2Delete:Show();
@@ -1160,7 +1160,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso3Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso3Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso3Delete:Show();
@@ -1177,7 +1177,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso4Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso4Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso4Delete:Show();
@@ -1194,7 +1194,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso5Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso5Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso5Delete:Show();
@@ -1211,7 +1211,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso6Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso6Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso6Delete:Show();
@@ -1228,7 +1228,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso7Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso7Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso7Delete:Show();
@@ -1245,7 +1245,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso8Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso8Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso8Delete:Show();
@@ -1262,7 +1262,7 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine(CONSULTERFICHE, 1, 1, 1);
-							GameTooltip:AddLine("Added on "..ListeButtonPerso9Date:GetText(), 1, 0.75, 0);
+							GameTooltip:AddLine("Añadido el "..ListeButtonPerso9Date:GetText(), 1, 0.75, 0);
 							GameTooltip:Show();
 							cacherCroixDeletePerso();
 							ListeButtonPerso9Delete:Show();
@@ -1446,11 +1446,11 @@
 							ChargerListe();
 						</OnClick>
 						<OnLoad>
-							ListeConnectedCheckText:SetText("Online Only");
+							ListeConnectedCheckText:SetText("Conectados");
 						</OnLoad>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-							GameTooltip:AddLine("Show only connected people.",1,0.75,0);
+							GameTooltip:AddLine("Mostrar únicamente conectados.",1,0.75,0);
 							GameTooltip:Show();
 						</OnEnter>
 						<OnLeave>
@@ -2906,9 +2906,9 @@
 					</Size>
 					<Scripts>
 						<OnLoad>
-							StatsAlignement:SetText("Character's Alignment");
-							StatsMorale:SetText("Morality");
-							StatsEthique:SetText("Ethics");
+							StatsAlignement:SetText("Alineamiento del Personaje");
+							StatsMorale:SetText("Moralidad");
+							StatsEthique:SetText("Ética");
 							StatsMoraleFond:SetTexture(1,1,1);
 						</OnLoad>
 						<OnUpdate>
@@ -3080,7 +3080,7 @@
 					</Size>
 					<Scripts>
 						<OnLoad>
-							StatsAlignementEdit:SetText("Character's Alignment");
+							StatsAlignementEdit:SetText("Alineamiento del Personaje");
 						</OnLoad>
 						<OnUpdate>
 							PopupStatsAlignAdapt()
@@ -3116,7 +3116,7 @@
 							<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-50"/></Offset></Anchor></Anchors>
 							<Scripts>
 								<OnLoad>
-									getglobal(this:GetName().."Text"):SetText("Morality");
+									getglobal(this:GetName().."Text"):SetText("Moralidad");
 									getglobal(this:GetName().."High"):SetText("+");
 									getglobal(this:GetName().."Low"):SetText("-");
 									this:SetOrientation("Horizontal");
@@ -3149,7 +3149,7 @@
 							<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-100"/></Offset></Anchor></Anchors>
 							<Scripts>
 								<OnLoad>
-									getglobal(this:GetName().."Text"):SetText("Ethics");
+									getglobal(this:GetName().."Text"):SetText("Ética");
 									getglobal(this:GetName().."High"):SetText("+");
 									getglobal(this:GetName().."Low"):SetText("-");
 									this:SetOrientation("Horizontal");

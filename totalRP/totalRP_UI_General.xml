@@ -1976,7 +1976,7 @@
 
 		</Layer>
 		<Layer level="OVERLAY">
-			<FontString inherits="GameFontNormalHuge" justifyH="CENTER" text="Prepare a package">
+			<FontString inherits="GameFontNormalHuge" justifyH="CENTER" text="Preparar un paquete">
 				<Size>
 					<AbsDimension x="300" y="100"/>
 				</Size>
@@ -1989,7 +1989,7 @@
 				</Anchors>
 				<Color r="0.95" g="0.95" b="0.95"/>
 			</FontString>
-			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Send to">
+			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Enviar a">
 				<Size>
 					<AbsDimension x="300" y="100"/>
 				</Size>
@@ -2002,7 +2002,7 @@
 				</Anchors>
 				<Color r="0.95" g="0.95" b="0.95"/>
 			</FontString>
-			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Quantity">
+			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Cantidad">
 				<Size>
 					<AbsDimension x="300" y="100"/>
 				</Size>
@@ -2015,7 +2015,7 @@
 				</Anchors>
 				<Color r="0.95" g="0.95" b="0.95"/>
 			</FontString>
-			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Comment">
+			<FontString inherits="GameFontNormal" justifyH="CENTER" text="Comentario">
 				<Size>
 					<AbsDimension x="300" y="100"/>
 				</Size>

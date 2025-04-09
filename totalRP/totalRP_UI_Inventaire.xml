@@ -283,7 +283,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Effects when used", 1, 1, 1);
+					GameTooltip:AddLine("Efectos cuando se usa", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>
@@ -638,7 +638,7 @@
 									OpenListeIcones("CreaObjOptionC");
 								</OnClick>
 								<OnLoad>
-									this:SetText("Select Icon");
+									this:SetText("Selecciona Icono");
 								</OnLoad>
 							</Scripts>
 						</Button>
@@ -672,25 +672,25 @@
 								</OnLeave>
 								<OnUpdate>
 									if this.model and TRP_OBJETS_MODEL[this.model] then
-										this:SetText("3D Model : |cff00ff00Yes !");
+										this:SetText("Modelo 3D : |cff00ff00¡Sí!");
 									else
-										this:SetText("3D Model : |cff000000No !");
+										this:SetText("Modelo 3D : |cff000000¡No!");
 									end
 								</OnUpdate>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Item Model",1,1,1);
+									GameTooltip:AddLine("Modelo de Item",1,1,1);
 									GameTooltip:AddLine(" ",1,1,1);
 									if this.model and TRP_OBJETS_MODEL[this.model] then
-										GameTooltip:AddLine("You have chosen the 3D model :",1,0.75,0);
+										GameTooltip:AddLine("Has elegido el modelo 3D :",1,0.75,0);
 										GameTooltip:AddLine(TRP_OBJETS_MODEL[this.model].Nom,1,1,1);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select another 3D model.",0.25,1,0.25);
-										GameTooltip:AddLine("Right Click: Remove Selected 3D model.",1,0.25,0.25);
+										GameTooltip:AddLine("Click Izq: Selecciona otra modelo 3D.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Der: Elimina el model 3D.",1,0.25,0.25);
 									else
-										GameTooltip:AddLine("You have not selected a 3D model.",1,0.75,0);
+										GameTooltip:AddLine("No has seleccionado un modelo 3D.",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select a 3D model.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Izq: Selecciona un modelo 3D.",0.25,1,0.25);
 									end
 									GameTooltip:Show();
 									anchorModeleTo(this.model,FicheJoueur,this);
@@ -877,7 +877,7 @@
 							</Anchors>
 							<Scripts>
 								<OnLoad>
-									CreaObjCheckBoxLockText:SetText("Lock the item");
+									CreaObjCheckBoxLockText:SetText("Bloquear el item");
 								</OnLoad>
 								<OnClick>
 									
@@ -915,7 +915,7 @@
 					</Anchors>
 					<Layers>
 						<Layer level="OVERLAY">
-							<FontString name="UtilisationEffetTitle" inherits="GameFontNormalHuge" justifyH="LEFT" text="Effects when used :">
+							<FontString name="UtilisationEffetTitle" inherits="GameFontNormalHuge" justifyH="LEFT" text="Effectos cuando se usa:">
 								<Size>
 									<AbsDimension x="250" y="0"/>
 								</Size>
@@ -1268,17 +1268,17 @@
 								</OnLoad>
 								<OnUpdate>
 									if CreaObjEditBoxI:GetText() and CreaObjEditBoxI:GetText() ~= "" then
-										this:SetText("Receive an item : |cff00ff00Yes !");
+										this:SetText("Recibir un item : |cff00ff00¡Sí!");
 									else
-										this:SetText("Receive an item : |cff000000No !");
+										this:SetText("Recibir un item : |cff000000¡No!");
 									end
 								</OnUpdate>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Receive an item when used",1,1,1);
+									GameTooltip:AddLine("Recibir un item cuando se usa",1,1,1);
 									GameTooltip:AddLine(" ",1,1,1);
 									if CreaObjEditBoxI:GetText() then
-										GameTooltip:AddLine("This item will be received :",1,0.75,0);
+										GameTooltip:AddLine("Este item será recibido :",1,0.75,0);
 										if string.len(CreaObjEditBoxI:GetText()) == 16 then
 											GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[CreaObjEditBoxI:GetText()]["Icone"]..".blp:45:45|t", 0, 0.75, 1);
 											GameTooltip:AddLine("   ["..TRP_Module_ObjetsPerso[CreaObjEditBoxI:GetText()]["Nom"].."]",1,1,1);
@@ -1289,18 +1289,18 @@
 											GameTooltip:AddLine("   |cff7777ffTRP Item",1,0.75,0);
 										end
 										if this.Qte then
-											GameTooltip:AddLine("   |cff00ffffQuantity : "..this.Qte,1,0.75,0);
+											GameTooltip:AddLine("   |cff00ffffCantidad : "..this.Qte,1,0.75,0);
 										else
-											GameTooltip:AddLine("   |cff00ffffQuantity : 1",1,0.75,0);
+											GameTooltip:AddLine("   |cff00ffffCantidad : 1",1,0.75,0);
 										end
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select another item.",0.25,1,0.25);
-										GameTooltip:AddLine("Ctrl + Left Click: Choose the quantity.",0.5,1,0.5);
-										GameTooltip:AddLine("Right Click: Do not receive item.",1,0.25,0.25);
+										GameTooltip:AddLine("Click Izq: Seleccionar otro item.",0.25,1,0.25);
+										GameTooltip:AddLine("Ctrl + Click Izq: Seleccionar la cuantía.",0.5,1,0.5);
+										GameTooltip:AddLine("Click Der: No recibir el item.",1,0.25,0.25);
 									else
-										GameTooltip:AddLine("No item will be received.",1,0.75,0);
+										GameTooltip:AddLine("Ningún item será recibido.",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select an item.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Izq: Selecciona un item.",0.25,1,0.25);
 									end
 									GameTooltip:Show();
 								</OnEnter>
@@ -1476,17 +1476,17 @@
 								</OnLoad>
 								<OnUpdate>
 									if CreaObjEditBoxM:GetText() and CreaObjEditBoxM:GetText() ~= "" then
-										this:SetText("Receive an item : |cff00ff00Yes !");
+										this:SetText("Recibir un item : |cff00ff00¡Sí!");
 									else
-										this:SetText("Receive an item : |cff000000No !");
+										this:SetText("Recibir un item : |cff000000¡No!");
 									end
 								</OnUpdate>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Receive an item when discharged",1,1,1);
+									GameTooltip:AddLine("Recibir un item tras descargar",1,1,1);
 									GameTooltip:AddLine(" ",1,1,1);
 									if CreaObjEditBoxM:GetText() then
-										GameTooltip:AddLine("This item will be received :",1,0.75,0);
+										GameTooltip:AddLine("Este item será recibido:",1,0.75,0);
 										GameTooltip:AddLine(" ",1,1,1);
 										if string.len(CreaObjEditBoxM:GetText()) == 16 then
 											GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[CreaObjEditBoxM:GetText()]["Icone"]..".blp:45:45|t", 0, 0.75, 1);
@@ -1498,18 +1498,18 @@
 											GameTooltip:AddLine("   |cff7777ffTRP Item",1,0.75,0);
 										end
 										if this.Qte then
-											GameTooltip:AddLine("   |cff00ffffQuantity : "..this.Qte,1,0.75,0);
+											GameTooltip:AddLine("   |cff00ffffCantidad : "..this.Qte,1,0.75,0);
 										else
-											GameTooltip:AddLine("   |cff00ffffQuantity : 1",1,0.75,0);
+											GameTooltip:AddLine("   |cff00ffffCantidad : 1",1,0.75,0);
 										end
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select another item.",0.25,1,0.25);
-										GameTooltip:AddLine("Ctrl + Left Click: Choose the quantity.",0.5,1,0.5);
-										GameTooltip:AddLine("Right Click: Do not receive item.",1,0.25,0.25);
+										GameTooltip:AddLine("Click Izq: Selecciona otro item.",0.25,1,0.25);
+										GameTooltip:AddLine("Ctrl + Click Izq: Elige la cantidad.",0.5,1,0.5);
+										GameTooltip:AddLine("Click Der: No recibir item.",1,0.25,0.25);
 									else
-										GameTooltip:AddLine("No item will be received.",1,0.75,0);
+										GameTooltip:AddLine("No se recibirá ningun item.",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select item.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Izq: Seleccionar item.",0.25,1,0.25);
 									end
 									GameTooltip:Show();
 								</OnEnter>
@@ -1643,36 +1643,36 @@
 								</OnLoad>
 								<OnUpdate>
 									if CreaObjEditBoxF:GetText() and CreaObjEditBoxF:GetText() ~= "" then
-										this:SetText("Open Document : |cff00ff00Yes !");
+										this:SetText("Abrir Documento : |cff00ff00¡Sí!");
 									else
-										this:SetText("Open Document : |cff000000No !");
+										this:SetText("Abrir Documento : |cff000000¡No!");
 									end
 								</OnUpdate>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Open Document",1,1,1);
+									GameTooltip:AddLine("Abrir Documento",1,1,1);
 									GameTooltip:AddLine(" ",1,1,1);
 									if CreaObjEditBoxF:GetText() and TRP_Module_Documents[CreaObjEditBoxF:GetText()] then
 										GameTooltip:AddLine("This document will be open when used :",1,0.75,0);
 										GameTooltip:AddLine(" ",1,1,1);
 										GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteIcone"]..".blp:45:45|t", 0, 0.75, 1);
 										if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"] ~= "" then
-											GameTooltip:AddLine("   Title : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"], 0, 0.75, 1);
+											GameTooltip:AddLine("   Título : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"], 0, 0.75, 1);
 										end
 										if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"] ~= "" then
-											GameTooltip:AddLine("   Author : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"], 0, 0.75, 1);
+											GameTooltip:AddLine("   Autor : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteAuteur"], 0, 0.75, 1);
 										end
 										if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"] ~= "" then
-											GameTooltip:AddLine("   Date : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"], 0, 0.75, 1);
+											GameTooltip:AddLine("   Fecha : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteDate"], 0, 0.75, 1);
 										end
-										GameTooltip:AddLine("   Creator : |cff7777ff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["Createur"], 1, 0.75, 0);
+										GameTooltip:AddLine("   Creador : |cff7777ff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["Createur"], 1, 0.75, 0);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select another document.",0.25,1,0.25);
-										GameTooltip:AddLine("Right Click: Do not open the document.",1,0.25,0.25);
+										GameTooltip:AddLine("Click Izq: Selecciona otro documento.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Der: No abrir el documento",1,0.25,0.25);
 									else
-										GameTooltip:AddLine("No document will be opened.",1,0.75,0);
+										GameTooltip:AddLine("Ningún documento será abierto.",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
-										GameTooltip:AddLine("Left Click: Select document.",0.25,1,0.25);
+										GameTooltip:AddLine("Click Izq: Seleccionar documento.",0.25,1,0.25);
 									end
 									GameTooltip:Show();
 								</OnEnter>
@@ -1699,7 +1699,7 @@
 									end
 								</OnUpdate>
 								<OnLoad>
-									CreaObjCheckBoxCooldownText:SetText("Cooldown");
+									CreaObjCheckBoxCooldownText:SetText("Tiempo Reutil.");
 								</OnLoad>
 							</Scripts>
 						</CheckButton>
@@ -2251,8 +2251,8 @@
 							end);
 							if Num > 0 then
 								GameTooltip:AddLine(" ", 1, 1, 1);
-								GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-								GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+								GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+								GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 							end
 							GameTooltip:Show();
 						</OnEnter>
@@ -2292,8 +2292,8 @@
 							end);
 							if Num > 0 then
 								GameTooltip:AddLine(" ", 1, 1, 1);
-								GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-								GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+								GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+								GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 							end
 							GameTooltip:Show();
 						</OnEnter>
@@ -2318,7 +2318,7 @@
 								PanelOpen("FicheJoueurOngletInventaire",this:GetName())
 							else
 								if IconeZone[GetCurrentMapContinent()] == nil or IconeZone[GetCurrentMapContinent()][GetCurrentMapZone()] == nil then
-									TRPError("You can't create a hiding place here.");
+									TRPError("No puedes crear un escondrijo aquí.");
 								else
 									TRP_ShowStaticPopup("TRP_CREATE_PLANQUE");
 								end
@@ -2340,8 +2340,8 @@
 								end);
 								if Num > 0 then
 									GameTooltip:AddLine(" ", 1, 1, 1);
-									GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-								GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+									GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+								GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 								end
 							else
 								GameTooltip:AddLine("|cff00ff00"..CREERPLANQUETOOL, 1, 1, 1);
@@ -2447,7 +2447,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Hiding places list",1,1,1);
+									GameTooltip:AddLine("Listra de escondrijos",1,1,1);
 									GameTooltip:Show()
 								</OnEnter>
 								<OnLeave>
@@ -2519,8 +2519,8 @@
 										</OnClick>
 										<OnEnter>
 											GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-											GameTooltip:AddLine("Destroy hiding place",1,1,1);
-											GameTooltip:AddLine("(the hiding place must be empty)",1,0.75,0);
+											GameTooltip:AddLine("Destruir escondrijo",1,1,1);
+											GameTooltip:AddLine("(el escondrijo tiene que estar vacío)",1,0.75,0);
 											GameTooltip:Show()
 										</OnEnter>
 										<OnLeave>
@@ -2586,7 +2586,7 @@
 												PanelObjetSliderSousCategorie:SetValue(0);
 											else
 												PanelObjetSliderSousCategorie:SetValue(0);
-												PanelObjetSliderCategorieText:SetText("All");
+												PanelObjetSliderCategorieText:SetText("Todas");
 												PanelObjetSliderSousCategorie:Hide();
 											end
 											if this:IsVisible() then
@@ -2637,7 +2637,7 @@
 											if this:GetValue() > 0 and this:IsVisible() then
 												PanelObjetSliderSousCategorieText:SetText(TRP_ObjetCategorie[PanelObjetSliderCategorie:GetValue()].SousCategorie[this:GetValue()]);
 											else
-												PanelObjetSliderSousCategorieText:SetText("Toutes");
+												PanelObjetSliderSousCategorieText:SetText("Todas");
 											end
 											if this:IsVisible() then
 												if PanelCoffreSacFrameType:GetText() == COFFREFINANCES then
@@ -3025,9 +3025,9 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("New Object",1,1,1);
-									GameTooltip:AddLine("Left-click: Create a new object",0,1,0);
-									GameTooltip:AddLine("Right-click Create from ...",0,1,0);
+									GameTooltip:AddLine("Nuevo Objeto",1,1,1);
+									GameTooltip:AddLine("Click-Izq: Crear un nuevo objeto",0,1,0);
+									GameTooltip:AddLine("Click Der: Crear desde...",0,1,0);
 									GameTooltip:Show()
 								</OnEnter>
 								<OnLeave>
@@ -3115,12 +3115,12 @@
 								</OnLoad>
 								<OnValueChanged>
 									if this:GetValue() > 0 then
-										PanelObjetPersoSliderCategorieText:SetText("Category : "..TRP_ObjetCategorie[this:GetValue()].Nom);
+										PanelObjetPersoSliderCategorieText:SetText("Categoría : "..TRP_ObjetCategorie[this:GetValue()].Nom);
 										PanelObjetPersoSliderSousCategorie:Show();
 										PanelObjetPersoSliderSousCategorie:SetMinMaxValues(0, #TRP_ObjetCategorie[this:GetValue()].SousCategorie);
 										PanelObjetPersoSliderSousCategorie:SetValue(0);
 									else
-										PanelObjetPersoSliderCategorieText:SetText("Category : ".."Toutes");
+										PanelObjetPersoSliderCategorieText:SetText("Categoría : ".."Todas");
 										PanelObjetPersoSliderSousCategorie:Hide();
 									end
 									if this:IsVisible() then
@@ -3153,9 +3153,9 @@
 								</OnLoad>
 								<OnValueChanged>
 									if this:GetValue() > 0 and this:IsVisible() then
-										PanelObjetPersoSliderSousCategorieText:SetText("Subcategory : "..TRP_ObjetCategorie[PanelObjetPersoSliderCategorie:GetValue()].SousCategorie[this:GetValue()]);
+										PanelObjetPersoSliderSousCategorieText:SetText("Subcategoría : "..TRP_ObjetCategorie[PanelObjetPersoSliderCategorie:GetValue()].SousCategorie[this:GetValue()]);
 									else
-										PanelObjetPersoSliderSousCategorieText:SetText("Subcategory : ".."Toutes");
+										PanelObjetPersoSliderSousCategorieText:SetText("Subcategoría : ".."Todas");
 									end
 									if this:IsVisible() then
 										ShowObjetPerso();

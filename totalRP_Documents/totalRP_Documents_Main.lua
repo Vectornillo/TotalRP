@@ -92,8 +92,8 @@ function ChargerSliderDocumentVertical(num)
 
 				getglobal("DocumentsSlot"..j.."Icon"):SetTexture("Interface\\Icons\\"..TRP_Module_Documents[ID]["VignetteIcone"]..".blp");
 				getglobal("DocumentsSlot"..j.."Titre"):SetText(setTRPColorToString(TRP_Module_Documents[ID]["VignetteTitre"]));
-				getglobal("DocumentsSlot"..j.."Auteur"):SetText("|cffff9900Author : |cffffffff"..setTRPColorToString(TRP_Module_Documents[ID]["VignetteAuteur"]));
-				getglobal("DocumentsSlot"..j.."Date"):SetText("|cffff9900Date : |cffffffff"..setTRPColorToString(TRP_Module_Documents[ID]["VignetteDate"]));
+				getglobal("DocumentsSlot"..j.."Auteur"):SetText("|cffff9900Autor : |cffffffff"..setTRPColorToString(TRP_Module_Documents[ID]["VignetteAuteur"]));
+				getglobal("DocumentsSlot"..j.."Date"):SetText("|cffff9900Fecha : |cffffffff"..setTRPColorToString(TRP_Module_Documents[ID]["VignetteDate"]));
 				getglobal("DocumentsSlot"..j.."ID"):SetText(ID);
 				getglobal("DocumentsSlot"..j):Show();
 				getglobal("DocumentsSlot"..j):Enable();
@@ -103,7 +103,7 @@ function ChargerSliderDocumentVertical(num)
 							donnerDocument(ID);
 						else
 							if TRP_Module_Documents[ID]["Createur"] ~= Joueur then
-								TRPError("You are not the creator of this document.\nYou have to use the associated item to consulte the document\nIf this document don't possessed any associated item, warn the creator.");
+								TRPError("No eres el creador de este documento.\nTienes que usar el item asociado para consultar el documento\nSi este documento no posee un item asociado, avisa al creador.");
 							else
 								afficheDocument(ID);
 							end
@@ -140,7 +140,7 @@ function donnerDocument(ID)
 		return;
 	end
 	TRPSecureSendAddonMessage("GDA",ID.."|"..document["Createur"].."|"..document["VignetteTitre"],UnitName("target"));
-	sendMessage("{o}Document trade query sent to "..UnitName("target")..".");
+	sendMessage("{o}Consulta de comercio de documento enviada a "..UnitName("target")..".");
 end
 
 function AskingDocument(docu,sender)
@@ -585,9 +585,9 @@ function createDocumentWithID(ID)
 		TRP_Module_Documents[ID] = {};
 		TRP_Module_Documents[ID]["Createur"] = Joueur;
 		TRP_Module_Documents[ID]["VignetteIcone"] = "INV_Scroll_12";
-		TRP_Module_Documents[ID]["VignetteTitre"] = "New document";
+		TRP_Module_Documents[ID]["VignetteTitre"] = "Nuevo Documento";
 		TRP_Module_Documents[ID]["VignetteAuteur"] = Joueur;
-		TRP_Module_Documents[ID]["VignetteDate"] = date("%d/%m \195\160 %Hh%M");
+		TRP_Module_Documents[ID]["VignetteDate"] = date("%d/%m a las %Hh%M");
 		TRP_Module_Documents[ID]["Texte"] = {};
 		TRP_Module_Documents[ID]["Texte"]["Texte"] = {};
 		TRP_Module_Documents[ID]["Texte"]["Font"] = 1;
@@ -596,7 +596,7 @@ function createDocumentWithID(ID)
 		TRP_Module_Documents[ID]["Texte"]["Ombre"] = 100;
 		TRP_Module_Documents[ID]["Texte"]["Alignement"] = 1;
 		TRP_Module_Documents[ID]["Titre"] = {};
-		TRP_Module_Documents[ID]["Titre"]["Titre"] = "New document";
+		TRP_Module_Documents[ID]["Titre"]["Titre"] = "Nuevo Documento";
 		TRP_Module_Documents[ID]["Titre"]["Font"] = 1;
 		TRP_Module_Documents[ID]["Titre"]["Taille"] = 11;
 		TRP_Module_Documents[ID]["Titre"]["Surligner"] = 1;
@@ -817,11 +817,11 @@ function EnregistrerDocument()
 			if found then
 				PanelOpen("FicheJoueurOngletDocument","DocumentsPanelListe");
 			else
-				StaticPopupDialogs["TRP_DOCU_CREATEOBJ"].text = setTRPColorToString(TRP_ENTETE.." \nThere isn't any item associated to this document. You must associate a item to this document if you want others to be able to consulte it. Do you want to create this item now ?");
+				StaticPopupDialogs["TRP_DOCU_CREATEOBJ"].text = setTRPColorToString(TRP_ENTETE.." \nNo hay ningún item asociado a este documento. Debes asociar uno si quieres que los demás puedan consultarlo. ¿Quieres crear este item ahora?");
 				TRP_ShowStaticPopup("TRP_DOCU_CREATEOBJ",nil,nil,ID);
 			end
 		else
-			StaticPopupDialogs["TRP_TEXT_ONLY_SHADE"].text = setTRPColorToString(TRP_ENTETE.." \n "..TRPWARNING.."\n\n".."{r}There is a list with more than 200 consecutive characters (ie without space). This is forbidden !");
+			StaticPopupDialogs["TRP_TEXT_ONLY_SHADE"].text = setTRPColorToString(TRP_ENTETE.." \n "..TRPWARNING.."\n\n".."{r}Hay una lista con más de 200 caracters consecutivos (ej. sin espacio). ¡Esto está prohibido!");
 			TRP_ShowStaticPopup("TRP_TEXT_ONLY_SHADE");
 		end
 	end
@@ -980,12 +980,12 @@ function refreshApercu()
 	--Vignette
 	ApercuPanelDocumentVignetteTitre:SetText(setTRPColorToString(DocumentCreateTitreVignette:GetText()));
 	if setTRPColorToString(DocumentCreateAuteurVignette:GetText()) ~= "" then
-		ApercuPanelDocumentVignetteAuteur:SetText("|cffff9900Auteur : |cffffffff"..setTRPColorToString(DocumentCreateAuteurVignette:GetText()));
+		ApercuPanelDocumentVignetteAuteur:SetText("|cffff9900Autor : |cffffffff"..setTRPColorToString(DocumentCreateAuteurVignette:GetText()));
 	else
 		ApercuPanelDocumentVignetteAuteur:SetText("");
 	end
 	if setTRPColorToString(DocumentCreateDateVignette:GetText()) ~= "" then
-		ApercuPanelDocumentVignetteDate:SetText("|cffff9900Date : |cffffffff"..setTRPColorToString(DocumentCreateDateVignette:GetText()));
+		ApercuPanelDocumentVignetteDate:SetText("|cffff9900Fecha : |cffffffff"..setTRPColorToString(DocumentCreateDateVignette:GetText()));
 	else
 		ApercuPanelDocumentVignetteDate:SetText("");
 	end

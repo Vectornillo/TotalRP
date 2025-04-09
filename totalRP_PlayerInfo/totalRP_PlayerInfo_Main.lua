@@ -103,11 +103,11 @@ end
 function RappelInfos()
 	local message;
 	message = "|cffffaa00Total RP\n------------------"
-			  .."\n|cffffaa00Your current character is : |cff00ff00"..nomComplet(Joueur)
-			  .."\n|cffffaa00Your mood : "..humeur_color[TRP_Module_PlayerInfo[Royaume][Joueur]["Humeur"]]..HUMEUR_SET[TRP_Module_PlayerInfo[Royaume][Joueur]["Humeur"]]
-			  .."\n|cffffaa00Your status : "..statut_color[TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"]]..STATUTRPSMALL[TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"]];
+			  .."\n|cffffaa00Tu personaje actual es : |cff00ff00"..nomComplet(Joueur)
+			  .."\n|cffffaa00Tu humor : "..humeur_color[TRP_Module_PlayerInfo[Royaume][Joueur]["Humeur"]]..HUMEUR_SET[TRP_Module_PlayerInfo[Royaume][Joueur]["Humeur"]]
+			  .."\n|cffffaa00Tu estado : "..statut_color[TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"]]..STATUTRPSMALL[TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"]];
 	if TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"] ~= nil and TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"] ~= "" then
-		message = message..setTRPColorToString("\n\n{o}Your current description :\n{w}\""..TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"].."{w}\"");
+		message = message..setTRPColorToString("\n\n{o}Tu descripción actual :\n{w}\""..TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"].."{w}\"");
 	end
 	RaidNotice_AddMessage(RaidWarningFrame, message, ChatTypeInfo["RAID_WARNING"]);
 end
@@ -151,24 +151,24 @@ function getNameAndColorAlignement(nom,Ethique,Morale)
 	texteMorale = "Neutral";
 	texteEthique = "Neutral";
 	if Morale == 0 then
-		texteMorale = "Unknown";
+		texteMorale = "Desconocido";
 		vertMorale = 0.5;
 		rougeMorale = 0.5;
 	elseif Morale >= 500 then
 		vertMorale = 1;
 		rougeMorale = (500 - (Morale-500))/500;
 		if Morale >= 800 then
-			texteMorale = "Good";
+			texteMorale = "Bueno";
 		elseif Morale >= 600 then
-			texteMorale = "Good";
+			texteMorale = "Bueno";
 		end
 	else
 		vertMorale = (Morale/500);
 		rougeMorale = 1;
 		if Morale <= 200 then
-			texteMorale = "Evil";
+			texteMorale = "Maligno";
 		elseif Morale <= 400  then
-			texteMorale = "Evil";
+			texteMorale = "Maligno";
 		end
 	end
 	if Ethique == 0 then
@@ -179,17 +179,17 @@ function getNameAndColorAlignement(nom,Ethique,Morale)
 		vertEthique = 1;
 		rougeEthique = (500 - (Ethique-500))/500;
 		if Ethique >=800 then
-			texteEthique = "Lawfull";
+			texteEthique = "Legal";
 		elseif Ethique >= 600 then
-			texteEthique = "Lawfull";
+			texteEthique = "Legal";
 		end
 	else
 		vertEthique = (Ethique/500);
 		rougeEthique = 1;
 		if Ethique <= 200 then
-			texteEthique = "Chaotic";
+			texteEthique = "Caótico";
 		elseif Ethique <= 400  then
-			texteEthique = "Chaotic";
+			texteEthique = "Caótico";
 		end
 	end
 	
@@ -201,11 +201,11 @@ function StatsAlignAdapt()
 	local Ethique = TRP_Module_PlayerInfo[Royaume][Joueur]["Ethique"];
 	local texteMorale,texteEthique,vertMorale,rougeMorale,vertEthique,rougeEthique = getNameAndColorAlignement(Joueur);
 	StatsMoralePointeur:SetPoint("TOP",-93 + ((186/1000)*Morale),-52);
-	StatsMorale:SetText("Morality : "..texteMorale);
+	StatsMorale:SetText("Moralidad : "..texteMorale);
 	StatsMoraleFond:SetTexture(rougeMorale,vertMorale,0,0.5);
 	StatsMorale:SetTextColor(rougeMorale,vertMorale,0);
 	StatsEthiquePointeur:SetPoint("TOP",-93 + ((186/1000)*Ethique),-92);
-	StatsEthique:SetText("Ethics : "..texteEthique);
+	StatsEthique:SetText("Ética : "..texteEthique);
 	StatsEthiqueFond:SetTexture(rougeEthique,vertEthique,0,0.5);
 	StatsEthique:SetTextColor(rougeEthique,vertEthique,0);
 end
@@ -214,9 +214,9 @@ function PopupStatsAlignAdapt()
 	local Morale = PopupAlignementMoraleSlider:GetValue();
 	local Ethique = PopupAlignementEthiqueSlider:GetValue();
 	local texteMorale,texteEthique,vertMorale,rougeMorale,vertEthique,rougeEthique = getNameAndColorAlignement(nil,Ethique,Morale);
-	PopupAlignementMoraleSliderText:SetText("Morality : "..texteMorale);
+	PopupAlignementMoraleSliderText:SetText("Moralidad : "..texteMorale);
 	PopupAlignementMoraleSliderText:SetTextColor(rougeMorale,vertMorale,0);
-	PopupAlignementEthiqueSliderText:SetText("Ethics : "..texteEthique);
+	PopupAlignementEthiqueSliderText:SetText("Ética : "..texteEthique);
 	PopupAlignementEthiqueSliderText:SetTextColor(rougeEthique,vertEthique,0);
 end
 
@@ -339,9 +339,9 @@ function ChangeStatutRP(num)
 		FicheJoueurStatut:SetText(statut_color[num]..STATUT.." : "..STATUTRPSMALL[num]);
 	end
 	if num == 1 then
-		sendMessage("{j}You are now playing out of your character {r}(OCC){j}.");
+		sendMessage("{j}Ya no estás interpretando a tu personaje {r}(ROF){j}.");
 	elseif num == 2 then
-		sendMessage("{j}You are now playing your character {v}(IC){j}.");
+		sendMessage("{j}Ahora estás interpretando a tu personaje {v}(RON){j}.");
 	end
 	
 	if UnitName("target") == Joueur then

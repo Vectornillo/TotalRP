@@ -87,9 +87,9 @@
 	};
 	
 	StaticPopupDialogs["TRP_EMOTEGLOBAL"] = {
-	  text = TRP_ENTETE.."Enter No-targeted emote to play. \n\nA No-targeted emote is an emote that is not played by a character. \nExample: \"A sound is heard.\"",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  text = TRP_ENTETE.."Introduce un emote sin objetivo. \n\nUn emote sin objetivo es aquél que ningún personaje protagoniza. \nEjemplo: \"Se escucha un sonido.\"",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			
 	  end,
@@ -119,7 +119,7 @@
 	};
 	
 	StaticPopupDialogs["TRP_EMOTENAMEDIRE"] = {
-	  text = TRP_ENTETE.."Enter the name of the person who will speak.",
+	  text = TRP_ENTETE.."Introduce el nombre de la persona que hablará.",
 	  button1 = "Accept",
 	  button2 = "Cancel",
 	  OnShow = function(self)
@@ -153,9 +153,9 @@
 	};
 	
 	StaticPopupDialogs["TRP_EMOTENAME"] = {
-	  text = TRP_ENTETE.."Enter the name of the person who will perform the emote.",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  text = TRP_ENTETE.."Introduce el nombre de la persona que protagonizará el emote.",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			
 	  end,
@@ -187,9 +187,9 @@
 	};
 	
 	StaticPopupDialogs["TRP_EMOTENPC"] = {
-	  text = TRP_ENTETE.."Enter the emote to play by the selected character. \nIt an emote /e.",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  text = TRP_ENTETE.."Introduce el emote que protagonizará tu personaje seleccionado. \nEs un emote de tipo /e.",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			
 	  end,
@@ -229,7 +229,7 @@
 	};
 	
 	StaticPopupDialogs["TRP_EMOTENPCDIRE"] = {
-	  text = TRP_ENTETE.."Enter the dialogue that the target will tell. \nIt's a spoken dialogue (/say).",
+	  text = TRP_ENTETE.."Introduce el diálogo que tu objetivo protagonizará. \nEs un diálogo hablado (/say).",
 	  button1 = "Accept",
 	  button2 = "Cancel",
 	  OnShow = function(self)
@@ -271,7 +271,7 @@
 	};
 	
 	StaticPopupDialogs["TRP_SAISIESOUND"] = {
-	  text = TRP_ENTETE.."Enter the path of the sound (from the root of the game and without the extension \".wav\".).\nPress Enter for preview.",
+	  text = TRP_ENTETE.."Introduce la ruta del sonido (Desde la raíz del juego y sin la extensión \".wav\".).\nPresiona Intro para pre-escuchar.",
 	  button1 = "Local",
 	  button2 = "Cancel",
 	  button3 = "Global",
@@ -388,9 +388,9 @@
 	};
 	
 	StaticPopupDialogs["TRP_CREATE_PLANQUE"] = {
-	  text = TRP_ENTETE.."Create a hiding place: \n\nPlease enter a short description of your hiding place. This description will help you remember exactly where it is.",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  text = TRP_ENTETE.."Crear un escondrijo: \n\nPor favor, introduce una pequeña descripción del escondrijo. Ésta servirá para ayudarte a recordar dońde está.",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 
 	  end,

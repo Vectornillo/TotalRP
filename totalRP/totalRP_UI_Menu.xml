@@ -59,8 +59,8 @@
 		<OnEnter>
 			GameTooltip:SetOwner(MinimapButton, "ANCHOR_LEFT");
 			GameTooltip:AddLine(TOTALRP, 1, 1, 1);
-			GameTooltip:AddLine("Left click: Open menu",1,0.75,0);
-			GameTooltip:AddLine("Right click: Show shortcuts bar",1,0.75,0);
+			GameTooltip:AddLine("Click Izq: Abrir menú",1,0.75,0);
+			GameTooltip:AddLine("Click Der: Mostrar barra atajos",1,0.75,0);
 			local count = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["InBox"], function()
 				count = count + 1;
@@ -400,7 +400,7 @@
 				</OnUpdate>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Open your backpack", 1, 1, 1);
+					GameTooltip:AddLine("Abrir tu mochila", 1, 1, 1);
 					local Num = 0;
 					local Qte = 0;
 					table.foreach(TRP_Module_Inventaire[Royaume][Joueur],
@@ -412,8 +412,8 @@
 					end);
 					if Num > 0 then
 						GameTooltip:AddLine(" ", 1, 1, 1);
-						GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-						GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+						GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+						GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 					end
 					GameTooltip:Show();
 				</OnEnter>
@@ -448,7 +448,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Open your safe", 1, 1, 1);
+					GameTooltip:AddLine("Abrir tu alforja", 1, 1, 1);
 					if not IsMounted() then
 						GameTooltip:AddLine(ObjectError["MUSTBOONMOUNT"], 1, 0, 0);
 					end
@@ -463,8 +463,8 @@
 					end);
 					if Num > 0 then
 						GameTooltip:AddLine(" ", 1, 1, 1);
-						GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-						GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+						GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+						GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 					end
 					GameTooltip:Show();
 				</OnEnter>
@@ -533,8 +533,8 @@
 						end);
 						if Num > 0 then
 							GameTooltip:AddLine(" ", 1, 1, 1);
-							GameTooltip:AddLine(Num.." item types in total.", 0, 1, 0);
-							GameTooltip:AddLine(Qte.." items in total.", 0, 1, 0);
+							GameTooltip:AddLine(Num.." tipos de item en total.", 0, 1, 0);
+							GameTooltip:AddLine(Qte.." items en total.", 0, 1, 0);
 						end
 					else
 						GameTooltip:AddLine("|cff00ff00"..CREERPLANQUETOOL, 1, 1, 1);
@@ -586,11 +586,11 @@
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if ShowingHelm() then
-						GameTooltip:AddLine("Helmet is shown",0,1,0);
-						GameTooltip:AddLine("Click: Hide helm.",1,0.75,0);
+						GameTooltip:AddLine("El casco se muestra",0,1,0);
+						GameTooltip:AddLine("Click: Ocultar casco.",1,0.75,0);
 					else
-						GameTooltip:AddLine("Helmet is hidden",1,0.75,0);
-						GameTooltip:AddLine("Click: Show helm.",0,1,0);
+						GameTooltip:AddLine("El casco está oculto",1,0.75,0);
+						GameTooltip:AddLine("Click: Mostrar casco.",0,1,0);
 					end
 					GameTooltip:Show()
 				</OnEnter>
@@ -648,11 +648,11 @@
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if ShowingCloak() then
-						GameTooltip:AddLine("Cloak is shown",0,1,0);
-						GameTooltip:AddLine("Click: Hide Cloak",1,0.75,0);
+						GameTooltip:AddLine("La capa se muestra",0,1,0);
+						GameTooltip:AddLine("Click: Esconder capa",1,0.75,0);
 					else
-						GameTooltip:AddLine("Cloak is hidden",1,0.75,0);
-						GameTooltip:AddLine("Click: Show Cloak.",0,1,0);
+						GameTooltip:AddLine("La capa está oculta",1,0.75,0);
+						GameTooltip:AddLine("Click: Mostrar la capa.",0,1,0);
 					end
 					GameTooltip:Show()
 				</OnEnter>
@@ -701,11 +701,11 @@
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 						if TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"] == 2 then
-						GameTooltip:AddLine("In Character (IC)",0,1,0);
-						GameTooltip:AddLine("Click: Enter OOC Mode.",1,0,0);
+						GameTooltip:AddLine("Rol ON (RON)",0,1,0);
+						GameTooltip:AddLine("Click: Entrar modo ROF.",1,0,0);
 					else
-						GameTooltip:AddLine("Out of Character (OOC)",1,0,0);
-						GameTooltip:AddLine("Click: Enter IC Mode.",0,1,0);
+						GameTooltip:AddLine("Rol OFF (ROF)",1,0,0);
+						GameTooltip:AddLine("Click: Entrar modo RON.",0,1,0);
 					end
 					GameTooltip:Show()
 				</OnEnter>
@@ -714,9 +714,9 @@
 				</OnLeave>
 				<OnUpdate>
 					if TRP_Module_PlayerInfo and TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"] == 1 then
-						BarreActionsRPSwitchText:SetText("|cffff0000OOC");
+						BarreActionsRPSwitchText:SetText("|cffff0000ROF");
 					else
-						BarreActionsRPSwitchText:SetText("|cff00ff00IC");
+						BarreActionsRPSwitchText:SetText("|cff00ff00RON");
 					end
 				</OnUpdate>
 				<OnClick>
@@ -760,14 +760,14 @@
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if not UnitIsAFK("player") and not UnitIsDND("player") then
-						GameTooltip:AddLine("Normal Mode",0,1,0);
-						GameTooltip:AddLine("Left click : Go AFK.",1,0.75,0);
-						GameTooltip:AddLine("Right click : Go DND. \"Do Not Disturb\".",1,0.25,0);
+						GameTooltip:AddLine("Modo Normal",0,1,0);
+						GameTooltip:AddLine("Left click : Ponte AUS.",1,0.75,0);
+						GameTooltip:AddLine("Right click : Ponte NM. \"Do Not Disturb\".",1,0.25,0);
 					elseif UnitIsDND("player") then
-						GameTooltip:AddLine("Current Mode \"Do Not Disturb\"",1,0.25,0);
-						GameTooltip:AddLine("Click : Leave DND or AFK Mode",0,1,0);
+						GameTooltip:AddLine("Modo Actual \"No molestar\"",1,0.25,0);
+						GameTooltip:AddLine("Click : Abandona el modo NM o AUS",0,1,0);
 					else
-						GameTooltip:AddLine("Current Mode: AFK",1,0.75,0);
+						GameTooltip:AddLine("Modo Actual: AUS",1,0.75,0);
 					end
 					GameTooltip:Show()
 				</OnEnter>
@@ -776,9 +776,9 @@
 				</OnLeave>
 				<OnUpdate>
 					if UnitIsDND("player") then
-						BarreActionsAbsSwitchText:SetText("|cffff2200DND");
+						BarreActionsAbsSwitchText:SetText("|cffff2200NM");
 					elseif UnitIsAFK("player") then
-						BarreActionsAbsSwitchText:SetText("|cffff9900AFK");
+						BarreActionsAbsSwitchText:SetText("|cffff9900AUS");
 					else
 						BarreActionsAbsSwitchText:SetText("|cff00ff00OK");
 					end
@@ -1832,12 +1832,12 @@
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if TRP_Module_Configuration["Modules"]["Sons"]["Activate"] then
-						GameTooltip:AddLine("Click: Play a sound",1,0.75,0);
-						GameTooltip:AddLine("Shift + Click: Play a sound (with path)",1,0.75,0);
+						GameTooltip:AddLine("Click: Reproduce un sonido",1,0.75,0);
+						GameTooltip:AddLine("Shift + Click: Reproduce un sonido (con ruta)",1,0.75,0);
 						GameTooltip:AddLine(" ",1,0.75,0);
-						GameTooltip:AddLine("Ctrl + Click: Disable TRP sounds",1,0.25,0);
+						GameTooltip:AddLine("Ctrl + Click: Desactiva sonidos TRP",1,0.25,0);
 					else
-						GameTooltip:AddLine("Ctrl + Click: Enable TRP sounds",0,1,0);
+						GameTooltip:AddLine("Ctrl + Click: Activa sonidos TRP",0,1,0);
 					end
 					GameTooltip:Show();
 				</OnEnter>
@@ -1914,9 +1914,9 @@
 						GameTooltip:AddLine("Left-click: Make "..UnitName("target").." speak.",1,0.75,0);
 						GameTooltip:AddLine("Right Click: Make "..UnitName("target").." do an emote.",1,0.75,0);
 					else
-						GameTooltip:AddLine("Click: Make a non-targeted emote.",1,0.75,0);
-						GameTooltip:AddLine("Shift + Left Click: Make someone speak (choice of name).",1,0.75,0);
-						GameTooltip:AddLine("Shift + Right Click: Make someone do an emote (choice of name).",1,0.75,0);
+						GameTooltip:AddLine("Click: Crea un emote deslocalizado.",1,0.75,0);
+						GameTooltip:AddLine("Shift + Click Izq: Haz hablar a alguien (elección del nombre).",1,0.75,0);
+						GameTooltip:AddLine("Shift + Click Der: Haz emote de alguien (elección del nombre).",1,0.75,0);
 					end
 					GameTooltip:Show();
 				</OnEnter>
@@ -2010,7 +2010,7 @@
 					</Anchor>
 				</Anchors>
 			</FontString>
-			<FontString name="TRPListePlaySoundRecherche" inherits="NumberFontNormal" justifyH="LEFT" text="Search">
+			<FontString name="TRPListePlaySoundRecherche" inherits="NumberFontNormal" justifyH="LEFT" text="Buscar">
 				<Anchors>
 					<Anchor point="CENTER">
 						<Offset>
@@ -2019,7 +2019,7 @@
 					</Anchor>
 				</Anchors>
 			</FontString>
-			<FontString name="TRPListePlaySoundEmpty" inherits="NumberFontNormalHuge" justifyH="CENTER" text="No Sound">
+			<FontString name="TRPListePlaySoundEmpty" inherits="NumberFontNormalHuge" justifyH="CENTER" text="Sin Sonido">
 				<Anchors>
 					<Anchor point="CENTER">
 						<Offset>
@@ -2259,7 +2259,7 @@
 			ShadeSecondPlan(1);
 		</OnHide>
 		<OnLoad>
-			PanelListePlaySoundTitre:SetText("Play sound :")
+			PanelListePlaySoundTitre:SetText("Reproducir sonido :")
 		</OnLoad>
 	</Scripts>
 </Frame>
@@ -2391,7 +2391,7 @@
 					</Anchor>
 				</Anchors>
 			</FontString>
-			<FontString name="TRPListeModeleRecherche" inherits="NumberFontNormal" justifyH="LEFT" text="Search">
+			<FontString name="TRPListeModeleRecherche" inherits="NumberFontNormal" justifyH="LEFT" text="Buscar">
 				<Anchors>
 					<Anchor point="CENTER">
 						<Offset>

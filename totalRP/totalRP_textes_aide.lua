@@ -2,13 +2,13 @@
 -- [ Texte - Localisation - Boutons d'aide] --
 -------------------------------------------------------------------------------
 
-CHARACTERENBR = " characters are available for this attribute.\n{o}Warning: one special character counts as two.";
-CHRACTEREINTERDIT = "{r}These special characters are not allowed.\n^ $ ( ) % . [ ] * + - ? | {w}";
-MUSTSAISIR = "{o}You must specify a value for this attribute.{w}";
-NOMUSTSAISIR = "{v}This attribute is optional.{w}"
-CAREFULL = "\n\n|cffffaa00This action can not be canceled.\n\nDo you really want to perform this action ?";
+CHARACTERENBR = " caracteres estçam disponibles para este atributo.\n{o}Aviso: un caracter especial cuenta como 2.";
+CHRACTEREINTERDIT = "{r}Estos caracteres especiales no están permitidos.\n^ $ ( ) % . [ ] * + - ? | {w}";
+MUSTSAISIR = "{o}Debes especificar una valor para este atributo.{w}";
+NOMUSTSAISIR = "{v}Este atributo es opcional.{w}"
+CAREFULL = "\n\n|cffffaa00Esta acción no puede ser cancelada.\n\n¿Realmente quiers llevarla a cabo?";
 TRP_ENTETE = "|TInterface\\AddOns\\totalRP\\Images\\TRPlogo.tga:75:125|t\n";
-CHATFRAMEEXPLICATION = "Chat Frame : \n1 - Main\n2 - Combat Log\n3 à 7 - Additional windows"
+CHATFRAMEEXPLICATION = "Marco de Chat : \n1 - Principal\n2 - Log de Combate\n3 à 7 - Ventanas adicionales"
 
 TEXTE_AIDE_BUTTON = {
 	-- Création d'objets
@@ -183,10 +183,10 @@ TEXTE_AIDE_BUTTON = {
 };
 
 TRP_TEXT_STATIC_POPUP = {
-	TRP_REG_EPURER_LISTE = "This action will remove from the Register every character "
-							.."you never cross with one of your characters in this Realm.";
-	TRP_REG_DELETE_PERSO = "This action will remove this person from the Register. Remind that notes and relationship aren't erased. So you can delete a ignored character, he will be still ignored.";
-	TRP_AVERT_USE_CHAT = "You have disable the improving chat frame feature. But some links cannot be disable without reloading the interface. We recommend you to restart your interface to eliminate these links.\n\n{v}Restart Interface ?";
+	TRP_REG_EPURER_LISTE = "Esto eliminará del Registro a todos los personajes "
+							.."con los que te cruzaste en este Reino.";
+	TRP_REG_DELETE_PERSO = "Esta acción eliminará a esta persona del Registro . Recuerda que las notas y las relaciones no son borradas. Así que puedes eliminar a un personaje ignorado, él seguirá siendo ignorado";
+	TRP_AVERT_USE_CHAT = "Debes desactivar el marco de chat mejorado. Pero algunos enlaces no puede ser deshabilitados sin recargar la interfaz. Te recomendamos reiniciar la interfaz para eliminar estos enlaces.\n\n{v}¿Reiniciar la interfaz?";
 }
 
 TRPCheckOptionTooltip = {
@@ -251,73 +251,73 @@ TRPCheckOptionTooltip = {
 }
 
 ExchangeError = {
-	NOTARGET = "You must select a character in range.";
-	NORANGE = "The target is too far from you.";
-	REFUSAL = "{r}Exchange refused ";
-	CANTUNIQUE = " can not carry more unit of this item.";
-	CANTUNIQUESELF = "You can not carry more unit of this item.";
-	HASNOTREF = "{r}This player does not have the reference of this item: his version of TRP is older than yours.";
-	MUSTINSAC = "You can only exchange items that are in your backpack.";
-	ALREADYEXCHNAGE = Joueur.." is busy.";
-	REFCIBLE = "You must select a character.";
-	ISFINGHTING = " is busy because he's fighting!";
-	SHOW = "You can not show that item to this person.";
+	NOTARGET = "Debes seleccionar un personaje en rango.";
+	NORANGE = "Tu objetivo está muy lejos de ti.";
+	REFUSAL = "{r}Comercio denegado ";
+	CANTUNIQUE = " no puede llevar más unidades de este item.";
+	CANTUNIQUESELF = "No puedes llevar más unidades de este item.";
+	HASNOTREF = "{r}Este jugador no tiene la referencia de este item: su versión de TRP is más vieja que la tuya.";
+	MUSTINSAC = "Sólo puedes comerciar con objetos de tu mochila.";
+	ALREADYEXCHNAGE = Joueur.." está ocupado.";
+	REFCIBLE = "Debes seleccionar un jugador.";
+	ISFINGHTING = " está ocupado porque está luchando.";
+	SHOW = "No puedes mostrar ese item a esta persona.";
 }
 
 Exchange = {
-	ECHANGEREF = "Sending information : in process ...";
-	ECHANGEREFDONE = "Sending information : over.";
-	SENDED = "An exchange request has been sent to ";
-	SENDEDREF = "A request to send item information has been sent to ";
-	REFASKING = "Item Information : Receive";
-	REFASKINGMAJ = "Item Information : Update";
-	REFASKINGD = " wants to give you {o}an update{w} of the information about an item you already own :\n\n";
-	REFASKINGE = " wants to give you {o}an update{w} of the information about his item :\n\n";
-	REFASKINGB = " wants to send you information about an item :\n\n";
-	REFASKINGBWARNINGB = "\n\n{o}Warning{w} : The creator of this update is the creator of the version of the item you have, however there is always a risk that this version is earlier than the one you have"
-						..".\n\n{v}Accept the update ?";
-	REFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is different from the version you have.\n\n{v}Accept the update ?";
-	REFASKINGC = "\n\nSending/Updating data is required if you want to be able to exchange this kind of item.\n\n{v}Do you accept ?";
+	ECHANGEREF = "Enviando información : en progreso ...";
+	ECHANGEREFDONE = "Enviando información : terminado.";
+	SENDED = "Una petición de comercio ha sido enviada a ";
+	SENDEDREF = "Una petición para enviar información de item ha sido enviada a ";
+	REFASKING = "Información del item : Recibir";
+	REFASKINGMAJ = "Información del item : Actualizar";
+	REFASKINGD = " quiere darte {o}una actualización{w} de la información de un item que ya tienes :\n\n";
+	REFASKINGE = " quiere darte {o}una actualización{w} de la información de su item :\n\n";
+	REFASKINGB = " quiere enviarte información acerca de un item :\n\n";
+	REFASKINGBWARNINGB = "\n\n{o}Aviso{w} : El creador de esta actualización es el autor de la versión del item que tienes, aunque siempre existe el riesgo de que esta versión sea anterior a la que tienes"
+						..".\n\n{v}¿Aceptas la actualización?";
+	REFASKINGBWARNING = "\n\n{o}Aviso{w} : El creador de esta actualización es diferente al de la versión que tú tienes.\n\n{v}¿Aceptas la actualización?";
+	REFASKINGC = "\n\nEnviar/Actualizar datos es necesario si quieres comerciar con este tipo de item.\n\n{v}¿Aceptas?";
 	
-	DOCUREFASKING = "Document Information : Receive";
-	DOCUREFASKINGMAJ = "Document Information : Update";
-	DOCUREFASKINGD = " wants to give you {o}an update{w} of a document you already own :\n\n";
-	DOCUREFASKINGE = " wants to give you {o}an update{w} of his document :\n\n";
-	DOCUREFASKINGB = " wants to give you a document :\n\n";
-	DOCUREFASKINGBWARNINGB = "\n\n{o}Warning{w} : The creator of this update is the creator of the version of the document you have, however there is always a risk that this version is earlier than the one you have"
-						..".\n\n{v}Accept the update ?";
-	DOCUREFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is not the creator of the version you have.\n\n{v}Accept the update ?";
-	DOCUREFASKINGC = "\n\n{v}Do you accept ?";
+	DOCUREFASKING = "Información del Documento : Recibir";
+	DOCUREFASKINGMAJ = "Información del Documento : Actualizar";
+	DOCUREFASKINGD = " quiere darte {o}una actualización{w} de un documento que ya tienes :\n\n";
+	DOCUREFASKINGE = " quiere darte {o}una actualización{w} de su documento:\n\n";
+	DOCUREFASKINGB = " quiere darte un documento :\n\n";
+	DOCUREFASKINGBWARNINGB = "\n\n{o}Aviso{w} : El creador de esta actualización es el autor de la versión del item que tienes, aunque siempre existe el riesgo de que esta versión sea anterior a la que tienes"
+						..".\n\n{v}¿Aceptas la actualización?";
+	DOCUREFASKINGBWARNING = "\n\n{o}Warning{w} : El creador de esta actualización no es el autor de la versión que tienes.\n\n{v}¿Aceptas la actualización?";
+	DOCUREFASKINGC = "\n\n{v}¿Aceptas?";
 }
 
 ObjectError = {
-	NOMOUNT = "You do not have access to your safe, you have to be on your mount.";
-	MUSTBOONMOUNT = "You must be on your mount.";
-	NOPLANQUE = "You have no hiding place here.";
+	NOMOUNT = "No tienes acceso a tu alforja, tienes que estar montado.";
+	MUSTBOONMOUNT = "Debes estar sobre tu montura.";
+	NOPLANQUE = "No tienes un escondrijo aquí.";
 }
 
 DeleteMessages = {
-	DELETEPLANQUE = "This action will destroy the hiding place, {o}and any items still remaining into.{w}\n\n"
-					.."{o}This action is not reversible.\n\n{w}Are you sure you want to delete this hiding place ?";
-	DELETEPLANQUEWARN = "You have to stay near your hiding place in order to destroy it !";
-	DELETEDOCUMENT = "This action will delete the document.\n\n{o}This action is not reversible.\n\n{w}Are you sure you want to delete this document ?"
+	DELETEPLANQUE = "Esta acción destruirá el escondrijo, {o}y cualquier item en su interior.{w}\n\n"
+					.."{o}Esta acción no es reversible.\n\n{w}¿Estás seguro de que quieres eliminar este escondrijo?";
+	DELETEPLANQUEWARN = "¡Tienes que estar cerca del escondrijo para poder eliminarlo!";
+	DELETEDOCUMENT = "Eston eliminará el documento.\n\n{o}Esta acción no es reversible.\n\n{w}¿Estás seguro de que quieres eliminar este documento?"
 }
 
 DocumentsTexts = {
-	ECHANGETITRE = "Exchange a document";
-	ECHANGE1 = " wants to send you a document whose title is :\n\n{o}\"";
-	ECHANGE2 = " wants to send you an update of a document {o}that you already own{w} whose title is :\n\n{o}\"";
-	ECHANGE2WARNING = "\"{w}\n\nBeware, the update has not been made by the creator of the version you have the document."
-					.."\n\nWould you still accept this update document?";
-	ECHANGEACCEPT = "\"{w}\n\nWould you accept this document ?";
-	EDITAUTEUR = "Edit Document";
-	EDITAUTEURTEXT = "Be careful, you are not the creator of this document. {o}If you would make changes and save, you become the creator.";
-	CREATEUR = "Document Creator : ";
-	YOUCREATEUR = "You are the creator of the document";
+	ECHANGETITRE = "Envío de documento";
+	ECHANGE1 = " quiere envirate un documento cuyo título es :\n\n{o}\"";
+	ECHANGE2 = " quiere enviarte una actualización de un documento {o}que ya tienes actualmente{w} cuyo título es :\n\n{o}\"";
+	ECHANGE2WARNING = "\"{w}\n\nAtención, la actualización no ha sido hecha por el creador de la versión que tú tienes."
+					.."\n\n¿Quieres continuar aun así?";
+	ECHANGEACCEPT = "\"{w}\n\n¿Aceptas este documento?";
+	EDITAUTEUR = "Editar Documento";
+	EDITAUTEURTEXT = "Ten cuidado, no eres el creador de este documento. {o}Si vas a modificarlo y guardarlo, serás el nuevo creador.";
+	CREATEUR = "Creador del docuemnto : ";
+	YOUCREATEUR = "Eres el creador del documento";
 }
 
 CONFIGINVCONFIRM = {
-	" Automatically deny any request receive item and/or item information.",
+	" Denegar automáticamente cualquier petición para recibir item y/o actualización de información.",
 	" {o}Always{w} display a prompt if anyone wants to send you an item or a reference or an update of a reference that you already have.",
 	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the item. If this is the case"
 	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
@@ -325,7 +325,7 @@ CONFIGINVCONFIRM = {
 }
 
 CONFIGDOCUCONFIRM = {
-	" Automatically deny any request receive document and/or document information.",
+	" Denegar automáticamente cualquier petición para recibir un documento y/o información de documento.",
 	" {o}Always{w} display a prompt if anyone wants to send you an document or a reference or an update of a reference that you already have.",
 	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the document. If this is the case"
 	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
@@ -333,20 +333,20 @@ CONFIGDOCUCONFIRM = {
 }
 
 CONFIGDOCUCONFIRMTITLE = {
-	"{r}Niveau 1 : Total blocking",
-	"{o}Niveau 2 : Always ask",
-	"{w}Niveau 3 : Yes, if creator",
-	"{v}Niveau 4 : Always yes",
+	"{r}Nivel 1 : Bloqueo total",
+	"{o}Nivel 2 : Preguntar siempre",
+	"{w}Nivel 3 : Sí, si creador",
+	"{v}Nivel 4 : Siempre",
 }
 
 CONFIGINVCONFIRMTITLE = {
-	"{r}Niveau 1 : Total blocking",
-	"{o}Niveau 2 : Always ask",
-	"{w}Niveau 3 : Yes, if creator",
-	"{v}Niveau 4 : Always yes",
+	"{r}Nivel 1 : Bloqueo total",
+	"{o}Nivel 2 : Preguntar siempre",
+	"{w}Nivel 3 : Sí, si creador",
+	"{v}Nivel 4 : Siempre",
 }
 
 Courrier = {
-	DELETEA = "{w}Are you sure you want to destroy this package ?\n\n{o}You will lose forever its contents !";
-	DELETEB = "{w}Are you sure you want to destroy this package ?\n\n{v}You will recover automatically its contents.";
+	DELETEA = "{w}¿Estás seguro de que quieres destruir este paquete?\n\n{o}¡Perderás sus contenidos para siempre!";
+	DELETEB = "{w}¿Estás seguro de que quieres destruir este paquete?\n\n{v}Recuperarás automáticamente su contenido.";
 }

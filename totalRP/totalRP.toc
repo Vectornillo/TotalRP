@@ -2,7 +2,7 @@
 ## Title: Total RP
 ## Author: Telkostrasz
 ## Version: 1.107
-## Notes: A Role-Playing Add-on. Version 1.1 (build 1107) - English Version 1.000
+## Notes: Un Add-on de Roleo. Version 1.1 (build 1107) - Versión Española 1.000
 ## URL: http://forums.telkostrasz.be/index.php
 ## RequiredDeps: totalRP_PlayerInfo, totalRP_Registre, totalRP_Documents, totalRP_Configuration, totalRP_Inventaire, totalRP_Interface
 ## DefaultState: Enabled

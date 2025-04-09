@@ -1184,11 +1184,11 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Relation"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipRelationCheckText:SetText("Relationship");
+									ConfigTooltipRelationCheckText:SetText("Relación");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Relationship :",1,0.75,0);
+									GameTooltip:AddLine("Relación :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLRELATION"],35,1,1,1);
 									GameTooltip:Show();
@@ -2038,11 +2038,11 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["IconeRelation"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuIconeCheckText:SetText("Relationship Icon in chat");
+									ConfigCommuIconeCheckText:SetText("Icono de relación en el chat");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Relationship Icon in chat :",1,0.75,0);
+									GameTooltip:AddLine("Icono de relación en el chat :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ICONRELATION"],35,1,1,1);
 									GameTooltip:Show();

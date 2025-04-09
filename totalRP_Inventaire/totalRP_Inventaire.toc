@@ -2,7 +2,7 @@
 ## Title: Total RP : Inventory and item creation
 ## Author: Telkostrasz
 ## Version: 1.106
-## Notes: A Role-Playing Add-on. Version 1.1 (build 1106) - English Version 1.000
+## Notes: Un Add-on de Roleo. Version 1.1 (build 1106) - Versión Española 1.000
 ## URL: http://forums.telkostrasz.be/index.php
 ## RequiredDeps: totalRP
 ## DefaultState: Enabled

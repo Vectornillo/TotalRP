@@ -244,5 +244,5 @@ function CheckIntegrity()
 					end);
 			end);
 	end);
-	sendMessage("Saved variables verified (and corrected if necessary).",0,1,0);
+	sendMessage("Variables guardadas verificadas (y corregidas en caso de necesitarlo).",0,1,0);
 end
