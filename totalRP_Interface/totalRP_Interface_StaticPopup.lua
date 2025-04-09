@@ -388,7 +388,7 @@
 	};
 	
 	StaticPopupDialogs["TRP_CREATE_PLANQUE"] = {
-	  text = TRP_ENTETE.."Crear un escondrijo: \n\nPor favor, introduce una pequeña descripción del escondrijo. Ésta servirá para ayudarte a recordar dońde está.",
+	  text = TRP_ENTETE.."Crear un escondrijo: \n\nPor favor, introduce una breve descripción del escondrijo. Ésta servirá para ayudarte a recordar dońde está.",
 	  button1 = "Aceptar",
 	  button2 = "Cancelar",
 	  OnShow = function(self)

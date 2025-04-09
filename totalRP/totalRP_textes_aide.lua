@@ -271,8 +271,8 @@ Exchange = {
 	SENDEDREF = "Una petición para enviar información de item ha sido enviada a ";
 	REFASKING = "Información del item : Recibir";
 	REFASKINGMAJ = "Información del item : Actualizar";
-	REFASKINGD = " quiere darte {o}una actualización{w} de la información de un item que ya tienes :\n\n";
-	REFASKINGE = " quiere darte {o}una actualización{w} de la información de su item :\n\n";
+	REFASKINGD = " quiere enviarte {o}una actualización{w} de la información de un item que ya tienes :\n\n";
+	REFASKINGE = " quiere enviarte {o}una actualización{w} de la información de su item :\n\n";
 	REFASKINGB = " quiere enviarte información acerca de un item :\n\n";
 	REFASKINGBWARNINGB = "\n\n{o}Aviso{w} : El creador de esta actualización es el autor de la versión del item que tienes, aunque siempre existe el riesgo de que esta versión sea anterior a la que tienes"
 						..".\n\n{v}¿Aceptas la actualización?";
@@ -281,12 +281,12 @@ Exchange = {
 	
 	DOCUREFASKING = "Información del Documento : Recibir";
 	DOCUREFASKINGMAJ = "Información del Documento : Actualizar";
-	DOCUREFASKINGD = " quiere darte {o}una actualización{w} de un documento que ya tienes :\n\n";
-	DOCUREFASKINGE = " quiere darte {o}una actualización{w} de su documento:\n\n";
-	DOCUREFASKINGB = " quiere darte un documento :\n\n";
+	DOCUREFASKINGD = " quiere enviarte {o}una actualización{w} de un documento que ya tienes :\n\n";
+	DOCUREFASKINGE = " quiere enviarte {o}una actualización{w} de su documento:\n\n";
+	DOCUREFASKINGB = " quiere eviarte un documento :\n\n";
 	DOCUREFASKINGBWARNINGB = "\n\n{o}Aviso{w} : El creador de esta actualización es el autor de la versión del item que tienes, aunque siempre existe el riesgo de que esta versión sea anterior a la que tienes"
 						..".\n\n{v}¿Aceptas la actualización?";
-	DOCUREFASKINGBWARNING = "\n\n{o}Warning{w} : El creador de esta actualización no es el autor de la versión que tienes.\n\n{v}¿Aceptas la actualización?";
+	DOCUREFASKINGBWARNING = "\n\n{o}Aviso{w} : El creador de esta actualización no es el autor de la versión que tienes.\n\n{v}¿Aceptas la actualización?";
 	DOCUREFASKINGC = "\n\n{v}¿Aceptas?";
 }
 
@@ -312,7 +312,7 @@ DocumentsTexts = {
 	ECHANGEACCEPT = "\"{w}\n\n¿Aceptas este documento?";
 	EDITAUTEUR = "Editar Documento";
 	EDITAUTEURTEXT = "Ten cuidado, no eres el creador de este documento. {o}Si vas a modificarlo y guardarlo, serás el nuevo creador.";
-	CREATEUR = "Creador del docuemnto : ";
+	CREATEUR = "Creador del documento : ";
 	YOUCREATEUR = "Eres el creador del documento";
 }
 
@@ -326,8 +326,8 @@ CONFIGINVCONFIRM = {
 
 CONFIGDOCUCONFIRM = {
 	" Denegar automáticamente cualquier petición para recibir un documento y/o información de documento.",
-	" {o}Always{w} display a prompt if anyone wants to send you an document or a reference or an update of a reference that you already have.",
-	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the document. If this is the case"
+	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un documento, una referencia o una actualización de una referencia que ya tienes.",
+	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un item o referencia, salvo que la referencia sea conocida y el emisor es el creador del documento."
 	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
 	" Receiving / updating reference are always accepted, regardless of the creator {r}(!not recommended!).",
 }

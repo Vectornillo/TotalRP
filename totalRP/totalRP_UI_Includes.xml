@@ -1180,7 +1180,7 @@
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 			GameTooltip:AddLine("[TRP] Inbox", 1, 1, 1);
-			GameTooltip:AddLine("Check mail", 0, 1, 0);
+			GameTooltip:AddLine("Consultar correo", 0, 1, 0);
 			local tab = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["InBox"],
 			function(objet)
@@ -1219,7 +1219,7 @@
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 			GameTooltip:AddLine("[TRP] Outbox", 1, 1, 1);
-			GameTooltip:AddLine("Consult waiting mail", 0, 1, 0);
+			GameTooltip:AddLine("Consultar correo en espera", 0, 1, 0);
 			local tab = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"],
 			function(objet)

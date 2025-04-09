@@ -2447,7 +2447,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Listra de escondrijos",1,1,1);
+									GameTooltip:AddLine("Lista de escondrijos",1,1,1);
 									GameTooltip:Show()
 								</OnEnter>
 								<OnLeave>

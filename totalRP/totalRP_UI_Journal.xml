@@ -490,7 +490,7 @@
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Entregar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -542,7 +542,7 @@
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Entregar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 
@@ -595,7 +595,7 @@
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Entregar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 
@@ -648,7 +648,7 @@
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Entregar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -700,7 +700,7 @@
 							end
 							if UnitName("target") ~= nil and UnitName("target") ~= Joueur and UnitIsPlayer("target") and UnitFactionGroup("target") == UnitFactionGroup("player") and 
 							CheckInteractDistance("target",3) ~= nil then
-								GameTooltip:AddLine(CLICGAUCHECTRL.." : Dar el documento a "..UnitName("target"),0.5,0.5,1);
+								GameTooltip:AddLine(CLICGAUCHECTRL.." : Entregar el documento a "..UnitName("target"),0.5,0.5,1);
 							end
 							GameTooltip:Show()
 						</OnEnter>
