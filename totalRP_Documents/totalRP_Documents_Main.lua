@@ -144,7 +144,7 @@ function donnerDocument(ID)
 end
 
 function AskingDocument(docu,sender)
-	if string.len(objet[1]) > 16 then return end;
+	--if string.len(objet[1]) > 16 then return end;
 	if UnitAffectingCombat("player") ~= nil then
 		TRPSecureSendAddonMessage("SDM","{r}"..Joueur..ExchangeError["ISFINGHTING"],sender);
 		return;

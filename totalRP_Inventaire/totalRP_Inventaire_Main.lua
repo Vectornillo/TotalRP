@@ -553,9 +553,9 @@ function ChargerSliderCoffreVertical(num)
 									if IsControlKeyDown() then
 										DonnerObjet(CoffreTab[objet][1],UnitName("target"));
 									elseif IsShiftKeyDown() then
-										if ChatFrameEditBox:IsVisible() then
+										--[[if ChatFrameEditBox:IsVisible() then
 											ChatFrameEditBox:SetText(ChatFrameEditBox:GetText().."["..objetID["Nom"].."]");
-										else
+										else]]
 											SendMailBoxSlot:SetText(CoffreTab[objet][1]);
 											SendMailBoxID:SetText(CoffreTab[objet][2]);
 											SendMailBoxMax:SetText(CoffreTab[objet][3]);
@@ -564,7 +564,7 @@ function ChargerSliderCoffreVertical(num)
 											EnvoiCourrierSaisieCommentaire:SetText("");
 											TRPListePersonnagesType:SetText("1");
 											SendMailBox:Show();
-										end
+										--end
 									elseif IsAltKeyDown() then
 										SendPersoBoxSlot:SetText(CoffreTab[objet][1]);
 										SendPersoBoxID:SetText(CoffreTab[objet][2]);
