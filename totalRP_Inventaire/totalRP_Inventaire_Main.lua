@@ -1167,13 +1167,16 @@ function VerifierInventaire(texte)
 				else
 					TRPError("Missing component.")
 				end
-				return;
-			elseif bDelete == "1" then
-				TabInvToDelete[i] = {};
-				TabInvToDelete[i]["Slot"] = SlotFound;
-				TabInvToDelete[i]["Qte"] = Qte;
-				i = i + 1;
-			end
+				TabInvToDelete = nil;
+				return retour;
+			else
+				if bDelete == "1" then
+					TabInvToDelete[i] = {};
+					TabInvToDelete[i]["Slot"] = SlotFound;
+					TabInvToDelete[i]["Qte"] = Qte;
+					i = i + 1;
+				end
+			end			
 		end
 	end);
 	return retour;
