@@ -245,6 +245,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen("FicheJoueurOngletInventaire","InventaireOngletSacADos")
+					PlaySoundFile("Sound\\Interface\\PickUp\\PickUpBag.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -352,6 +353,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen("FicheJoueurOngletInventaire","InventaireOngletCreation")
+					PlaySoundFile("Sound\\Vehicles\\Vehicle_Airplane_GearShift_1.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");
@@ -729,6 +731,7 @@
 							else
 								createEmptyDocument();
 							end
+							PlaySoundFile("Sound\\Interface\\WriteQuestA.wav")
 						</OnClick>
 					</Scripts>
 				</Button>

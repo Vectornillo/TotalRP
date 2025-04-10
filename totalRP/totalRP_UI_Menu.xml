@@ -217,6 +217,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen(this:GetName())
+					PlaySoundFile("Sound\\Interface\\iAbilitiesOpenA.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -237,6 +238,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen(this:GetName())
+					PlaySoundFile("Sound\\Interface\\KeyRingClose.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -257,6 +259,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen(this:GetName())
+					PlaySoundFile("Sound\\Interface\\iAbilitiesOpenA.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -277,6 +280,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen(this:GetName())
+					PlaySoundFile("Sound\\Vehicles\\Vehicle_Airplane_GearShift_4.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");

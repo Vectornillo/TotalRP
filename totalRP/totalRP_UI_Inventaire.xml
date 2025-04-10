@@ -2236,6 +2236,7 @@
 					<Scripts>
 						<OnClick>
 							PanelOpen("FicheJoueurOngletInventaire",this:GetName())
+							PlaySoundFile("Sound\\Interface\\PickUp\\PickUpBag.wav")
 						</OnClick>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -2382,6 +2383,7 @@
 					<Scripts>
 						<OnClick>
 							PanelOpen("FicheJoueurOngletInventaire",this:GetName())
+							PlaySoundFile("Sound\\Interface\\iAbilitiesOpenA.wav")							
 						</OnClick>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");
@@ -2402,6 +2404,7 @@
 					<Scripts>
 						<OnClick>
 							PanelOpen("FicheJoueurOngletInventaire",this:GetName())
+							PlaySoundFile("Sound\\Vehicles\\Vehicle_Airplane_GearShift_1.wav")
 						</OnClick>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");
@@ -3039,6 +3042,7 @@
 									else
 										createEmptyObjet();
 									end
+									PlaySoundFile("Sound\\Vehicles\\Vehicle_Airplane_GearShift_5.wav")
 								</OnClick>
 							</Scripts>
 						</Button>
