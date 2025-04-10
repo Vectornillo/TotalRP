@@ -227,7 +227,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						end
 						i = i + 1;
 						local Localclass,englishClass = UnitClass("mouseover");
-						infoTab[i] = "|cffffffff"..UnitRace("mouseover").." "..classes_color[englishClass]..Localclass.."|cffffffff (Level "..UnitLevel("mouseover")..")";
+						infoTab[i] = "|cffffffff"..UnitRace("mouseover").." "..classes_color[englishClass]..Localclass.."|cffffffff (Nivel "..UnitLevel("mouseover")..")";
 						if TRP_Module_Configuration["Modules"]["Tooltip"]["Guilde"] and GetGuildInfo("player") ~= nil then
 							i = i + 1;
 							local guilde, grade = GetGuildInfo("player");
@@ -405,7 +405,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						end
 						i = i + 1;
 						local Localclass,englishClass = UnitClass("mouseover");
-						infoTab[i] = "|cffffffff"..UnitRace("mouseover").." "..classes_color[englishClass]..Localclass.."|cffffffff (Level "..UnitLevel("mouseover")..")";
+						infoTab[i] = "|cffffffff"..UnitRace("mouseover").." "..classes_color[englishClass]..Localclass.."|cffffffff (Nivel "..UnitLevel("mouseover")..")";
 						if TRP_Module_Configuration["Modules"]["Tooltip"]["Guilde"] and GetGuildInfo("mouseover") ~= nil then
 							i = i + 1;
 							local guilde, grade = GetGuildInfo("mouseover");

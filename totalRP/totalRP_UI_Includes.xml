@@ -1179,7 +1179,7 @@
 		</OnClick>
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-			GameTooltip:AddLine("[TRP] Inbox", 1, 1, 1);
+			GameTooltip:AddLine("[TRP] Bandeja de Entrada", 1, 1, 1);
 			GameTooltip:AddLine("Consultar correo", 0, 1, 0);
 			local tab = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["InBox"],
@@ -1187,7 +1187,7 @@
 				tab = tab + 1;
 			end);
 			if tab > 0 then
-				GameTooltip:AddLine("You have "..tab.." packages pending.", 0, 1, 0);
+				GameTooltip:AddLine("Tienes "..tab.." paquetes entrantes.", 0, 1, 0);
 			end
 			GameTooltip:Show();
 		</OnEnter>
@@ -1218,7 +1218,7 @@
 		</OnClick>
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-			GameTooltip:AddLine("[TRP] Outbox", 1, 1, 1);
+			GameTooltip:AddLine("[TRP] Bandeja de Salida", 1, 1, 1);
 			GameTooltip:AddLine("Consultar correo en espera", 0, 1, 0);
 			local tab = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"],
@@ -1226,7 +1226,7 @@
 				tab = tab + 1;
 			end);
 			if tab > 0 then
-				GameTooltip:AddLine("You have "..tab.." packages waiting to be sent", 0, 1, 0);
+				GameTooltip:AddLine("Tienes "..tab.." paquetes pendientes de envío", 0, 1, 0);
 			end
 			GameTooltip:Show();
 		</OnEnter>

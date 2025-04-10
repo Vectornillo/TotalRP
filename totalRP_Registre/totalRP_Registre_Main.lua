@@ -729,25 +729,25 @@ function GenererNotes(nom)
 	local genre = UnitSex("target");
 	local informations = "----------------------------------------\nInformation :\n----------------------------------------\n";
 	
-	informations = informations.."- Faction : "..faction.."\n";
-	informations = informations.."- Race : "..race.."\n";
-	informations = informations.."- Class : "..classe.."\n";
+	informations = informations.."- Facción : "..faction.."\n";
+	informations = informations.."- Raza : "..race.."\n";
+	informations = informations.."- Clase : "..classe.."\n";
 	if guilde == nil or guilde == "" then 
-		informations = informations.."- Guild : < Aucune >\n" 
+		informations = informations.."- Hermandad : < Ninguna >\n" 
 		grade = nil;
 	else 
-		informations = informations.."- Guild : < "..guilde.." >\n"
+		informations = informations.."- Hermandad : < "..guilde.." >\n"
 		if grade == nil or grade == "" then
-			informations = informations.."- Rank : < Aucun >\n";
+			informations = informations.."- Rango : < Ninguno >\n";
 		else
-			informations = informations.."- Rank : < "..grade.." >\n";
+			informations = informations.."- Rango : < "..grade.." >\n";
 		end
 	end
-	informations = informations.."- Level : "..cercle.."\n";
+	informations = informations.."- Nivel : "..cercle.."\n";
 	if genre == 2 then
-		informations = informations.."- Sex : Male\n";
+		informations = informations.."- Sexo : Hombre\n";
 	elseif genre == 3 then
-		informations = informations.."- Sex : Female\n";
+		informations = informations.."- Sexo : Mujer\n";
 	end
 	informations = informations.."----------------------------------------"; -- Place les info a la fin des notes
 	TRP_Module_PlayerInfo_Notes[Royaume][nom] = TRP_Module_PlayerInfo_Notes[Royaume][nom].."\n\n"..informations;

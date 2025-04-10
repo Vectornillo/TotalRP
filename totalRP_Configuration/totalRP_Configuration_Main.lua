@@ -85,7 +85,7 @@ end
 function setTooltipDocuLevel(slider,value)
 	if slider:IsVisible() then
 		GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-		GameTooltip:AddLine("Filtering level :",1,0.75,0);
+		GameTooltip:AddLine("Nivel de filtrado :",1,0.75,0);
 		GameTooltip:AddLine(" ",1,0.75,0);
 		GameTooltip:AddLine(setTRPColorToString(CONFIGDOCUCONFIRMTITLE[value]),1,0.75,0);
 		GameTooltip:AddLine(" ",1,0.75,0);
@@ -97,7 +97,7 @@ end
 function setTooltipInventaireLevel(slider,value)
 	if slider:IsVisible() then
 		GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-		GameTooltip:AddLine("Filtering level :",1,0.75,0);
+		GameTooltip:AddLine("Nivel de filtrado :",1,0.75,0);
 		GameTooltip:AddLine(" ",1,0.75,0);
 		GameTooltip:AddLine(setTRPColorToString(CONFIGINVCONFIRMTITLE[value]),1,0.75,0);
 		GameTooltip:AddLine(" ",1,0.75,0);

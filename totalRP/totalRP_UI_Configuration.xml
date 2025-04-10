@@ -813,7 +813,7 @@
 							<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-80"/></Offset></Anchor></Anchors>
 							<Scripts>
 								<OnLoad>
-									getglobal(this:GetName().."Text"):SetText("Level filter");
+									getglobal(this:GetName().."Text"):SetText("Nivel de filtrado");
 									getglobal(this:GetName().."High"):SetText("");
 									getglobal(this:GetName().."Low"):SetText("");
 									this:SetOrientation("Horizontal");
@@ -929,7 +929,7 @@
 							<Anchors><Anchor point="TOP"><Offset><AbsDimension x="0" y="-80"/></Offset></Anchor></Anchors>
 							<Scripts>
 								<OnLoad>
-									getglobal(this:GetName().."Text"):SetText("Level filter");
+									getglobal(this:GetName().."Text"):SetText("Nivel de filtrado");
 									getglobal(this:GetName().."High"):SetText("");
 									getglobal(this:GetName().."Low"):SetText("");
 									this:SetOrientation("Horizontal");
@@ -1577,11 +1577,11 @@
 									TRPActionsBar:EnableMouse(not TRP_Module_Configuration["Modules"]["Actions"]["Lock"]);
 								</OnClick>
 								<OnLoad>
-									ConfigActionLockCheckText:SetText("Locking location");
+									ConfigActionLockCheckText:SetText("Bloquear posición");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Locking location :",1,0.75,0);
+									GameTooltip:AddLine("Bloquear posición :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RACCLOCK"],35,1,1,1);
 									GameTooltip:Show();
