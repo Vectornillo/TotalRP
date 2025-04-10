@@ -1148,11 +1148,11 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Description"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipDescriptionCheckText:SetText("First 200 char. of description");
+									ConfigTooltipDescriptionCheckText:SetText("Primeros 200 char. de descripción");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("First 200 char. of description :",1,0.75,0);
+									GameTooltip:AddLine("Primeros 200 char. de descripción :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLDESCRI"],35,1,1,1);
 									GameTooltip:Show();

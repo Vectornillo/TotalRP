@@ -67,7 +67,7 @@
 			end);
 			if count > 0 then
 				GameTooltip:AddLine(" ",1,0.75,0);
-				GameTooltip:AddLine("You have ".. count .." packages awaiting to be read. \ nGo to a mailbox!",0.25,1,0);
+				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \ n¡Ve a un buzón!",0.25,1,0);
 			end
 			count = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"], function()
@@ -75,7 +75,7 @@
 			end);
 			if count > 0 then
 				GameTooltip:AddLine(" ",1,0.75,0);
-				GameTooltip:AddLine("You have ".. count .." packages awaiting to be sent. \ nGo to a mailbox!",0.25,1,0);
+				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \ n¡Ve a un buzón!",0.25,1,0);
 			end
 			GameTooltip:Show();
 		</OnEnter>
@@ -894,11 +894,11 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if ChatFrame3:IsVisible() then
-								GameTooltip:AddLine("Chat Window n°3 : "..GetChatWindowInfo(3), 0, 1, 0);
-								GameTooltip:AddLine("Click: Hide this Chat Window", 1, 0.75, 0);
+								GameTooltip:AddLine("Ventana de Chat nº3 : "..GetChatWindowInfo(3), 0, 1, 0);
+								GameTooltip:AddLine("Click: Oculta esta Ventana de Chat", 1, 0.75, 0);
 							else
-								GameTooltip:AddLine("Chat Window n°3 : "..GetChatWindowInfo(3), 1, 0, 0);
-								GameTooltip:AddLine("Click: Show this Chat Window", 0, 1, 0);
+								GameTooltip:AddLine("Ventana de Chat n°3 : "..GetChatWindowInfo(3), 1, 0, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 0, 1, 0);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -984,11 +984,11 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if ChatFrame4:IsVisible() then
-								GameTooltip:AddLine("Chat Window n°4 : "..GetChatWindowInfo(4), 0, 1, 0);
-								GameTooltip:AddLine("Click: Hide this Chat Window", 1, 0.75, 0);
+								GameTooltip:AddLine("Ventana de Chat n°4 : "..GetChatWindowInfo(4), 0, 1, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 1, 0.75, 0);
 							else
-								GameTooltip:AddLine("Chat Window n°4 : "..GetChatWindowInfo(4), 1, 0, 0);
-								GameTooltip:AddLine("Click: Show this Chat Window", 0, 1, 0);
+								GameTooltip:AddLine("Ventana de Chat n°4 : "..GetChatWindowInfo(4), 1, 0, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 0, 1, 0);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1074,11 +1074,11 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if ChatFrame5:IsVisible() then
-								GameTooltip:AddLine("Chat Window n°5 : "..GetChatWindowInfo(5), 0, 1, 0);
-								GameTooltip:AddLine("Click: Hide this Chat Window", 1, 0.75, 0);
+								GameTooltip:AddLine("Ventana de Chat nº5 : "..GetChatWindowInfo(5), 0, 1, 0);
+								GameTooltip:AddLine("Click: Oculta esta Ventana de Chat", 1, 0.75, 0);
 							else
-								GameTooltip:AddLine("Chat Window n°5 : "..GetChatWindowInfo(5), 1, 0, 0);
-								GameTooltip:AddLine("Click: Show this Chat Window", 0, 1, 0);
+								GameTooltip:AddLine("Ventana de Chat n°5 : "..GetChatWindowInfo(5), 1, 0, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 0, 1, 0);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1164,11 +1164,11 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if ChatFrame6:IsVisible() then
-								GameTooltip:AddLine("Chat Window n°6 : "..GetChatWindowInfo(6), 0, 1, 0);
-								GameTooltip:AddLine("Click: Hide this Chat Window", 1, 0.75, 0);
+								GameTooltip:AddLine("Ventana de Chat nº6 : "..GetChatWindowInfo(6), 0, 1, 0);
+								GameTooltip:AddLine("Click: Oculta esta Ventana de Chat", 1, 0.75, 0);
 							else
-								GameTooltip:AddLine("Chat Window n°6 : "..GetChatWindowInfo(6), 1, 0, 0);
-								GameTooltip:AddLine("Click: Show this Chat Window", 0, 1, 0);
+								GameTooltip:AddLine("Ventana de Chat n°6 : "..GetChatWindowInfo(6), 1, 0, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 0, 1, 0);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1254,11 +1254,11 @@
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if ChatFrame7:IsVisible() then
-								GameTooltip:AddLine("Chat Window n°7 : "..GetChatWindowInfo(7), 0, 1, 0);
-								GameTooltip:AddLine("Click: Hide this Chat Window", 1, 0.75, 0);
+								GameTooltip:AddLine("Ventana de Chat nº7 : "..GetChatWindowInfo(7), 0, 1, 0);
+								GameTooltip:AddLine("Click: Oculta esta Ventana de Chat", 1, 0.75, 0);
 							else
-								GameTooltip:AddLine("Chat Window n°7 : "..GetChatWindowInfo(7), 1, 0, 0);
-								GameTooltip:AddLine("Click: Show this Chat Window", 0, 1, 0);
+								GameTooltip:AddLine("Ventana de Chat n°7 : "..GetChatWindowInfo(7), 1, 0, 0);
+								GameTooltip:AddLine("Click: Mostrar esta Ventana de Chat", 0, 1, 0);
 							end
 							GameTooltip:Show()
 						</OnEnter>

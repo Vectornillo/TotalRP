@@ -5,7 +5,7 @@
 		CreaObjScrollAideText:SetText(setTRPColorToString(TEXTE_AIDE_BUTTON[nom]["Texte"]));
 	else
 		AideCreaObjText:SetText();
-		CreaObjScrollAideText:SetText("There is no help yet for this option");
+		CreaObjScrollAideText:SetText("Aún no hay ayuda para esta opción");
 	end
 end
 
@@ -1045,14 +1045,14 @@ function generateCoordonnees()
 		x = math.floor(x * 250);
 		y = math.floor(y * 250);
 	else
-		x = "<unknown>";
-		y = "<unknown>";
+		x = "<desconocida>";
+		y = "<desconocida>";
 	end
 	return x,y;
 end
 
 function TRPGPS()
 	local x,y = generateCoordonnees();
-	sendMessage("{j}Actual location :\nContinent : "..tostring(GetCurrentMapContinent()).."\nZone : "..tostring(GetCurrentMapZone()).."\nSub-Zone : "..tostring(GetSubZoneText()).."\nX : "..tostring(x).."  , Y : "..tostring(y));
+	sendMessage("{j}Localización Actual :\nContinente : "..tostring(GetCurrentMapContinent()).."\nZona : "..tostring(GetCurrentMapZone()).."\nSubzona : "..tostring(GetSubZoneText()).."\nX : "..tostring(x).."  , Y : "..tostring(y));
 end
 

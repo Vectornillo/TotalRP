@@ -263,7 +263,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Main Information", 1, 1, 1);
+					GameTooltip:AddLine("Información General", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>
@@ -484,7 +484,7 @@
 					</Anchors>
 					<Layers>
 						<Layer level="OVERLAY">	
-							<FontString name="UtilisationGeneralTitle" inherits="GameFontNormalHuge" justifyH="LEFT" text="Main Information :">
+							<FontString name="UtilisationGeneralTitle" inherits="GameFontNormalHuge" justifyH="LEFT" text="Información General :">
 								<Size>
 									<AbsDimension x="250" y="0"/>
 								</Size>
@@ -1005,7 +1005,7 @@
 								<Color r="0.95" g="0.95" b="0.95"/>
 							</FontString>
 							<!-- USE : Lier document  -->
-							<FontString name="CreaObjOptionLierDocument" inherits="GameFontNormal" justifyH="LEFT" text="Link to a document :">
+							<FontString name="CreaObjOptionLierDocument" inherits="GameFontNormal" justifyH="LEFT" text="Enlazar a documento :">
 								<Size>
 									<AbsDimension x="350" y="0"/>
 								</Size>

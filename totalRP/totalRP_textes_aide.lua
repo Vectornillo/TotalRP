@@ -193,16 +193,16 @@ TRPCheckOptionTooltip = {
 	USEPERSOTOOL = " Allows you to use a improved tooltip for the players. The new tooltip contains information specific to TotalRP "
 					.."and you can choose his composition through the list below.";
 	COMMUPARENT = " Allows you to automatically cover your sentences with parenthesis when you speak with an OOC status in a RP channel (/say, /group /guild, /w and /yell).";
-	RACCALPHA = " Determines the transparency of the shortcuts bar.";
-	RACCREINIT = " Reset the position of the shortcuts bar, if you'd lost it. ;)";
+	RACCALPHA = " Define la transparencia de la barra de atajos.";
+	RACCREINIT = " Reinicia la posición de la barra de atajos si la perdiste. ;)";
 	TOOLSTATUT = " Displays the character's status (IC or OOC) in his tooltip.";
-	RACCLOCK = " Locks the shortcuts bar, preventing you from moving in by error.";
-	TOOLST = " Displays the character's title in his tooltip.";
+	RACCLOCK = " Bloquea la ventana de atajos, previniendo que se la muevas por error.";
+	TOOLST = " Mostrar el título del personaje en este tooltip.";
 	TOOLACTUELLE = " Displays the character's \"current\" description in his tooltip.";
 	TOOLDESCRI = " Displays the beginning of the character's physical description (the first 200 characters) in his tooltip.";
 	TOOLRELATION = " Shows the relationship between the character and you as an icon in his tooltip.";
-	TOOLALIGNEMENT = " Shows the character's Alignment in his tooltip.";
-	TOOLHUMEUR = " Displays the character's mood in his tooltip.";
+	TOOLALIGNEMENT = " Mostrar el Alineamiento de este personaje en este tooltip.";
+	TOOLHUMEUR = " Muestra el humor del personaje en este tooltip.";
 	TOOLGUILD = " Displays character's guild information (Name, Rank) in his tooltip.";
 	TOOLIMAGE = " Displays the character's faction and PvP status in his tooltip.";
 	TOOLCOUPERNOM = " If the character's full name (prefix + first and last names) to is too large and exceeds the limit you selected, it will be cut.";
@@ -211,7 +211,7 @@ TRPCheckOptionTooltip = {
 	TOOLINVDOCU = " If a item is associated to a document, the document thumbnail will be displayed in the tooltip.";
 	CHECKRESUME = " When selecting a character, displays a window containing the character's information summary. (As a FlagRSP window style)";
 	RESUMEPERSIS = " If this option is enabled, the summary window will not close automatically even after deselecting the character. It will have to be manually closed.";
-	RESUMEOPACITE = " Determines the summary window opacity";
+	RESUMEOPACITE = " Define la opacidad de la ventana de eesumen";
 	ALIGNEPUBLIC = " Determines if your character's Alignment (Morality and Ethics) will be shown to other players.";
 	ALIGNAFFICHE = " Determines if you can see the Alignment (Morallity and Ethics) of other characters.";
 	NOTIFYAJOUT = " When a character is added to your Register, a message will be displayed to notify you.";
@@ -220,24 +220,24 @@ TRPCheckOptionTooltip = {
 				.."allowing the player using FlagRSP/MyRP/ImmersionRP (or TotalRP and having enabled this option) to recover them.";
 	FORCEMAJ = " When you consult a character's sheet, TRP will try to update them, event if the character is not connected.";
 	RAPPELINFO = " Show you a reminder of the main information of your character (PR Status, Current Description  ..) at your connection.";
-	DEBUG = " Displays debugging messages. Useful for beta testers.";
+	DEBUG = " Mostrar mensajes de depuración. Útil para beta testers.";
 	ICONPOS = " Determines distance between the TotalRP minimap icon and the center of the minimap.";
-	ICONROT = " Determines the rotation of the TotalRP icon around the minimap.";
-	COMBATCLOSE = " Automatically close all TotalRP windows if your character comes into battle.";
+	ICONROT = " Define la rotación del icono de TotalRP alrededor del minimapa.";
+	COMBATCLOSE = " Cerrar automáticamente todas las ventanas de TotalRP si tu personaje entra en batalla.";
 	NEWVERSION = " Show you a message notifying you of the availability of a new version of TotalRP if someone with a newer version than yours tries to interact with you.";
-	CHATAMELIO = " Allows Total RP to improve the display of chat windows.";
+	CHATAMELIO = " Permite que TotalRP mejore la salida de las ventanas de chat.";
 	HRPDETECT = " Total RP will detect any words in brackets and display it in another color (darker) by placing a tag [OOC] in front of it.";
 	EMOTEDETECT = " Total RP will detect any words between stars (**) or between cones (<>) and display it as if it were a personal emote (/ me).";
 	SPAMDETECT = " Total RP will detect and will not display messages containing a combination of letters you have marked as prohibited.";
-	NAMEINCHAT = " Display the characters last names in the chat windows.";
-	DEBUGFRAME = " If you want to display debug messages in a specific chat window.\n\n"..CHATFRAMEEXPLICATION;
+	NAMEINCHAT = " Mostrar los apellidos de personaje en las ventanas de chat.";
+	DEBUGFRAME = " Si quieres mostrar mensajes de depuración en una ventana específica.\n\n"..CHATFRAMEEXPLICATION;
 	HRPDETECTFRAME = " If you want the catched OOC sentences to be placed in another chat window than when they first appeared, please enter the number of the chat window target. Otherwise, leave blank.\n\n"..CHATFRAMEEXPLICATION;
 	SPAMDETECTFRAME = " If you want the catched spam messages to be placed in another chat window rather than not to be shown at all, please indicate the number of the chat window target.\n\n"..CHATFRAMEEXPLICATION;
 	SPAMLISTEXPLAIN = " Please enter a sequence of groups of characters that are usually found only in spam messages. Any message"
 						.." containing at least one of its panels will be considered as spam and will not be displayed (or displayed depending on your options above)."
 						.." Separate each group with a newline! All non-alphanumeric characters (.,,:!? ...etc) MUST be preceded by '%' ! Use Escape to exit and save.";
 	SPAMLISTEXPLAINB = " If you are not comfortable with the concept of \"string pattern\", do not try to edit this list, you could create lua errors. ;)";
-	ACTIVATESOUND = " Allow TotalRP to play sounds. The sounds can be triggered by the use of an item or by using the list of sounds.";
+	ACTIVATESOUND = " Permite a TotalRP reproducir sonidos. Los sonidos pueden ser producido por el uso de un item o presinando la lista de sonidos.";
 	SONSATFLOOD = " Allow you to limit the flow of sounds played by TotalRP. \n When activated, you can specify in the box below the number of seconds that have to"
 				.." pass between two sounds. This applies to the sounds received from other players as much as those emitted by the use of items.";
 	SONSCOOLDOWN = " Indicate the number of seconds that have to to pass between two sounds.";
@@ -245,7 +245,7 @@ TRPCheckOptionTooltip = {
 	SONSLOGFRAME = " The chat window how will be used for the sound log.\n\n"..CHATFRAMEEXPLICATION;
 	INVFRAME = "Enter here the chat window in which you want the messages specific to the use of items to be displayed.\n\n"..CHATFRAMEEXPLICATION;
 	NAMECOLOR = " Show character's names in the color on their relationship.";
-	BARREVIE = " Show the character's life bar below the tooltip.";
+	BARREVIE = " Mostrar la vida del personaje bajo el tooltip.";
 	ICONRELATION = " Displays an icon before the name of the person who speaks showing the relationship between him and your character. The relation \"none\" will not be displayed.";
 	LOREFRAMECHECK = " You can choose in which chat window TRP will put the translations received by the add-Lore.\n\n"..CHATFRAMEEXPLICATION.."\n\nWarning: This applies only to translations of other characters. Translations of your own words (via the \"Translate to self\" Lore) will be placed in the General window. Its coded in the Lore add-on, I can not do anything about it. ;(";
 }
@@ -318,18 +318,18 @@ DocumentsTexts = {
 
 CONFIGINVCONFIRM = {
 	" Denegar automáticamente cualquier petición para recibir item y/o actualización de información.",
-	" {o}Always{w} display a prompt if anyone wants to send you an item or a reference or an update of a reference that you already have.",
-	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the item. If this is the case"
-	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
-	" Receiving / updating reference are always accepted, regardless of the creator {r}(!not recommended!).",
+	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un item o referencia, o actualización de referencia que ya tienes.",
+	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un item o referencia, salvo que la referencia se conozca, y el emisor es el creador del item."
+	.." la petición se acepta automáticamente.{v} ({v}por defecto y recomendado Opción !)",
+	" Recibir / actualizar referencias siempre se acepta, independientemente del creador{r}(¡no se recomienda!).",
 }
 
 CONFIGDOCUCONFIRM = {
 	" Denegar automáticamente cualquier petición para recibir un documento y/o información de documento.",
 	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un documento, una referencia o una actualización de una referencia que ya tienes.",
 	" {o}Siempre{w} mostrar un aviso si alguien quiere enviarte un item o referencia, salvo que la referencia sea conocida y el emisor es el creador del documento."
-	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
-	" Receiving / updating reference are always accepted, regardless of the creator {r}(!not recommended!).",
+	.." la petición se acepta automáticamente.{v} ({v}por defecto y recomendado Opción !)",
+	" Recibir / actualizar referencias siempre se acepta, independientemente del creador{r}(¡no se recomienda!).",
 }
 
 CONFIGDOCUCONFIRMTITLE = {
