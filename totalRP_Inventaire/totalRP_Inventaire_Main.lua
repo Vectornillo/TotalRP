@@ -1167,6 +1167,7 @@ function VerifierInventaire(texte)
 				else
 					TRPError("Missing component.")
 				end
+				PlaySound(soundsfiche[racesex].cantuse);
 				return;
 			elseif bDelete == "1" then
 				TabInvToDelete[i] = {};
@@ -1193,6 +1194,7 @@ function UseObjet(SlotNum)
 				if TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]] then
 					if time() < tonumber(TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]]) then
 						TRPError("The item is not ready yet.");
+						PlaySound(soundsfiche[racesex].cantuseyet);
 						return;
 					end
 				end

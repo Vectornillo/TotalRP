@@ -267,6 +267,7 @@
 				<OnClick>
 					if IsMounted() then
 						PanelOpen("FicheJoueurOngletInventaire","InventaireOngletCoffre")
+						PlaySound(12188)
 					else
 						TRPError(ObjectError["NOMOUNT"]);
 					end
@@ -297,6 +298,7 @@
 				<OnClick>
 					if DetectPlanque() then
 						PanelOpen("FicheJoueurOngletInventaire","InventaireOngletPlanques")
+						PlaySound(15029)
 					else
 						if IconeZone[GetCurrentMapContinent()] == nil or IconeZone[GetCurrentMapContinent()][GetCurrentMapZone()] == nil then
 							TRPError("You cannot create a hiding place here.");

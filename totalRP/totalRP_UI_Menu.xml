@@ -216,8 +216,8 @@
 			<Anchors><Anchor point="CENTER"><Offset><AbsDimension x="-60" y="-18"/></Offset></Anchor></Anchors>
 			<Scripts>
 				<OnClick>
-					PanelOpen(this:GetName())
-					PlaySoundFile("Sound\\Interface\\iAbilitiesOpenA.wav")
+					PanelOpen(this:GetName());
+					PlaySound(soundsfiche[racesex].hello);
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -393,8 +393,10 @@
 					if MainInventaireFrame:IsVisible() and FicheJoueurPanelTitle:GetText() == INVENTAIRESACADOS then
 						CloseAll();
 						OpenMainMenu(true);
+						PlaySoundFile("Sound\\Interface\\iAbilitiesCloseA.wav")
 					else
 						PanelOpen("FicheJoueurOngletInventaire","InventaireOngletSacADos")
+						PlaySoundFile("Sound\\Interface\\PickUp\\PickUpBag.wav")
 					end
 				</OnClick>
 				<OnUpdate>
@@ -443,8 +445,10 @@
 						if MainInventaireFrame:IsVisible() and FicheJoueurPanelTitle:GetText() == INVENTAIRECOFFRE then
 							CloseAll();
 							OpenMainMenu(true);
+							PlaySoundFile("Sound\\Interface\\iAbilitiesCloseA.wav")
 						else
 							PanelOpen("FicheJoueurOngletInventaire","InventaireOngletCoffre")
+							PlaySound(12188)
 						end
 					else
 						TRPError(ObjectError["NOMOUNT"]);
@@ -511,8 +515,10 @@
 						if MainInventaireFrame:IsVisible() and FicheJoueurPanelTitle:GetText() == INVENTAIREPLANQUES then
 							CloseAll();
 							OpenMainMenu(true);
+							PlaySoundFile("Sound\\Interface\\iAbilitiesCloseA.wav")
 						else
 							PanelOpen("FicheJoueurOngletInventaire","InventaireOngletPlanques");
+							PlaySound(15029)
 						end
 					else
 						if IconeZone[GetCurrentMapContinent()] == nil or IconeZone[GetCurrentMapContinent()][GetCurrentMapZone()] == nil then
