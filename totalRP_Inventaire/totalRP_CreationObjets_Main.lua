@@ -17,7 +17,7 @@
 		i = i + 1;
 	end
 	if CreaObjCheckBoxA3:GetChecked() and tonumber(CreaObjCheckBoxA3Edit:GetText()) > 1 then
-		infoTab[i+1] = "< "..CreaObjCheckBoxA3Edit:GetText().." charge(s) >";
+		infoTab[i+1] = "< "..CreaObjCheckBoxA3Edit:GetText().." carga(s) >";
 		i = i + 1;
 	end
 	if CreaObjSliderSousCategorie:GetValue() ~= 1 then

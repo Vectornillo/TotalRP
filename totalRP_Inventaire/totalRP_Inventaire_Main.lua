@@ -1675,7 +1675,7 @@ function SetObjetTooltip(tableauInventaire,bouton,bTransaction,Prix,PrixMax,bPla
 			if tableauInventaire["Charges"] == nil then
 				tableauInventaire["Charges"] = objet["Utilisable"]["Charges"];
 			end
-			infoTab[i+1] = "< "..tableauInventaire["Charges"].." charge(s) >";
+			infoTab[i+1] = "< "..tableauInventaire["Charges"].." carga(s) >";
 			i = i + 1;
 		end
 		
