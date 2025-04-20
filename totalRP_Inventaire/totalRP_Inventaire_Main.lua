@@ -803,6 +803,7 @@ function receiveCourrier(ID,Qte,Charges,Comment,From,SlotTarget)
 	end
 	TRPSecureSendAddonMessage("COK",SlotTarget,From);
 	sendMessage("{v}You have received a package from "..From..". Go to a mailbox to retrieve it.");
+	PlaySound(12867)
 	refreshInventaire();
 end
 
