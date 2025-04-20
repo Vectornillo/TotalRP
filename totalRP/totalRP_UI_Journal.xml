@@ -570,11 +570,11 @@
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 									if TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Lock"] then
 										if TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"] ~= Joueur then
-											GameTooltip:AddLine("Document Locked",1,0,0);
-											GameTooltip:AddLine("Document locked by the author,|cffffffff "..TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"],1,0.5,0);
+											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
+											GameTooltip:AddLine("Document bloqueado por el author,|cffffffff "..TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"],1,0.5,0);
 										else
 											GameTooltip:AddLine("Edit",1,1,1);
-											GameTooltip:AddLine("You have locked this document",1,0.75,0);
+											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
 										GameTooltip:AddLine("Edit",1,1,1);
@@ -613,7 +613,7 @@
 							DocumentsSlot4Edit:SetScript("OnClick", 
 								function(self,button,down)
 									if TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Lock"] and TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"] ~= Joueur then
-										TRPError("The document author have locked the document, you can't edit it.");
+										TRPError("El autor del documento lo ha bloqueado, no puedes editarlo.");
 									else
 										PanelOpen("FicheJoueurOngletDocument","DocumentsPanelModifier",DocumentsSlot4ID:GetText());
 									end
@@ -626,8 +626,8 @@
 											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
 											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot4ID:GetText()]["Createur"],1,0.5,0);
 										else
-											GameTooltip:AddLine("Edit",1,1,1);
-											GameTooltip:AddLine("You have locked this document",1,0.75,0);
+											GameTooltip:AddLine("Editar",1,1,1);
+											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
 										GameTooltip:AddLine("Edit",1,1,1);
@@ -665,7 +665,7 @@
 							DocumentsSlot5Edit:SetScript("OnClick", 
 								function(self,button,down)
 									if TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Lock"] and TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"] ~= Joueur then
-										TRPError("The document author have locked the document, you can't edit it.");
+										TRPError("El autor del documento lo ha bloqueado, no puedes editarlo.");
 									else
 										PanelOpen("FicheJoueurOngletDocument","DocumentsPanelModifier",DocumentsSlot5ID:GetText());
 									end
@@ -675,11 +675,11 @@
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 									if TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Lock"] then
 										if TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"] ~= Joueur then
-											GameTooltip:AddLine("Document Locked",1,0,0);
-											GameTooltip:AddLine("Document locked by the author,|cffffffff "..TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"],1,0.5,0);
+											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
+											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"],1,0.5,0);
 										else
 											GameTooltip:AddLine("Edit",1,1,1);
-											GameTooltip:AddLine("You have locked this document",1,0.75,0);
+											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
 										GameTooltip:AddLine("Edit",1,1,1);

@@ -334,10 +334,10 @@ function ReceiveDocument(docu,sender)
 			TRP_Module_Documents[ID]["Texte"]["Texte"][tonumber(docu[3])] = docu[4];
 		elseif etape == 10 then -- Fin de transaction
 			checkDocumentIntegrity(ID);
-			TRPSecureSendAddonMessage("SDM","{v}"..Joueur.." has succefully receive your document \""..TRP_Module_Documents[ID]["VignetteTitre"].."\".",sender);
+			TRPSecureSendAddonMessage("SDM","{v}"..Joueur.." ha recibido correctamente tu documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\".",sender);
 			if TRPWaitingForInfos then
 				TRPWaitingForInfos = nil;
-				sendMessage("{v}You succefully receive the document \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" from "..sender..".");
+				sendMessage("{v}Has recibido satisfactoriamente el documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
 			end
 			if PanelDocumentsConsulte:IsVisible() and PanelDocumentsNomHidden:GetText() == ID then
 				PanelOpen("FicheJoueurOngletDocument","DocumentsPanelConsulte",PanelDocumentsNomHidden:GetText());

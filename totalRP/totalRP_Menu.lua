@@ -409,7 +409,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						if TRP_Module_Configuration["Modules"]["Tooltip"]["Guilde"] and GetGuildInfo("mouseover") ~= nil then
 							i = i + 1;
 							local guilde, grade = GetGuildInfo("mouseover");
-							infoTab[i] = "|cffffffff"..grade.." from |cffffaa00"..guilde;
+							infoTab[i] = "|cffffffff"..grade.." de |cffffaa00"..guilde;
 						end
 						if TRP_Module_Registre[Royaume][nom] ~= nil and TRP_Module_Registre[Royaume][nom]["Morale"] ~= nil then -- Personnages TRP
 							if TRP_Module_Configuration["Modules"]["Registre"]["bShowAlignement"] and TRP_Module_Configuration["Modules"]["Tooltip"]["Alignement"] and TRP_Module_Registre[Royaume][nom]["Ethique"] ~= 0 then
