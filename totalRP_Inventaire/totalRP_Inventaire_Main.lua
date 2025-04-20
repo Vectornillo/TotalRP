@@ -196,8 +196,8 @@ function ShowInventaire(SacType)
 		PoidsTotal = PoidsTotal + (TRP_CoffreMonture[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Monture"]]["Poids"]);
 		PanelCoffreSacFramePoidsMax:SetText("Peso máximo : 150 kg");
 	elseif SacType == 3 then -- Boite aux lettre
-		FicheJoueurPanelTitle:SetText("Inventory : Mailbox (In)");
-		PanelCoffreSacFrameType:SetText("Mailbox");
+		FicheJoueurPanelTitle:SetText("Inventario : Buzón (Entrada)");
+		PanelCoffreSacFrameType:SetText("Buzón");
 		ArgentText:Hide();
 		ArgentText:SetText("RECEPTION");
 		InventaireSlotSacIcon:SetTexture("Interface\\ICONS\\INV_Letter_14.blp");
@@ -207,8 +207,8 @@ function ShowInventaire(SacType)
 		PanelCoffreSacFramePoidsMax:SetText("");
 		PanelCoffreSacFramePoids:Hide();
 	elseif SacType == 4 then -- Boite d'envoi
-		FicheJoueurPanelTitle:SetText("Inventory : Mailbox (Out)");
-		PanelCoffreSacFrameType:SetText("Box shipments");
+		FicheJoueurPanelTitle:SetText("Inventory : Buzón (Salida)");
+		PanelCoffreSacFrameType:SetText("Caja de envíos");
 		ArgentText:Hide();
 		ArgentText:SetText("ENVOI");
 		InventaireSlotSacIcon:SetTexture("Interface\\ICONS\\INV_Letter_18.blp");
@@ -236,7 +236,7 @@ function ShowInventaire(SacType)
 			end
 			if planque["Commentaire"] ~= nil and planque["Commentaire"] ~= "" then
 				GameTooltip:AddLine(" ",1,1,1);
-				GameTooltip:AddLine("Notes :",1,1,1);
+				GameTooltip:AddLine("Notas :",1,1,1);
 				local ok = true;
 				local morceaux = "\""..string.gsub(planque["Commentaire"],"\n"," ");
 				while ok do
@@ -282,10 +282,10 @@ function listerPlanques()
 	table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"],
 		function(planque)
 			liste = liste.."------------------------\n";
-			liste = liste.."{o}Continent : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Continent"];
-			liste = liste.."\n{o}Part : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Zone"];
-			liste = liste.."\n{o}Zone : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["SousZone"];
-			liste = liste.."\n{o}Coordinates : {w}X = "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["CoordX"]..", Y = "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["CoordY"];
+			liste = liste.."{o}Continente : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Continent"];
+			liste = liste.."\n{o}Parte : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Zone"];
+			liste = liste.."\n{o}Zona : {w}"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["SousZone"];
+			liste = liste.."\n{o}Coordenadas : {w}X = "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["CoordX"]..", Y = "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["CoordY"];
 			local numObjet = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur],
 				function(objet)
@@ -295,9 +295,9 @@ function listerPlanques()
 						end
 					end
 			end);
-			liste = liste.."\n{o}Amount of hidden items : {w}"..numObjet;
+			liste = liste.."\n{o}Total de items escondidos: {w}"..numObjet;
 			if TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Commentaire"] ~= nil and TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Commentaire"] ~= "" then
-				liste = liste.."\n{o}Comments :{w}\n\""..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Commentaire"].."\"";
+				liste = liste.."\n{o}Comentarios :{w}\n\""..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][planque]["Commentaire"].."\"";
 			end
 			liste = liste.."\n------------------------\n\n";
 	end);
@@ -1745,7 +1745,7 @@ function SetObjetTooltip(tableauInventaire,bouton,bTransaction,Prix,PrixMax,bPla
 					GameTooltip:AddLine("   Fecha : |cffffffff"..setTRPColorToString(TRP_Module_Documents[objet["Utilisable"]["LierAuDoc"]]["VignetteDate"]), 0, 0.75, 1);
 				end
 			else
-				GameTooltip:AddLine(" Error: No tienes la information\ndel documento asociado.", 1, 0, 0);
+				GameTooltip:AddLine(" Error: No tienes la información\ndel documento asociado.", 1, 0, 0);
 			end
 		end
 		
