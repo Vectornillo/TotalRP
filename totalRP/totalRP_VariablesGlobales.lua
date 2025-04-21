@@ -31,15 +31,15 @@ statut_color = {"|cffff0000","|cff00ff00","|cffffffff"};
 preTabDiscu = {
 	["CHAT_MSG_SAY"] = "",
 	["CHAT_MSG_YELL"] = "",
-	["CHAT_MSG_PARTY"] = "|Hchannel:group|h[Party]|h",
-	["CHAT_MSG_RAID"] = "|Hchannel:raid|h[Raid]|h",
-	["CHAT_MSG_GUILD"] = "|Hchannel:guilde|h[Guild]|h",
-	["CHAT_MSG_OFFICER"] = "|Hchannel:officer|h[Officer]|h",
-	["CHAT_MSG_RAID_LEADER"] = "|Hchannel:raid|h[Raid Leader]|h",
+	["CHAT_MSG_PARTY"] = "|Hchannel:group|h[Grupo]|h",
+	["CHAT_MSG_RAID"] = "|Hchannel:raid|h[Banda]|h",
+	["CHAT_MSG_GUILD"] = "|Hchannel:guilde|h[Herm]|h",
+	["CHAT_MSG_OFFICER"] = "|Hchannel:officer|h[Oficial]|h",
+	["CHAT_MSG_RAID_LEADER"] = "|Hchannel:raid|h[Líder Banda]|h",
 	["CHAT_MSG_WHISPER"] = "From ",
 	["CHAT_MSG_WHISPER_INFORM"] = "To ",
 	["CHAT_MSG_TEXT_EMOTE"] = "",
-	["CHAT_MSG_PARTY_LEADER"] = "|Hchannel:group|h[Party Leader]|h",
+	["CHAT_MSG_PARTY_LEADER"] = "|Hchannel:group|h[Líder Grupo]|h",
 }
 
 postTabDiscu = {
