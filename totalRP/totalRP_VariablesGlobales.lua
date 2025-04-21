@@ -43,14 +43,14 @@ preTabDiscu = {
 }
 
 postTabDiscu = {
-	["CHAT_MSG_SAY"] = "|r] says :  ",
-	["CHAT_MSG_YELL"] = "|r] yells :  ",
+	["CHAT_MSG_SAY"] = "|r] dice :  ",
+	["CHAT_MSG_YELL"] = "|r] grita :  ",
 	["CHAT_MSG_PARTY"] = "|r]:  ",
 	["CHAT_MSG_RAID"] = "|r]:  ",
 	["CHAT_MSG_GUILD"] = "|r]:  ",
 	["CHAT_MSG_OFFICER"] = "|r]:  ",
 	["CHAT_MSG_RAID_LEADER"] = "|r]:  ",
-	["CHAT_MSG_WHISPER"] = "|r] whispers :  ",
+	["CHAT_MSG_WHISPER"] = "|r] susurra :  ",
 	["CHAT_MSG_WHISPER_INFORM"] = "|r]:  ",
 	["CHAT_MSG_TEXT_EMOTE"] = "",
 	["CHAT_MSG_PARTY_LEADER"] = "|r]:  ",

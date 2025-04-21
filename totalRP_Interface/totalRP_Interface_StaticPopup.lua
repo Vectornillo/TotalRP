@@ -243,7 +243,7 @@
 					texte = strsub(texte,2,strlen(texte));
 				end
 				if texte ~= "" then
-					SendChatMessage("|| "..self.trparg1.." says : "..texte,"EMOTE");
+					SendChatMessage("|| "..self.trparg1.." dice : "..texte,"EMOTE");
 				end
 			end
 	  end,
@@ -255,7 +255,7 @@
 					texte = strsub(texte,2,strlen(texte));
 				end
 				if texte ~= "" then
-					SendChatMessage("|| "..self:GetParent().trparg1.." says : "..texte,"EMOTE");
+					SendChatMessage("|| "..self:GetParent().trparg1.." dice : "..texte,"EMOTE");
 				end
 			end
 			self:GetParent():Hide();

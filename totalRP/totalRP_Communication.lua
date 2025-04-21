@@ -499,11 +499,11 @@ function AnalyserEmote(emote,perso,myChatFrame,event,coloredName)
 		end
 	elseif string.sub(emote,1,1) == "|" then
 		local trace = "|Hplayer:"..perso.."|h[-]|h";
-		if string.find(emote,"Says:  ") then
-			local Nom = string.sub(emote,3,string.find(emote,"Says:  ")-2);
-			local phrase = string.sub(emote,string.find(emote,"Says:  ")+6);
+		if string.find(emote,"Dice:  ") then
+			local Nom = string.sub(emote,3,string.find(emote,"Dice:  ")-2);
+			local phrase = string.sub(emote,string.find(emote,"Dice:  ")+6);
 			local NpcSay = ChatTypeInfo["MONSTER_SAY"];
-			myChatFrame:AddMessage(trace.." "..setTRPColorToString(Nom.." Says:  "..phrase),NpcSay.r,NpcSay.g,NpcSay.b,NpcSay.id);
+			myChatFrame:AddMessage(trace.." "..setTRPColorToString(Nom.." Dice:  "..phrase),NpcSay.r,NpcSay.g,NpcSay.b,NpcSay.id);
 		else
 			myChatFrame:AddMessage(trace.." "..setTRPColorToString(string.sub(emote,3)),infoNpc.r,infoNpc.g,infoNpc.b,infoNpc.id);
 		end

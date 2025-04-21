@@ -4,7 +4,7 @@
 -------------------------------------------------------------------------------
 
 TOTALRP = "Total RP";
-MESSAGE_ACCEUIL = "|cff00ff00Total RP : |rVersión 1.1 (Build "..TRP_version..") - Versión Española "..TRP_version_EN.."\n|cff00ff00¡Gracias por usar TotalRP!\n|cff000000< |cffff0000Foro de Total RP : http://forums.telkostrasz.be/ |cff000000>";
+MESSAGE_ACCEUIL = "|cff00ff00Total RP : |rVersión 1.1 (Build "..TRP_version..") - Versión Española "..TRP_version_EN.." |cff00ffff(trad. Vectornillo)\n|cff00ff00¡Gracias por usar TotalRP!|cff000000";
 MESSAGE_MENU = "|cff00ff00Total RP : |rVersión "..TRP_version;
 TAILLE_TEXTE = {"Muy Pequeño","Pequeño","Medio","Alto","Muy Alto","|cff999999<Desconocido>"};
 CORPULENCE_TEXTE = {"Muy Gordo","Gordo","Normal","Esbelto","Muy Esbelto","|cff999999<Unknown(e)>"};
