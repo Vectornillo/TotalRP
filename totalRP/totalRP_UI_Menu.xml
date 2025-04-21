@@ -67,7 +67,7 @@
 			end);
 			if count > 0 then
 				GameTooltip:AddLine(" ",1,0.75,0);
-				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \ n¡Ve a un buzón!",0.25,1,0);
+				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \n¡Ve a un buzón!",0.25,1,0);
 			end
 			count = 0;
 			table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"], function()
@@ -75,7 +75,7 @@
 			end);
 			if count > 0 then
 				GameTooltip:AddLine(" ",1,0.75,0);
-				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \ n¡Ve a un buzón!",0.25,1,0);
+				GameTooltip:AddLine("Tienes ".. count .." paquetes esperando a ser leídos. \n¡Ve a un buzón!",0.25,1,0);
 			end
 			GameTooltip:Show();
 		</OnEnter>
@@ -702,7 +702,7 @@
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 						if TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"] == 2 then
 						GameTooltip:AddLine("Rol ON (RON)",0,1,0);
-						GameTooltip:AddLine("Click: Entrar modo ROF.",1,0,0);
+						GameTooltip:AddLine("Click: Entrar modo ROFF.",1,0,0);
 					else
 						GameTooltip:AddLine("Rol OFF (ROF)",1,0,0);
 						GameTooltip:AddLine("Click: Entrar modo RON.",0,1,0);
@@ -761,8 +761,8 @@
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if not UnitIsAFK("player") and not UnitIsDND("player") then
 						GameTooltip:AddLine("Modo Normal",0,1,0);
-						GameTooltip:AddLine("Left click : Ponte AUS.",1,0.75,0);
-						GameTooltip:AddLine("Right click : Ponte NM. \"Do Not Disturb\".",1,0.25,0);
+						GameTooltip:AddLine("Click Izq : Ponte AUS.",1,0.75,0);
+						GameTooltip:AddLine("Click Der: Ponte NM. \"No molestar\".",1,0.25,0);
 					elseif UnitIsDND("player") then
 						GameTooltip:AddLine("Modo Actual \"No molestar\"",1,0.25,0);
 						GameTooltip:AddLine("Click : Abandona el modo NM o AUS",0,1,0);
@@ -1394,9 +1394,9 @@
 								else
 									GameTooltip:AddLine("Profile 1 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["1"]["Prenom"], 1, 0.75, 0);
 								end
-								GameTooltip:AddLine("Click: Load Profile", 0, 1, 0);
+								GameTooltip:AddLine("Click: Cargar Perfil", 0, 1, 0);
 							else
-								GameTooltip:AddLine("View Profile n°1 Unused", 0.5, 0.5, 0.5);
+								GameTooltip:AddLine("Ver el Perfil nº1 sin usar", 0.5, 0.5, 0.5);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1482,13 +1482,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Prenom"] then
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Texte"] and TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Texte"] ~= "" then
-									GameTooltip:AddLine("Profile 2 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Texte"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 2 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Texte"], 1, 0.75, 0);
 								else
-									GameTooltip:AddLine("Profile 2 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Prenom"], 1, 0.75, 0);
+									GameTooltip:AddLine("Peril 2 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["2"]["Prenom"], 1, 0.75, 0);
 								end
-								GameTooltip:AddLine("Click: Load Profile", 0, 1, 0);
+								GameTooltip:AddLine("Click: Cargar Perfil", 0, 1, 0);
 							else
-								GameTooltip:AddLine("View Profile n°2 Unused", 0.5, 0.5, 0.5);
+								GameTooltip:AddLine("Ver el Perfil nº2 sin usar", 0.5, 0.5, 0.5);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1574,13 +1574,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Prenom"] then
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Texte"] and TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Texte"] ~= "" then
-									GameTooltip:AddLine("Profile 3 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Texte"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 3 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Texte"], 1, 0.75, 0);
 								else
-									GameTooltip:AddLine("Profile 3 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Prenom"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 3 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["3"]["Prenom"], 1, 0.75, 0);
 								end
-								GameTooltip:AddLine("Click: Load Profile", 0, 1, 0);
+								GameTooltip:AddLine("Click: Cargar Perfil", 0, 1, 0);
 							else
-								GameTooltip:AddLine("View Profile n°3 Unused", 0.5, 0.5, 0.5);
+								GameTooltip:AddLine("Ver el Perfil nº3 sin usar", 0.5, 0.5, 0.5);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1666,13 +1666,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Prenom"] then
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Texte"] and TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Texte"] ~= "" then
-									GameTooltip:AddLine("Profile 4 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Texte"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 4 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Texte"], 1, 0.75, 0);
 								else
-									GameTooltip:AddLine("Profile 4 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Prenom"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 4 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["4"]["Prenom"], 1, 0.75, 0);
 								end
-								GameTooltip:AddLine("Click: Load Profile", 0, 1, 0);
+								GameTooltip:AddLine("Click: Cargar Perfil", 0, 1, 0);
 							else
-								GameTooltip:AddLine("View Profile n°4 Unused", 0.5, 0.5, 0.5);
+								GameTooltip:AddLine("Ver el Perfil nº4 sin usar", 0.5, 0.5, 0.5);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1758,13 +1758,13 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Prenom"] then
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Texte"] and TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Texte"] ~= "" then
-									GameTooltip:AddLine("Profile 5 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Texte"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 5 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Texte"], 1, 0.75, 0);
 								else
-									GameTooltip:AddLine("Profile 5 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Prenom"], 1, 0.75, 0);
+									GameTooltip:AddLine("Perfil 5 : "..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"]["5"]["Prenom"], 1, 0.75, 0);
 								end
-								GameTooltip:AddLine("Click: Load Profile", 0, 1, 0);
+								GameTooltip:AddLine("Click: Cargar Perfil", 0, 1, 0);
 							else
-								GameTooltip:AddLine("View Profile n°5 Unused", 0.5, 0.5, 0.5);
+								GameTooltip:AddLine("Ver el Perfil nº5 sin usar", 0.5, 0.5, 0.5);
 							end
 							GameTooltip:Show()
 						</OnEnter>
@@ -1911,8 +1911,8 @@
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					if UnitName("target") and not UnitIsPlayer("target") then
 						GameTooltip:AddLine(UnitName("target"),0,1,0);
-						GameTooltip:AddLine("Left-click: Make "..UnitName("target").." speak.",1,0.75,0);
-						GameTooltip:AddLine("Right Click: Make "..UnitName("target").." do an emote.",1,0.75,0);
+						GameTooltip:AddLine("Click Izq: Haz hablar a "..UnitName("target")..".",1,0.75,0);
+						GameTooltip:AddLine("Click Der: Envia emote de "..UnitName("target")..".",1,0.75,0);
 					else
 						GameTooltip:AddLine("Click: Crea un emote deslocalizado.",1,0.75,0);
 						GameTooltip:AddLine("Shift + Click Izq: Haz hablar a alguien (elección del nombre).",1,0.75,0);

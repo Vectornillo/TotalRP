@@ -36,7 +36,7 @@
 	end
 	if CreaObjEditBoxF:GetText() and TRP_Module_Documents[CreaObjEditBoxF:GetText()] then
 		GameTooltip:AddLine(" ", 1, 1, 1);
-		GameTooltip:AddLine(" Associated Document : ", 0, 0.5, 1);
+		GameTooltip:AddLine(" Documento Asociado : ", 0, 0.5, 1);
 		GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteIcone"]..".blp:45:45|t", 0, 0.75, 1);
 		if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"] ~= "" then
 			GameTooltip:AddLine("   Título : |cffffffff"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"], 0, 0.75, 1);
@@ -1291,8 +1291,8 @@ function ChargerSliderListeModele(num)
 				getglobal("ListeModeleSlot"..k):SetScript("OnEnter", function() 
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 					GameTooltip:AddLine(tostring(TRP_OBJETS_MODEL[nom]["Nom"]),0,1,0);
-					GameTooltip:AddLine("File : "..tostring(this.Url),1,0.75,0);
-					GameTooltip:AddLine("Size factor : "..tostring(this.Scale),1,0.75,0);
+					GameTooltip:AddLine("Archivo : "..tostring(this.Url),1,0.75,0);
+					GameTooltip:AddLine("Factor de Tamaño : "..tostring(this.Scale),1,0.75,0);
 					GameTooltip:Show();
 					anchorModeleTo(this.Nom,TRPListeModele,this);
 				end);

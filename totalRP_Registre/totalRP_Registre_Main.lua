@@ -556,25 +556,25 @@ function initPetButton()
 						if ID == self.creatureID then
 							GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
 							GameTooltip:AddLine(setTRPColorToString("{v}"..creatureName));
-							GameTooltip:AddLine(setTRPColorToString("{w}Instant"));
-							GameTooltip:AddLine(setTRPColorToString("{o}Click to summon your companion."));
+							GameTooltip:AddLine(setTRPColorToString("{w}Instantáneo"));
+							GameTooltip:AddLine(setTRPColorToString("{o}Click para invocar a tu compañero."));
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]
 							and (TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" or 
 							TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "") then
 								GameTooltip:AddLine(setTRPColorToString(" "));
-								GameTooltip:AddLine(setTRPColorToString("{o}Customizing companion :"));
+								GameTooltip:AddLine(setTRPColorToString("{o}Personalizar al compañero :"));
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Name :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
 								else
-									GameTooltip:AddLine(setTRPColorToString("{w}Name :{v} "..creatureName));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..creatureName));
 								end
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Description :"))
+									GameTooltip:AddLine(setTRPColorToString("{w}Descripción :"))
 									decouperForTooltip("\""..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"].."\"",35,1,0.75,0);
 								end
 							end
 							GameTooltip:AddLine(setTRPColorToString(" "));
-							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click to customize the companion"));
+							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click para personalizar al compañero"));
 							GameTooltip:Show();
 						end
 					end
@@ -584,25 +584,25 @@ function initPetButton()
 						if ID == self.creatureID then
 							GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
 							GameTooltip:AddLine(setTRPColorToString("{v}"..creatureName));
-							GameTooltip:AddLine(setTRPColorToString("{w}Instant"));
-							GameTooltip:AddLine(setTRPColorToString("{o}Click to summon your mount."));
+							GameTooltip:AddLine(setTRPColorToString("{w}Instantáneo"));
+							GameTooltip:AddLine(setTRPColorToString("{o}Click para invocar a tu montura."));
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]
 							and (TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" or 
 							TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "") then
 								GameTooltip:AddLine(setTRPColorToString(" "));
-								GameTooltip:AddLine(setTRPColorToString("{o}Customizing the mount :"));
+								GameTooltip:AddLine(setTRPColorToString("{o}Personalizar tu montura :"));
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Name :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
 								else
-									GameTooltip:AddLine(setTRPColorToString("{w}Name :{v} "..creatureName));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..creatureName));
 								end
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Description :"))
+									GameTooltip:AddLine(setTRPColorToString("{w}Descripción :"))
 									decouperForTooltip("\""..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"].."\"",35,1,0.75,0);
 								end
 							end
 							GameTooltip:AddLine(setTRPColorToString(" "));
-							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click to customize the mount"));
+							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click para personalizar tu montura"));
 							GameTooltip:Show();
 						end
 					end

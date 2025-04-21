@@ -175,7 +175,7 @@ function ShowInventaire(SacType)
 			GameTooltip:Show();
 		end);
 		PoidsTotal = PoidsTotal + (TRP_SacsADos[TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["SacADos"]]["Poids"]);
-		PanelCoffreSacFramePoidsMax:SetText("Pero máximo : 30 kg");
+		PanelCoffreSacFramePoidsMax:SetText("Peso máximo : 30 kg");
 	elseif SacType == 2 then --Coffre Monture
 		InventaireOngletCoffre:Disable();
 		InventaireOngletCoffreIcon:SetAlpha(0.5);
@@ -632,7 +632,7 @@ function ChargerSliderCoffreVertical(num)
 									GameTooltip:SetOwner(ObjetPersoSlot1, "ANCHOR_CURSOR");
 									GameTooltip:AddLine(objetID["Nom"], 1, 1, 1);
 									GameTooltip:AddLine("<Paquetes sin enviar>", 1, 1, 1);
-									GameTooltip:AddLine("From "..CoffreTab[objet][4], 0, 1, 0);
+									GameTooltip:AddLine("De "..CoffreTab[objet][4], 0, 1, 0);
 									if CoffreTab[objet][5] ~= nil and CoffreTab[objet][5] ~= "" then
 										decouperForTooltip("\""..CoffreTab[objet][5].."\"",30,1,0.85,1);
 									end
@@ -641,7 +641,7 @@ function ChargerSliderCoffreVertical(num)
 									GameTooltip:SetOwner(ObjetPersoSlot1, "ANCHOR_CURSOR");
 									GameTooltip:AddLine(objetID["nom"], 1, 1, 1);
 									GameTooltip:AddLine("<Paquetes sin leer>", 1, 1, 1);
-									GameTooltip:AddLine("From "..CoffreTab[objet][4], 0, 1, 0);
+									GameTooltip:AddLine("De "..CoffreTab[objet][4], 0, 1, 0);
 									if CoffreTab[objet][5] ~= nil and CoffreTab[objet][5] ~= "" then
 										decouperForTooltip("\""..CoffreTab[objet][5].."\"",30,1,0.85,1);
 									end

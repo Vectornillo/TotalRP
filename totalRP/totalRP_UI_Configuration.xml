@@ -283,7 +283,7 @@
 								</OnClick>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Debug Message :",1,0.75,0);
+									GameTooltip:AddLine("Mensaje Depuración :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["DEBUG"],35,1,1,1);
 									GameTooltip:Show();
@@ -351,7 +351,7 @@
 								</OnValueChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Minimap Icon Position :",1,0.75,0);
+									GameTooltip:AddLine("Posición del Icono del Minimapa :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ICONPOS"],35,1,1,1);
 									GameTooltip:Show();
@@ -380,7 +380,7 @@
 								</OnValueChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Minimap Icon Rotation :",1,0.75,0);
+									GameTooltip:AddLine("Rotación del Icono del Minimapa :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ICONROT"],35,1,1,1);
 									GameTooltip:Show();
@@ -402,7 +402,7 @@
 								</OnClick>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Close in Combat :",1,0.75,0);
+									GameTooltip:AddLine("Cerrar durante el combate :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["COMBATCLOSE"],35,1,1,1);
 									GameTooltip:Show();
@@ -424,7 +424,7 @@
 								</OnClick>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Notification when new version :",1,0.75,0);
+									GameTooltip:AddLine("Notificación de nueva versión:",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["NEWVERSION"],35,1,1,1);
 									GameTooltip:Show();
@@ -514,7 +514,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("View information summary :",1,0.75,0);
+									GameTooltip:AddLine("Ver el resumen de la información :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["CHECKRESUME"],35,1,1,1);
 									GameTooltip:Show();
@@ -539,7 +539,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Persistent summary :",1,0.75,0);
+									GameTooltip:AddLine("Resumen persistente :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RESUMEPERSIS"],35,1,1,1);
 									GameTooltip:Show();
@@ -580,7 +580,7 @@
 								</OnValueChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Summary opacity :",1,0.75,0);
+									GameTooltip:AddLine("Opacidad del resumen :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RESUMEOPACITE"],35,1,1,1);
 									GameTooltip:Show();
@@ -616,7 +616,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Share Alignements :",1,0.75,0);
+									GameTooltip:AddLine("Compartir alineamientos:",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ALIGNEPUBLIC"],35,1,1,1);
 									GameTooltip:Show();
@@ -641,7 +641,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("View Alignements :",1,0.75,0);
+									GameTooltip:AddLine("Ver Alineamientos :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ALIGNAFFICHE"],35,1,1,1);
 									GameTooltip:Show();
@@ -666,7 +666,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Additions Notification :",1,0.75,0);
+									GameTooltip:AddLine("Notificación de Añadidos :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["NOTIFYAJOUT"],35,1,1,1);
 									GameTooltip:Show();
@@ -691,7 +691,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("FlagRSP Compatibility :",1,0.75,0);
+									GameTooltip:AddLine("Compatibilidad con FlagRSP :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["COMPATFLAG"],35,1,1,1);
 									GameTooltip:Show();
@@ -716,7 +716,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Force information update :",1,0.75,0);
+									GameTooltip:AddLine("Forzar la actualización de la información :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["FORCEMAJ"],35,1,1,1);
 									GameTooltip:Show();
@@ -741,7 +741,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Info reminder :",1,0.75,0);
+									GameTooltip:AddLine("Recordatorio de Info :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RAPPELINFO"],35,1,1,1);
 									GameTooltip:Show();
@@ -851,7 +851,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Chat windows for message :",1,0.75,0);
+									GameTooltip:AddLine("Ventanas de chat para el mensaje :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["INVFRAME"],35,1,1,1);
 									GameTooltip:Show();
@@ -1019,7 +1019,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Use the TRP characters tooltip :",1,0.75,0);
+									GameTooltip:AddLine("User el tooltip de personajes de TRP :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["USEPERSOTOOL"],35,1,1,1);
 									GameTooltip:Show();
@@ -1044,7 +1044,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Role-Play Status :",1,0.75,0);
+									GameTooltip:AddLine("Estado de Rol :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLSTATUT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1080,7 +1080,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Title :",1,0.75,0);
+									GameTooltip:AddLine("Título :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLST"],35,1,1,1);
 									GameTooltip:Show();
@@ -1116,7 +1116,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("\"Current\" description :",1,0.75,0);
+									GameTooltip:AddLine("Descripción \"Actual\" :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLACTUELLE"],35,1,1,1);
 									GameTooltip:Show();
@@ -1224,7 +1224,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Alignements :",1,0.75,0);
+									GameTooltip:AddLine("Alineamientos :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLALIGNEMENT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1260,7 +1260,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Mood :",1,0.75,0);
+									GameTooltip:AddLine("Humor :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLHUMEUR"],35,1,1,1);
 									GameTooltip:Show();
@@ -1296,7 +1296,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Guild Information :",1,0.75,0);
+									GameTooltip:AddLine("Información de Hermandad :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLGUILD"],35,1,1,1);
 									GameTooltip:Show();
@@ -1373,7 +1373,7 @@
 								<OnEnter>
 									if this:IsEnabled() then
 										GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-										GameTooltip:AddLine("Cut the name after "..tostring(this:GetValue()).." characters :",1,0.75,0);
+										GameTooltip:AddLine("Cortar el nombre tras "..tostring(this:GetValue()).." caracteres :",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
 										decouperForTooltip(TRPCheckOptionTooltip["TOOLCOUPERNOM"],35,1,1,1);
 										GameTooltip:Show();
@@ -1409,13 +1409,13 @@
 									this:SetValueStep(1);
 								</OnLoad>
 								<OnValueChanged>
-									ConfigTooltipCouperTitreSliderText:SetText("Cut the title after "..tostring(this:GetValue()).." characters.")
+									ConfigTooltipCouperTitreSliderText:SetText("Cortar el título tras "..tostring(this:GetValue()).." caracteres.")
 									TRP_Module_Configuration["Modules"]["Tooltip"]["CouperTitre"] = this:GetValue();
 								</OnValueChanged>
 								<OnEnter>
 									if this:IsEnabled() then
 										GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-										GameTooltip:AddLine("Cut the title after "..tostring(this:GetValue()).." characters :",1,0.75,0);
+										GameTooltip:AddLine("Cortar el título tras "..tostring(this:GetValue()).." caracteres :",1,0.75,0);
 										GameTooltip:AddLine(" ",1,0.75,0);
 										decouperForTooltip(TRPCheckOptionTooltip["TOOLCOUPERNOM"],35,1,1,1);
 										GameTooltip:Show();
@@ -1452,7 +1452,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Factions and PvP status Icons :",1,0.75,0);
+									GameTooltip:AddLine("Iconos de Facciones y Estado JCJ :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLIMAGE"],35,1,1,1);
 									GameTooltip:Show();
@@ -1488,7 +1488,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Help for item shortcuts :",1,0.75,0);
+									GameTooltip:AddLine("Atajos de ayuda de objeto :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLINVAIDE"],35,1,1,1);
 									GameTooltip:Show();
@@ -1515,7 +1515,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Document thumbnail :",1,0.75,0);
+									GameTooltip:AddLine("Vista Previa documento :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["TOOLINVDOCU"],35,1,1,1);
 									GameTooltip:Show();
@@ -1612,7 +1612,7 @@
 								</OnClick>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Reset location :",1,0.75,0);
+									GameTooltip:AddLine("Resetear posición :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RACCREINIT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1641,7 +1641,7 @@
 								</OnValueChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Opacity :",1,0.75,0);
+									GameTooltip:AddLine("Opacidad :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["RACCALPHA"],35,1,1,1);
 									GameTooltip:Show();
@@ -1724,7 +1724,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Automatic parenthesis :",1,0.75,0);
+									GameTooltip:AddLine("Paréntesis automáticos :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["COMMUPARENT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1754,7 +1754,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Improved chat frames :",1,0.75,0);
+									GameTooltip:AddLine("Marcos de chat mejorados :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["CHATAMELIO"],35,1,1,1);
 									GameTooltip:Show();
@@ -1822,7 +1822,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("OOC chat detection :",1,0.75,0);
+									GameTooltip:AddLine("Detección de chat ROFF :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["HRPDETECT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1855,7 +1855,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Chat Window for OOC :",1,0.75,0);
+									GameTooltip:AddLine("Ventada de chat para ROFF :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["HRPDETECTFRAME"],35,1,1,1);
 									GameTooltip:Show();
@@ -1886,7 +1886,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Emote Detection :",1,0.75,0);
+									GameTooltip:AddLine("Detección de Emotes :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["EMOTEDETECT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1911,7 +1911,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Spam Detection :",1,0.75,0);
+									GameTooltip:AddLine("Detección de Spam :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SPAMDETECT"],35,1,1,1);
 									GameTooltip:Show();
@@ -1946,7 +1946,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Chat Window for Spam :",1,0.75,0);
+									GameTooltip:AddLine("Venta de chat para Spam :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SPAMDETECTFRAME"],35,1,1,1);
 									GameTooltip:Show();
@@ -1977,7 +1977,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Show last names in chat :",1,0.75,0);
+									GameTooltip:AddLine("Mostrar apellidos en el chat :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["NAMEINCHAT"],35,1,1,1);
 									GameTooltip:Show();
@@ -2017,7 +2017,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Colored names in chat :",1,0.75,0);
+									GameTooltip:AddLine("Nombres coloreados en el chat :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["NAMECOLOR"],35,1,1,1);
 									GameTooltip:Show();
@@ -2067,7 +2067,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Translation in other windows :",1,0.75,0);
+									GameTooltip:AddLine("Traducción en otras ventanas :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["LOREFRAMECHECK"],35,1,1,1);
 									GameTooltip:Show();
@@ -2110,7 +2110,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Window for translations :",1,0.75,0);
+									GameTooltip:AddLine("Ventana para traducciones :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["LOREFRAMECHECK"],35,1,1,1);
 									GameTooltip:Show();
@@ -2209,7 +2209,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Enable TRP sounds :",1,0.75,0);
+									GameTooltip:AddLine("Habilitar sonidos TRP :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["ACTIVATESOUND"],35,1,1,1);
 									GameTooltip:Show();
@@ -2253,7 +2253,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Anti-flood Sound :",1,0.75,0);
+									GameTooltip:AddLine("Sonido Anti-Spam :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SONSATFLOOD"],35,1,1,1);
 									GameTooltip:Show();
@@ -2287,7 +2287,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Waiting time between each sound  :",1,0.75,0);
+									GameTooltip:AddLine("Tiempo de espera entre sonidos :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SONSCOOLDOWN"],35,1,1,1);
 									GameTooltip:Show();
@@ -2318,7 +2318,7 @@
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Sound Log :",1,0.75,0);
+									GameTooltip:AddLine("Registor de Sonido :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SONSLOG"],35,1,1,1);
 									GameTooltip:Show();
@@ -2351,7 +2351,7 @@
 								</OnTextChanged>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("Sound Log Chat window :",1,0.75,0);
+									GameTooltip:AddLine("Ventana de Chat del Registro de Sonido :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["SONSLOGFRAME"],35,1,1,1);
 									GameTooltip:Show();
@@ -2416,7 +2416,7 @@
 			<Scripts>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("List of words considered as Spam :",1,0.75,0);
+					GameTooltip:AddLine("Lista de palabras consideradas Spam :",1,0.75,0);
 					GameTooltip:AddLine(" ",1,0.75,0);
 					decouperForTooltip(TRPCheckOptionTooltip["SPAMLISTEXPLAIN"],35,1,1,1);
 					GameTooltip:AddLine(" ",1,0.75,0);
@@ -2439,7 +2439,7 @@
 						</OnTextChanged>
 						<OnEnter>
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-							GameTooltip:AddLine("List of words considered as Spam :",1,0.75,0);
+							GameTooltip:AddLine("Lista de palabras consideradas Spam:",1,0.75,0);
 							GameTooltip:AddLine(" ",1,0.75,0);
 							decouperForTooltip(TRPCheckOptionTooltip["SPAMLISTEXPLAIN"],35,1,1,1);
 							GameTooltip:AddLine(" ",1,0.75,0);

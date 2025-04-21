@@ -303,7 +303,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Conditions for using", 1, 1, 1);
+					GameTooltip:AddLine("Condiciones de uso", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>
@@ -332,7 +332,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Booty Options", 1, 1, 1);
+					GameTooltip:AddLine("Opciones de Botín", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>
@@ -352,7 +352,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Advanced Information", 1, 1, 1);
+					GameTooltip:AddLine("Información Avanzada", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>
@@ -1491,7 +1491,7 @@
 										if string.len(CreaObjEditBoxM:GetText()) == 16 then
 											GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[CreaObjEditBoxM:GetText()]["Icone"]..".blp:45:45|t", 0, 0.75, 1);
 											GameTooltip:AddLine("   ["..TRP_Module_ObjetsPerso[CreaObjEditBoxM:GetText()]["Nom"].."]",1,1,1);
-											GameTooltip:AddLine("   Author : |cff7777ff"..TRP_Module_ObjetsPerso[CreaObjEditBoxM:GetText()]["Auteur"],1,0.75,0);
+											GameTooltip:AddLine("   Autor : |cff7777ff"..TRP_Module_ObjetsPerso[CreaObjEditBoxM:GetText()]["Auteur"],1,0.75,0);
 										else
 											GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Objects[CreaObjEditBoxM:GetText()]["Icone"]..".blp:45:45|t", 0, 0.75, 1);
 											GameTooltip:AddLine("   ["..TRP_Objects[CreaObjEditBoxM:GetText()]["Nom"].."]",1,1,1);

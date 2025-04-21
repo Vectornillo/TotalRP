@@ -167,7 +167,7 @@
 			<Scripts>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Remove",1,1,1);
+					GameTooltip:AddLine("Borrar",1,1,1);
 					GameTooltip:Show()
 				</OnEnter>
 				<OnLeave>
@@ -468,11 +468,11 @@
 											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
 											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot1ID:GetText()]["Createur"],1,0.5,0);
 										else
-											GameTooltip:AddLine("Edit",1,1,1);
+											GameTooltip:AddLine("Editar",1,1,1);
 											GameTooltip:AddLine("Has bloqueado el documento",1,0.75,0);
 										end
 									else
-										GameTooltip:AddLine("Edit",1,1,1);
+										GameTooltip:AddLine("Editar",1,1,1);
 									end
 									GameTooltip:Show();
 							end );
@@ -524,7 +524,7 @@
 											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
-										GameTooltip:AddLine("Edit",1,1,1);
+										GameTooltip:AddLine("Editar",1,1,1);
 									end
 									GameTooltip:Show();
 							end );
@@ -573,11 +573,11 @@
 											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
 											GameTooltip:AddLine("Document bloqueado por el author,|cffffffff "..TRP_Module_Documents[DocumentsSlot3ID:GetText()]["Createur"],1,0.5,0);
 										else
-											GameTooltip:AddLine("Edit",1,1,1);
+											GameTooltip:AddLine("Editar",1,1,1);
 											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
-										GameTooltip:AddLine("Edit",1,1,1);
+										GameTooltip:AddLine("Editar",1,1,1);
 									end
 									GameTooltip:Show();
 							end );
@@ -630,7 +630,7 @@
 											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
-										GameTooltip:AddLine("Edit",1,1,1);
+										GameTooltip:AddLine("Editar",1,1,1);
 									end
 									GameTooltip:Show();
 							end );
@@ -678,11 +678,11 @@
 											GameTooltip:AddLine("Documento Bloqueado",1,0,0);
 											GameTooltip:AddLine("Documento bloqueado por el autor,|cffffffff "..TRP_Module_Documents[DocumentsSlot5ID:GetText()]["Createur"],1,0.5,0);
 										else
-											GameTooltip:AddLine("Edit",1,1,1);
+											GameTooltip:AddLine("Editar",1,1,1);
 											GameTooltip:AddLine("Has bloqueado este documento",1,0.75,0);
 										end
 									else
-										GameTooltip:AddLine("Edit",1,1,1);
+										GameTooltip:AddLine("Editar",1,1,1);
 									end
 									GameTooltip:Show();
 							end );
@@ -717,7 +717,7 @@
 							GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 							GameTooltip:AddLine("Nuevo Documento",1,1,1);
 							GameTooltip:AddLine("Click-izq: Crear un nuevo documento",0,1,0);
-							GameTooltip:AddLine("Click-der Crear desde ...",0,1,0);
+							GameTooltip:AddLine("Click-der: Crear desde ...",0,1,0);
 							GameTooltip:Show()
 						</OnEnter>
 						<OnLeave>

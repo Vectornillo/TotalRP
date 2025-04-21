@@ -179,7 +179,7 @@
 	<Scripts>
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-			GameTooltip:AddLine("Delete",1,1,1);
+			GameTooltip:AddLine("Borrar",1,1,1);
 			GameTooltip:Show()
 		</OnEnter>
 		<OnLeave>
