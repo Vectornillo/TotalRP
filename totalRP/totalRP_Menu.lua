@@ -386,7 +386,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 							myNomComplet = myNomComplet..nomComplet(nom);
 						end
 						if UnitIsAFK("mouseover") then
-							myNomComplet = "|cffffffff(AFK) "..myNomComplet;
+							myNomComplet = "|cffffffff(AUS) "..myNomComplet;
 						elseif UnitFactionGroup("mouseover") == UnitFactionGroup("player") and UnitIsDND("mouseover") then
 							nomTotal = "|cffff9900(DND) "..myNomComplet;
 						end

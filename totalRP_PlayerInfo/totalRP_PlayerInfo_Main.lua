@@ -354,14 +354,14 @@ end
 
 function changeAbsStatut(bouton)
 	if UnitIsAFK("player") then
-		SendChatMessage("","AFK");
+		SendChatMessage("","AUS");
 	elseif UnitIsDND("player") then
-		SendChatMessage("","DND");
+		SendChatMessage("","NM");
 	else
 		if bouton == "LeftButton" then
-			SendChatMessage("","AFK");
+			SendChatMessage("","AUS");
 		else
-			SendChatMessage("","DND");
+			SendChatMessage("","NM");
 		end
 	end
 end
