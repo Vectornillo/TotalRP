@@ -488,12 +488,12 @@ function proceedGRI(tableau,sender)
 	elseif etape == "10" then -- Fin
 		if TRPWaitingForInfos then
 			TRPWaitingForInfos = nil;
-			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully received from "..sender..".");
+			sendMessage("{v}Información del item \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" recibida exitosamente de "..sender..".");
 		elseif TRPWaitingForShow then
 			TRPWaitingForShow = nil;
 			ShowObjetDone(ID,sender);
 		else -- Notify updates to others
-			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
+			sendMessage("{v}Información del item \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" recibida exitosamente de "..sender..".");
 			PlaySound(12867)
 		end
 		refreshInventaire();
