@@ -492,6 +492,8 @@ function proceedGRI(tableau,sender)
 		elseif TRPWaitingForShow then
 			TRPWaitingForShow = nil;
 			ShowObjetDone(ID,sender);
+		else -- Notify updates to others
+			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
 		end
 		refreshInventaire();
 	end
