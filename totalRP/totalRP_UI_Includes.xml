@@ -1481,8 +1481,8 @@
 		<OnEnter>
 			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
 			GameTooltip:AddLine(getglobal(this:GetName().."Nom"):GetText(),0,1,0);
-			GameTooltip:AddLine("Category : "..getglobal(this:GetName().."Categorie"):GetText(),0,1,0.5);
-			GameTooltip:AddLine("Path : "..getglobal(this:GetName().."Url"):GetText(),1,1,1);
+			GameTooltip:AddLine("Categoría : "..getglobal(this:GetName().."Categorie"):GetText(),0,1,0.5);
+			GameTooltip:AddLine("Ruta : "..getglobal(this:GetName().."Url"):GetText(),1,1,1);
 			GameTooltip:AddLine(" ",1,1,1);
 			GameTooltip:AddLine("Click Der: Pre-escuchar el sonido",1,0.75,0);
 			GameTooltip:AddLine("Click Izq: Reproducir sonido |cff00ff00localmente",0.25,1,0.25);

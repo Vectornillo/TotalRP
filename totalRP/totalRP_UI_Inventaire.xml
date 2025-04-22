@@ -1653,7 +1653,7 @@
 									GameTooltip:AddLine("Abrir Documento",1,1,1);
 									GameTooltip:AddLine(" ",1,1,1);
 									if CreaObjEditBoxF:GetText() and TRP_Module_Documents[CreaObjEditBoxF:GetText()] then
-										GameTooltip:AddLine("This document will be open when used :",1,0.75,0);
+										GameTooltip:AddLine("Este documento será abierto cuando se use :",1,0.75,0);
 										GameTooltip:AddLine(" ",1,1,1);
 										GameTooltip:AddLine("   |TInterface\\ICONS\\"..TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteIcone"]..".blp:45:45|t", 0, 0.75, 1);
 										if TRP_Module_Documents[CreaObjEditBoxF:GetText()]["VignetteTitre"] ~= "" then

@@ -1015,11 +1015,11 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Use"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipUseCheckText:SetText("Use the TRP characters tooltip");
+									ConfigTooltipUseCheckText:SetText("Usar el tooltip de personajes de TRP");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-									GameTooltip:AddLine("User el tooltip de personajes de TRP :",1,0.75,0);
+									GameTooltip:AddLine("Usar el tooltip de personajes de TRP :",1,0.75,0);
 									GameTooltip:AddLine(" ",1,0.75,0);
 									decouperForTooltip(TRPCheckOptionTooltip["USEPERSOTOOL"],35,1,1,1);
 									GameTooltip:Show();
@@ -1040,7 +1040,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["StatutRP"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipStatutCheckText:SetText("Role-Play Status");
+									ConfigTooltipStatutCheckText:SetText("Estado de Rol");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1112,7 +1112,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Actuellement"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipActuellementCheckText:SetText("\"Current\" description");
+									ConfigTooltipActuellementCheckText:SetText("Descripción \"Actual\"");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1220,7 +1220,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Alignement"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipAlignementCheckText:SetText("Alignments");
+									ConfigTooltipAlignementCheckText:SetText("Alineamientos");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1256,7 +1256,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Humeur"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipHumeurCheckText:SetText("Mood");
+									ConfigTooltipHumeurCheckText:SetText("Humor");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1292,7 +1292,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Guilde"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipGuildeCheckText:SetText("Guild information");
+									ConfigTooltipGuildeCheckText:SetText("Información de Hermandad");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1328,7 +1328,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["BarreDeVie"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipBarreVieCheckText:SetText("Life bar");
+									ConfigTooltipBarreVieCheckText:SetText("Barra de PS");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1367,7 +1367,7 @@
 									this:SetValueStep(1);
 								</OnLoad>
 								<OnValueChanged>
-									ConfigTooltipCouperSliderText:SetText("Cut the name after "..tostring(this:GetValue()).." characters.")
+									ConfigTooltipCouperSliderText:SetText("Cortar el nombre tras "..tostring(this:GetValue()).." characters.")
 									TRP_Module_Configuration["Modules"]["Tooltip"]["Couper"] = this:GetValue();
 								</OnValueChanged>
 								<OnEnter>
@@ -1448,7 +1448,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["UseImageIn"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipImagesCheckText:SetText("Factions and PvP status Icons");
+									ConfigTooltipImagesCheckText:SetText("Iconos de Facciones y Estado JCJ");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1484,7 +1484,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["AideInventaire"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipAideInvCheckText:SetText("Help for item shortcuts");
+									ConfigTooltipAideInvCheckText:SetText("Atajos de ayuda de objeto");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1511,7 +1511,7 @@
 									TRP_Module_Configuration["Modules"]["Tooltip"]["DocuInventaire"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigTooltipDocuInvCheckText:SetText("Document thumbnail");
+									ConfigTooltipDocuInvCheckText:SetText("Vista Previa documento ");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1718,9 +1718,9 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["AutoParenthese"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuParentheseCheckText:SetText("Automatic parenthesis");
-									ConfigCommuTitre2:SetText("Improved chat frames :");
-									ConfigCommuTitre3:SetText("Lore Compatibility :");
+									ConfigCommuParentheseCheckText:SetText("Paréntesis automáticos");
+									ConfigCommuTitre2:SetText("Marcos de chat mejorados :");
+									ConfigCommuTitre3:SetText("Compatibilidad Lore :");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1750,7 +1750,7 @@
 									end
 								</OnClick>
 								<OnLoad>
-									ConfigCommuUseTRPChatCheckText:SetText("Improved chat frames");
+									ConfigCommuUseTRPChatCheckText:SetText("Marcos de chat mejorados");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1882,7 +1882,7 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["EmoteDetect"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuEmoteDetectCheckText:SetText("Emote Detection");
+									ConfigCommuEmoteDetectCheckText:SetText("Detección de Emotes");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1907,7 +1907,7 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["SpamDetect"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuSpamDetectCheckText:SetText("Spam Detection");
+									ConfigCommuSpamDetectCheckText:SetText("Detección de Spam");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -1973,7 +1973,7 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["NameInChat"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuNameInChatCheckText:SetText("Show last names in chat");
+									ConfigCommuNameInChatCheckText:SetText("Mostrar apellidos en el chat");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -2013,7 +2013,7 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["UseColorName"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuColorNameCheckText:SetText("Colored names in chat");
+									ConfigCommuColorNameCheckText:SetText("Nombres coloreados en el chat");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -2063,7 +2063,7 @@
 									TRP_Module_Configuration["Modules"]["Communication"]["LoreFrameCheck"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigCommuLoreFrameCheckText:SetText("Translation in other windows");
+									ConfigCommuLoreFrameCheckText:SetText("Traducción en otras ventanas");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -2203,8 +2203,8 @@
 									TRP_Module_Configuration["Modules"]["Sons"]["Activate"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigSonsActivateCheckText:SetText("Enable TRP sounds");
-									ConfigSonsTitre2:SetText("Sound Settings :");
+									ConfigSonsActivateCheckText:SetText("Habilitar sonidos TRP");
+									ConfigSonsTitre2:SetText("Opciones de sonido :");
 									ConfigSonsTitre:SetText(SONSTEXT);
 								</OnLoad>
 								<OnEnter>
@@ -2314,7 +2314,7 @@
 									TRP_Module_Configuration["Modules"]["Sons"]["Log"] = (this:GetChecked() == 1);
 								</OnClick>
 								<OnLoad>
-									ConfigSonsLogCheckText:SetText("Sound Log");
+									ConfigSonsLogCheckText:SetText("Registro de Sonido");
 								</OnLoad>
 								<OnEnter>
 									GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
