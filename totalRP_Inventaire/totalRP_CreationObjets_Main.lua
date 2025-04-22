@@ -493,7 +493,7 @@ function proceedGRI(tableau,sender)
 			TRPWaitingForShow = nil;
 			ShowObjetDone(ID,sender);
 		else -- Notify updates to others
-			sendMessage("{v}Información del item \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" recibida exitosamente de "..sender..".");
+			sendMessage("{v}Información del item \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" actualizada exitosamente por "..sender..".");
 			PlaySound(12867)
 		end
 		refreshInventaire();
