@@ -340,6 +340,7 @@ function ReceiveDocument(docu,sender)
 				sendMessage("{v}Has recibido satisfactoriamente el documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
 			else -- Notify updates to others
 				sendMessage("{v}Has recibido una actualización del documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
+				PlaySound("QUESTADDED")
 			end
 			if PanelDocumentsConsulte:IsVisible() and PanelDocumentsNomHidden:GetText() == ID then
 				PanelOpen("FicheJoueurOngletDocument","DocumentsPanelConsulte",PanelDocumentsNomHidden:GetText());

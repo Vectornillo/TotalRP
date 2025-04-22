@@ -13,7 +13,7 @@ animationPlayed = 1;
 animationPlayedRixeGauche = 1;
 animationPlayedRixeDroite = 1;
 anim_humeur = {73,77,60,68,83,70,3,186,185};
-			
+	
 relation_texture = {"Interface\\ICONS\\INV_Misc_Bone_HumanSkull_02.blp",
 					"Interface\\ICONS\\Ability_DualWield.blp",
 					"Interface\\ICONS\\Achievement_Reputation_01.blp",
@@ -357,3 +357,28 @@ Documents_Consulte = {
 			},
 		},
 };
+
+racesex = select(2,UnitRace("player")) .. "" .. UnitSex("player");
+-- hello, cantuseyet, cantuse Generic, congrats
+soundsfiche = {
+	["Human2"] = {hello = 6162, cantuseyet = 1879, cantuse = 1918,congrats = 0},
+	["Human3"] = {hello = 6134,cantuseyet = 2003,cantuse = 2042,congrats = 0},
+	["Dwarf2"] = {hello = 6107, cantuseyet = 1586,cantuse = 1653,congrats = 0},
+	["Dwarf3"] = {hello = 6094,cantuseyet = 1658,cantuse = 0,congrats = 0},
+	["Gnome2"] = {hello = 6125,cantuseyet = 1713,cantuse = 1753,congrats = 0},
+	["Gnome3"] = {hello = 6116,cantuseyet = 1768,cantuse = 1808,congrats = 0},
+	["NightElf2"] = {hello = 6180,cantuseyet = 2122,cantuse = 2161,congrats = 0},
+	["NightElf3"] = {hello = 0,cantuseyet = 2233, cantuse = 2272,congrats = 0},
+	["Draenei2"] = {hello = 9712,cantuseyet = 9475,cantuse = 9535,congrats = 0},
+	["Draenei3"] = {hello = 9687,cantuseyet = 9476,cantuse = 9536,congrats = 0},
+	["Orc2"] = {hello = 6360,cantuseyet = 2288,cantuse = 2329,congrats = 0},
+	["Orc3"] = {hello = 6351,cantuseyet = 2345,cantuse = 2384,congrats = 0},
+	["Troll2"] = {hello = 6396,cantuseyet = 1824,cantuse = 1863,congrats = 0},
+	["Troll3"] = {hello = 6387,cantuseyet = 1934,cantuse = 1987,congrats = 0},
+	["Tauren2"] = {hello = 6378,cantuseyet = 2404,cantuse = 2483,congrats = 0},
+	["Tauren3"] = {hello = 6369,cantuseyet = 2405,cantuse = 2482,congrats = 0},
+	["Undead2"] = {hello = 6414,cantuseyet = 2058,cantuse = 2106,congrats = 0},
+	["Undead3"] = {hello = 6405,cantuseyet = 2177,cantuse = 2217,congrats = 0},
+	["BloodElf2"] = {hello = 9662,cantuseyet = 9559,cantuse = 9611,congrats = 0},
+	["BloodElf3"] = {hello = 9635,cantuseyet = 9560,cantuse = 9612,congrats = 0}
+};	

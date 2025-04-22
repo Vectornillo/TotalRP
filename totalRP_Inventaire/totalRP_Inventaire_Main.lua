@@ -803,6 +803,7 @@ function receiveCourrier(ID,Qte,Charges,Comment,From,SlotTarget)
 	end
 	TRPSecureSendAddonMessage("COK",SlotTarget,From);
 	sendMessage("{v}Has recibido un paquete de "..From..". Ve a un buzón a recogerlo.");
+	PlaySound(12867)
 	refreshInventaire();
 end
 
@@ -1167,6 +1168,7 @@ function VerifierInventaire(texte)
 				else
 					TRPError("Falta componente.")
 				end
+				PlaySound(soundsfiche[racesex].cantuse);
 				TabInvToDelete = nil;
 				return retour;
 			else
@@ -1196,6 +1198,7 @@ function UseObjet(SlotNum)
 				if TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]] then
 					if time() < tonumber(TRP_Module_Inventaire[Royaume][Joueur]["Cooldown"][slot["ID"]]) then
 						TRPError("El item no está preparado todavía.");
+						PlaySound(soundsfiche[racesex].cantuseyet);
 						return;
 					end
 				end

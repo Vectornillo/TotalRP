@@ -245,6 +245,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen("FicheJoueurOngletInventaire","InventaireOngletSacADos")
+					PlaySoundFile("Sound\\Interface\\PickUp\\PickUpBag.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
@@ -266,6 +267,7 @@
 				<OnClick>
 					if IsMounted() then
 						PanelOpen("FicheJoueurOngletInventaire","InventaireOngletCoffre")
+						PlaySound(12188)
 					else
 						TRPError(ObjectError["NOMOUNT"]);
 					end
@@ -296,6 +298,7 @@
 				<OnClick>
 					if DetectPlanque() then
 						PanelOpen("FicheJoueurOngletInventaire","InventaireOngletPlanques")
+						PlaySound(15029)
 					else
 						if IconeZone[GetCurrentMapContinent()] == nil or IconeZone[GetCurrentMapContinent()][GetCurrentMapZone()] == nil then
 							TRPError("You cannot create a hiding place here.");
@@ -352,6 +355,7 @@
 			<Scripts>
 				<OnClick>
 					PanelOpen("FicheJoueurOngletInventaire","InventaireOngletCreation")
+					PlaySoundFile("Sound\\Vehicles\\Vehicle_Airplane_GearShift_1.wav")
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");
@@ -729,6 +733,7 @@
 							else
 								createEmptyDocument();
 							end
+							PlaySoundFile("Sound\\Interface\\WriteQuestA.wav")
 						</OnClick>
 					</Scripts>
 				</Button>

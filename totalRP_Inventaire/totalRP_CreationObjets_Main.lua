@@ -494,6 +494,7 @@ function proceedGRI(tableau,sender)
 			ShowObjetDone(ID,sender);
 		else -- Notify updates to others
 			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
+			PlaySound(12867)
 		end
 		refreshInventaire();
 	end

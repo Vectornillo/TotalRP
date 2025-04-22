@@ -68,6 +68,7 @@
 				<OnClick>
 					MenuPrincipal:Hide();
 					FicheJoueur:Hide();
+					PlaySoundFile("Sound\\Interface\\iAbilitiesCloseA.wav")
 				</OnClick>
 			</Scripts>
 		</Button>
