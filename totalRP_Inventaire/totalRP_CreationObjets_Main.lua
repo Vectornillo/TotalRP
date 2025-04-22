@@ -219,6 +219,7 @@ function proceedGRS(tableau,sender)
 	local message = "";
 	-- Etape 1 : description(200)
 	TRPSecureSendAddonMessage("GRI",ID.."|".."1|"..objet["Description"],sender);
+	debugMess("ET1: " .. ID.."|".."1|"..objet["Description"])
 	-- Etape 2 : Poids(11) - Unique(3) - Categorie(2) - Sous categorie(2) - Valeur(10) - Nom(50) - Icone(50) - Auteur(24) - Model(4)
 	message = ID.."|".."2|"..objet["Poids"].."|";
 	if objet["Unique"] then
@@ -230,8 +231,9 @@ function proceedGRS(tableau,sender)
 		message = message..objet["3DModel"].."|";
 	end
 	TRPSecureSendAddonMessage("GRI",message,sender);
+	debugMess("ET2: " .. message)
 	if objet["Utilisable"] ~= nil then
-		-- Etape 3 : charges(3) - tooltip(50) - objetOnUse(16) - objetOnDeath(16) - LierAuDocu(16) - CreateurDocu(24) - Lock(4) - ButinOnly(4) - cooldown(6)
+		-- Etape 3 : charges(3) - tooltip(50) - objetOnUse(16) - objetOnDeath(16) - LierAuDocu(16) - CreateurDocu(24) - Lock(4) - ButinOnly(4) - cooldown(6) - ObjectOnDeathQte(16) - ObjectOnUseQte (16)
 		message = ID.."|".."3|"..objet["Utilisable"]["Charges"].."|"..objet["Utilisable"]["UseTooltip"].."|";
 		if objet["Utilisable"]["ObjectOnUse"] then
 			message = message..objet["Utilisable"]["ObjectOnUse"];
@@ -260,18 +262,34 @@ function proceedGRS(tableau,sender)
 			message = message..objet["Utilisable"]["Cooldown"];
 		end
 		message = message.."|";
+		if objet["Utilisable"]["ObjectOnDeathQte"] then
+			message = message..objet["Utilisable"]["ObjectOnDeathQte"];
+		else
+			message = message.."|";
+		end
+		message = message.."|";
+		if objet["Utilisable"]["ObjectOnUseQte"] then
+			message = message..objet["Utilisable"]["ObjectOnUseQte"];
+		else
+			message = message.."|";
+		end
+		message = message.."|";
 		TRPSecureSendAddonMessage("GRI",message,sender);
+		debugMess("ET3 : " .. message)
 		if objet["Utilisable"]["EmotePrivateOnUse"] ~= nil and objet["Utilisable"]["EmotePrivateOnUse"] ~= "" then
 			-- Etape 4 : Message on Use (200)
 			TRPSecureSendAddonMessage("GRI",ID.."|".."4|"..objet["Utilisable"]["EmotePrivateOnUse"],sender);
+			debugMess("ET4 : " .. message);
 		end
 		if objet["Utilisable"]["EmotePrivateOnDeath"] ~= nil and objet["Utilisable"]["EmotePrivateOnDeath"] ~= "" then
 			-- Etape 5 : Message on Death (200)
 			TRPSecureSendAddonMessage("GRI",ID.."|".."5|"..objet["Utilisable"]["EmotePrivateOnDeath"],sender);
+			debugMess("ET5 : " .. message);
 		end
 		-- Etape 6 : Emote use (100) - emote death (100)
 		message = ID.."|".."6|"..objet["Utilisable"]["EmotePublicOnUse"].."|"..objet["Utilisable"]["EmotePublicOnDeath"];
 		TRPSecureSendAddonMessage("GRI",message,sender);
+		debugMess("ET6: " .. message);
 		-- Etape 7 : sound use (100) - sound death (100)
 		message = ID.."|".."7|";
 		if objet["Utilisable"]["SoundOnUse"] then
@@ -282,6 +300,7 @@ function proceedGRS(tableau,sender)
 			message = message..objet["Utilisable"]["SoundOnDeath"];
 		end
 		TRPSecureSendAddonMessage("GRI",message,sender);
+		debugMess("ET7: " .. message);
 		-- Etape 8 : conditions : cible(1) - condiCible(50) - condiUser(50) - Composant(100)
 		message = ID.."|".."8|";
 		if objet["Utilisable"]["Conditions"] then
@@ -307,9 +326,11 @@ function proceedGRS(tableau,sender)
 			message = message.."0|";
 		end
 		TRPSecureSendAddonMessage("GRI",message,sender);
+		debugMess("ET8: " .. message)
 	end
 	
 	TRPSecureSendAddonMessage("GRI",ID.."|".."10",sender);
+	debugMess("ET8: " .. ID.."|".."10")
 	sendMessage("{v}"..Exchange["ECHANGEREFDONE"].." ( Item {w}["..TRP_Module_ObjetsPerso[ID]["Nom"].."]{v} )");
 end
 
@@ -325,16 +346,12 @@ function proceedGRI(tableau,sender)
 		return;
 	end
 	
-	--debugMess("Etape : "..etape);
-	--debugMess(tableau[3]);
-	--debugMess(tableau[4]);
-	--debugMess(tableau[5]);
-	--debugMess(tableau[6]);
-	--debugMess(tableau[7]);
-	--debugMess(tableau[8]);
-	--debugMess(tableau[9]);
-	--debugMess(tableau[10]);
-	--debugMess(tableau[11]);
+	--[[
+	debugMess("ET : "..etape);
+	debugMess(tableau[1] .. ", " .. tableau[2] .. ", " .. tableau[3] .. ", " .. tableau[4] .. ", " .. tableau[5]
+	.. ", " .. tableau[6] .. ", " .. tableau[7] .. ", " .. tableau[8] .. ", " .. tableau[9] .. ", " .. tableau[10]
+	.. ", " .. tableau[11] .. ", " .. tableau[12]);
+	]]
 	
 	if etape == "1" then
 		TRP_Module_ObjetsPerso[ID]["Description"] = tableau[3];
@@ -412,6 +429,16 @@ function proceedGRI(tableau,sender)
 		else
 			TRP_Module_ObjetsPerso[ID]["Utilisable"]["Cooldown"] = nil;
 		end
+		if tableau[12] ~= nil and tableau[12] ~= "" then
+			TRP_Module_ObjetsPerso[ID]["Utilisable"]["ObjectOnDeathQte"] = tableau[12];
+		else
+			TRP_Module_ObjetsPerso[ID]["Utilisable"]["ObjectOnDeathQte"] = nil;
+		end
+		if tableau[13] ~= nil and tableau[13] ~= "" then
+			TRP_Module_ObjetsPerso[ID]["Utilisable"]["ObjectOnUseQte"] = tableau[13];
+		else
+			TRP_Module_ObjetsPerso[ID]["Utilisable"]["ObjectOnUseQte"] = nil;
+		end
 	elseif etape == "4" then
 		TRP_Module_ObjetsPerso[ID]["Utilisable"]["EmotePrivateOnUse"] = tableau[3];
 	elseif etape == "5" then
@@ -465,6 +492,8 @@ function proceedGRI(tableau,sender)
 		elseif TRPWaitingForShow then
 			TRPWaitingForShow = nil;
 			ShowObjetDone(ID,sender);
+		else -- Notify updates to others
+			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
 		end
 		refreshInventaire();
 	end

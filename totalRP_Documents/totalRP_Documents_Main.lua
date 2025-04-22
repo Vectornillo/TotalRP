@@ -338,6 +338,8 @@ function ReceiveDocument(docu,sender)
 			if TRPWaitingForInfos then
 				TRPWaitingForInfos = nil;
 				sendMessage("{v}Has recibido satisfactoriamente el documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
+			else -- Notify updates to others
+				sendMessage("{v}Has recibido una actualización del documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
 			end
 			if PanelDocumentsConsulte:IsVisible() and PanelDocumentsNomHidden:GetText() == ID then
 				PanelOpen("FicheJoueurOngletDocument","DocumentsPanelConsulte",PanelDocumentsNomHidden:GetText());
