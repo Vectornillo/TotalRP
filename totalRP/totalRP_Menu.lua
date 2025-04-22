@@ -388,7 +388,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						if UnitIsAFK("mouseover") then
 							myNomComplet = "|cffffffff(AUS) "..myNomComplet;
 						elseif UnitFactionGroup("mouseover") == UnitFactionGroup("player") and UnitIsDND("mouseover") then
-							nomTotal = "|cffff9900(DND) "..myNomComplet;
+							nomTotal = "|cffff9900(NM) "..myNomComplet;
 						end
 						if TRP_Module_Registre[Royaume][nom] and TRP_Module_Registre[Royaume][nom]["StatutRP"] and TRP_Module_Configuration["Modules"]["Tooltip"]["StatutRP"] then
 							myNomComplet = myNomComplet..statut_color[tonumber(TRP_Module_Registre[Royaume][nom]["StatutRP"])].." ( "..STATUTRPSMALL[tonumber(TRP_Module_Registre[Royaume][nom]["StatutRP"])].." )";
@@ -415,9 +415,9 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 							if TRP_Module_Configuration["Modules"]["Registre"]["bShowAlignement"] and TRP_Module_Configuration["Modules"]["Tooltip"]["Alignement"] and TRP_Module_Registre[Royaume][nom]["Ethique"] ~= 0 then
 								local texteMorale,texteEthique,vertMorale,rougeMorale,vertEthique,rougeEthique = getNameAndColorAlignement(nom);
 								i = i + 1;
-								infoTab[i] = "|cff"..deciToHexa(rougeEthique)..deciToHexa(vertEthique).."00Ethics : "..texteEthique;
+								infoTab[i] = "|cff"..deciToHexa(rougeEthique)..deciToHexa(vertEthique).."00Ética : "..texteEthique;
 								i = i + 1;
-								infoTab[i] = "|cff"..deciToHexa(rougeMorale)..deciToHexa(vertMorale).."00Morality : "..texteMorale;
+								infoTab[i] = "|cff"..deciToHexa(rougeMorale)..deciToHexa(vertMorale).."00Moralidad : "..texteMorale;
 							end
 							if TRP_Module_Configuration["Modules"]["Tooltip"]["Humeur"] and tonumber(TRP_Module_Registre[Royaume][nom]["Humeur"]) ~= 7 then
 								i = i + 1;
@@ -501,7 +501,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 								end
 							else
 								i = i + 1;
-								infoTab[i] = "|cffff0000(Player)";
+								infoTab[i] = "|cffff0000(Jugador)";
 							end
 						else
 							if TRP_Module_Configuration["Modules"]["Tooltip"]["UseImageIn"] then
@@ -521,7 +521,7 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 						if UnitIsDead("mouseover") then
 							i = i + 1;
 							if UnitIsGhost("mouseover") then
-								infoTab[i] = "|cff00ffff< Ghost >";
+								infoTab[i] = "|cff00ffff< Fantasma >";
 							else
 								infoTab[i] = "|cffff0000< KO >";
 							end
