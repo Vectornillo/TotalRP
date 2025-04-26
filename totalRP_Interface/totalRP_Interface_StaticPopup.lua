@@ -20,8 +20,8 @@
 	
 	StaticPopupDialogs["TRP_REG_DELETE_PERSO"] = {
 	  text = TRP_ENTETE..DELETEPERSO.."\n\n"..TRP_TEXT_STATIC_POPUP.TRP_REG_DELETE_PERSO..CAREFULL,
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -47,8 +47,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_OBJECT"] = {
 	  text = "\n\n\n\n\n\n\n",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -66,8 +66,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_OBJECT_AMOUNT"] = {
 	  text = "\n\n\n\n\n\n\n\n",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Acceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -120,8 +120,8 @@
 	
 	StaticPopupDialogs["TRP_EMOTENAMEDIRE"] = {
 	  text = TRP_ENTETE.."Introduce el nombre de la persona que hablará.",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			
 	  end,
@@ -230,8 +230,8 @@
 	
 	StaticPopupDialogs["TRP_EMOTENPCDIRE"] = {
 	  text = TRP_ENTETE.."Introduce el diálogo que tu objetivo protagonizará. \nEs un diálogo hablado (/say).",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			
 	  end,
@@ -273,7 +273,7 @@
 	StaticPopupDialogs["TRP_SAISIESOUND"] = {
 	  text = TRP_ENTETE.."Introduce la ruta del sonido (Desde la raíz del juego y sin la extensión \".wav\".).\nPresiona Intro para pre-escuchar.",
 	  button1 = "Local",
-	  button2 = "Cancel",
+	  button2 = "Cancelar",
 	  button3 = "Global",
 	  OnShow = function(self)
 			
@@ -310,8 +310,8 @@
 	
 	StaticPopupDialogs["TRP_REF_ASKING"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -330,8 +330,8 @@
 	
 	StaticPopupDialogs["TRP_OBJ_ASKING"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -350,8 +350,8 @@
 	
 	StaticPopupDialogs["TRP_DOC_ASKING"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -370,8 +370,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_REF"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -430,8 +430,8 @@
 	
 	StaticPopupDialogs["TRP_ECRASE_SLOT"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -449,8 +449,8 @@
 	
 	StaticPopupDialogs["TRP_INV_GIVE_AMOUNT"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -478,8 +478,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_DOCU"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -499,8 +499,8 @@
 	
 	StaticPopupDialogs["TRP_INV_AJOUT_OBJ_PERSO"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Acceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -525,8 +525,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_REF"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -544,8 +544,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_PLANQUE"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -563,8 +563,8 @@
 	
 	StaticPopupDialogs["TRP_INV_DELETE_COURRIER"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -582,8 +582,8 @@
 	
 	StaticPopupDialogs["TRP_AVERT_USE_CHAT"] = {
 	  text = setTRPColorToString(TRP_ENTETE..TRP_TEXT_STATIC_POPUP["TRP_AVERT_USE_CHAT"]),
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -600,9 +600,9 @@
 	};
 	
 	StaticPopupDialogs["TRP_SAVE_PERSO"] = {
-	  text = TRP_ENTETE.."Enter the name of the profile.",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  text = TRP_ENTETE.."Introduce el nombre del perfil.",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 
 	  end,
@@ -625,8 +625,8 @@
 	
 	StaticPopupDialogs["TRP_OBJCREA_QTE"] = {
 	  text = "",
-	  button1 = "Accept",
-	  button2 = "Cancel",
+	  button1 = "Aceptar",
+	  button2 = "Cancelar",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
 	  end,
@@ -649,7 +649,7 @@
 	
 	StaticPopupDialogs["TRP_DOCU_CREATEOBJ"] = {
 	  text = "",
-	  button1 = "Yes",
+	  button1 = "Sí",
 	  button2 = "No",
 	  OnShow = function(self)
 			ShadeSecondPlan(0.5);
