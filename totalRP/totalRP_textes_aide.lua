@@ -5,7 +5,7 @@
 CHARACTERENBR = " characters are available for this attribute.\n{o}Warning: one special character counts as two.";
 CHRACTEREINTERDIT = "{r}These special characters are not allowed.\n^ $ ( ) % . [ ] * + - ? | {w}";
 MUSTSAISIR = "{o}You must specify a value for this attribute.{w}";
-NOMUSTSAISIR = "{v}This attribute is optional.{w}"
+NOMUSTSAISIR = "{g}This attribute is optional.{w}"
 CAREFULL = "\n\n|cffffaa00This action can not be canceled.\n\nDo you really want to perform this action ?";
 TRP_ENTETE = "|TInterface\\AddOns\\totalRP\\Images\\TRPlogo.tga:75:125|t\n";
 CHATFRAMEEXPLICATION = "Chat Frame : \n1 - Main\n2 - Combat Log\n3 à 7 - Additional windows"
@@ -50,7 +50,7 @@ TEXTE_AIDE_BUTTON = {
 		Nom = "Item : Unique";
 		Texte = "Determines whether the item can be possessed only on a limited amount.\n\n"..NOMUSTSAISIR.."\n\n"
 				.."The Unique feature is global to all your bags (Backpack + Safe + Hiding places).\n\n"
-				.."{v}Zero means infinity (no limit).\nThe maximum is 999.";
+				.."{g}Zero means infinity (no limit).\nThe maximum is 999.";
 	},
 	CreaObjCategorie = {
 		Nom = "Item Category";
@@ -68,7 +68,7 @@ TEXTE_AIDE_BUTTON = {
 	},
 	CreaObjCharges = {
 		Nom = "Charges";
-		Texte = "Charges are the number of times an item can be used {o}before being automatically deleted{w}.\n\n{v}0 means infinity !\n\n"
+		Texte = "Charges are the number of times an item can be used {o}before being automatically deleted{w}.\n\n{g}0 means infinity !\n\n"
 				..MUSTSAISIR.."\n\nYou are limited to 999 charges at maximum.";
 	},
 	CreaObjOnUseMessage = {
@@ -97,34 +97,34 @@ TEXTE_AIDE_BUTTON = {
 	},
 	CreaObjOnUseCreate = {
 		Nom = "When using : Receive item";
-		Texte = "When using the item, the character will receive a number of units of the selected item.\n\n"..NOMUSTSAISIR.."\n\n{v}Left-click on the button to show "
+		Texte = "When using the item, the character will receive a number of units of the selected item.\n\n"..NOMUSTSAISIR.."\n\n{g}Left-click on the button to show "
 				.."the items selection window. This window contains all the items that are not locked and all the add-on pre-built items.\nRight-click on the button to select the number of units that will be given.";
 	},
 	CreaObjOnDeathCreate = {
 		Nom = "Once discharged: Receive item";
 		Texte = "When the item is discharged (When its charges reach 0), the character will receive a number of units of the selected item.\n\n"..NOMUSTSAISIR
-				.."\n\n{o}This item will be received in addition to the \"When using : Receive item\".\n\n{v}Left-click on the button to show "
+				.."\n\n{o}This item will be received in addition to the \"When using : Receive item\".\n\n{g}Left-click on the button to show "
 				.."the items selection window. This window contains all the items that are not locked and all the add-on pre-built items.\nRight-click on the button to select the number of units that will be given.";
 	},
 	CreaObjOnUseSound = {
 		Nom = "When using : Sound";
-		Texte = "When using the item, the sound will be played. This is a local sound who will be heard by any TRP user in the party/raid (or by the target).\n\n"..NOMUSTSAISIR.."\n\n{v}Click on the List button to show "
+		Texte = "When using the item, the sound will be played. This is a local sound who will be heard by any TRP user in the party/raid (or by the target).\n\n"..NOMUSTSAISIR.."\n\n{g}Click on the List button to show "
 				.."the sounds window selection. You can write yourself a path of a sound if its not in the list.";
 	},
 	CreaObjOnDeathSound = {
 		Nom = "Once discharged : Sound";
 		Texte = "When the item is discharged (When its charges reach 0), the sound will be played. This is a local sound who will be heard by any TRP user in the party/raid (or by the target).\n\n"
 				.."{o}Warning, this sound will replace the sound to \"When using : Sound\".\n\n"
-				..NOMUSTSAISIR.."\n\n{v}Click on the List button to show "
+				..NOMUSTSAISIR.."\n\n{g}Click on the List button to show "
 				.."the sounds window selection. You can write yourself a path of a sound if its not in the list.";
 	},
 	CreaObjTooltipUse = {
 		Nom = "Tooltip green using text";
-		Texte = "This text is added in the tooltip behind the word \"{v}Use : {w}\". By convention, start with a verb.\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
+		Texte = "This text is added in the tooltip behind the word \"{g}Use : {w}\". By convention, start with a verb.\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
 	},
 	CreaObjLierDocu = {
 		Nom = "Associated document";
-		Texte = "You can link a document to the item. When using the item, the player will see the document.\n\n"..NOMUSTSAISIR.."\n\n{v}Click on the button to show "
+		Texte = "You can link a document to the item. When using the item, the player will see the document.\n\n"..NOMUSTSAISIR.."\n\n{g}Click on the button to show "
 				.."the documents selection window. This window contains all the documents that haven't been locked by their creator.";
 	},
 	CreaObjCooldown = {
@@ -161,11 +161,11 @@ TEXTE_AIDE_BUTTON = {
 	},
 	CreaDocuVignetteDate = {
 		Nom = "Document Date";
-		Texte = "This is the date on which the document was created. {o}This does not correspond to the date when you created the document in TRP,{v} this is an RP information !\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
+		Texte = "This is the date on which the document was created. {o}This does not correspond to the date when you created the document in TRP,{g} this is an RP information !\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
 	},
 	CreaDocuVignetteAuteur = {
 		Nom = "Document Author";
-		Texte = "It is the author of the document. {o}This should not necessarily be your character, {v}this is an RP information !\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
+		Texte = "It is the author of the document. {o}This should not necessarily be your character, {g}this is an RP information !\n\n"..NOMUSTSAISIR.."\n\n50 "..CHARACTERENBR;
 	},
 	CreaDocuVignetteIcone = {
 		Nom = "Document icon";
@@ -186,7 +186,7 @@ TRP_TEXT_STATIC_POPUP = {
 	TRP_REG_EPURER_LISTE = "This action will remove from the Register every character "
 							.."you never cross with one of your characters in this Realm.";
 	TRP_REG_DELETE_PERSO = "This action will remove this person from the Register. Remind that notes and relationship aren't erased. So you can delete a ignored character, he will be still ignored.";
-	TRP_AVERT_USE_CHAT = "You have disable the improving chat frame feature. But some links cannot be disable without reloading the interface. We recommend you to restart your interface to eliminate these links.\n\n{v}Restart Interface ?";
+	TRP_AVERT_USE_CHAT = "You have disable the improving chat frame feature. But some links cannot be disable without reloading the interface. We recommend you to restart your interface to eliminate these links.\n\n{g}Restart Interface ?";
 }
 
 TRPCheckOptionTooltip = {
@@ -275,9 +275,9 @@ Exchange = {
 	REFASKINGE = " wants to give you {o}an update{w} of the information about his item :\n\n";
 	REFASKINGB = " wants to send you information about an item :\n\n";
 	REFASKINGBWARNINGB = "\n\n{o}Warning{w} : The creator of this update is the creator of the version of the item you have, however there is always a risk that this version is earlier than the one you have"
-						..".\n\n{v}Accept the update ?";
-	REFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is different from the version you have.\n\n{v}Accept the update ?";
-	REFASKINGC = "\n\nSending/Updating data is required if you want to be able to exchange this kind of item.\n\n{v}Do you accept ?";
+						..".\n\n{g}Accept the update ?";
+	REFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is different from the version you have.\n\n{g}Accept the update ?";
+	REFASKINGC = "\n\nSending/Updating data is required if you want to be able to exchange this kind of item.\n\n{g}Do you accept ?";
 	
 	DOCUREFASKING = "Document Information : Receive";
 	DOCUREFASKINGMAJ = "Document Information : Update";
@@ -285,9 +285,9 @@ Exchange = {
 	DOCUREFASKINGE = " wants to give you {o}an update{w} of his document :\n\n";
 	DOCUREFASKINGB = " wants to give you a document :\n\n";
 	DOCUREFASKINGBWARNINGB = "\n\n{o}Warning{w} : The creator of this update is the creator of the version of the document you have, however there is always a risk that this version is earlier than the one you have"
-						..".\n\n{v}Accept the update ?";
-	DOCUREFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is not the creator of the version you have.\n\n{v}Accept the update ?";
-	DOCUREFASKINGC = "\n\n{v}Do you accept ?";
+						..".\n\n{g}Accept the update ?";
+	DOCUREFASKINGBWARNING = "\n\n{o}Warning{w} : The creator of this update is not the creator of the version you have.\n\n{g}Accept the update ?";
+	DOCUREFASKINGC = "\n\n{g}Do you accept ?";
 }
 
 ObjectError = {
@@ -320,7 +320,7 @@ CONFIGINVCONFIRM = {
 	" Automatically deny any request receive item and/or item information.",
 	" {o}Always{w} display a prompt if anyone wants to send you an item or a reference or an update of a reference that you already have.",
 	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the item. If this is the case"
-	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
+	.." the request is automatically accepted.{g} ({g}default and recommended Setting !)",
 	" Receiving / updating reference are always accepted, regardless of the creator {r}(!not recommended!).",
 }
 
@@ -328,7 +328,7 @@ CONFIGDOCUCONFIRM = {
 	" Automatically deny any request receive document and/or document information.",
 	" {o}Always{w} display a prompt if anyone wants to send you an document or a reference or an update of a reference that you already have.",
 	" {o}Always{w} display a prompt if anyone wants to send an item or a reference unless the reference is known, and the sender is the creator of the document. If this is the case"
-	.." the request is automatically accepted.{v} ({v}default and recommended Setting !)",
+	.." the request is automatically accepted.{g} ({g}default and recommended Setting !)",
 	" Receiving / updating reference are always accepted, regardless of the creator {r}(!not recommended!).",
 }
 
@@ -336,17 +336,17 @@ CONFIGDOCUCONFIRMTITLE = {
 	"{r}Niveau 1 : Total blocking",
 	"{o}Niveau 2 : Always ask",
 	"{w}Niveau 3 : Yes, if creator",
-	"{v}Niveau 4 : Always yes",
+	"{g}Niveau 4 : Always yes",
 }
 
 CONFIGINVCONFIRMTITLE = {
 	"{r}Niveau 1 : Total blocking",
 	"{o}Niveau 2 : Always ask",
 	"{w}Niveau 3 : Yes, if creator",
-	"{v}Niveau 4 : Always yes",
+	"{g}Niveau 4 : Always yes",
 }
 
 Courrier = {
 	DELETEA = "{w}Are you sure you want to destroy this package ?\n\n{o}You will lose forever its contents !";
-	DELETEB = "{w}Are you sure you want to destroy this package ?\n\n{v}You will recover automatically its contents.";
+	DELETEB = "{w}Are you sure you want to destroy this package ?\n\n{g}You will recover automatically its contents.";
 }

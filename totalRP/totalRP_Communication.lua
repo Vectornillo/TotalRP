@@ -151,7 +151,7 @@ end
 function notifSoundToLog(sound,from,bGlobal)
 	local message = "{w}[{r}"..date("%H:%M:%S").."{w}]|Hplayer:"..from.."|h["..from.."]|h {w}joue le son ";
 	if bGlobal then
-		message = message.." {v}(Global)";
+		message = message.." {g}(Global)";
 	else
 		message = message.." {c}(Local)";
 	end
@@ -369,7 +369,7 @@ function FragmenterDialogue(texte,perso,langue,statut,arg7,myChatFrame,event,col
 	-- Calcul de la couleur du perso + lien de whisp + nom
 	if TRP_Module_Configuration["Modules"]["Communication"]["UseColorName"] then
 		if perso == Joueur then
-			color = "{v}";
+			color = "{g}";
 		elseif TRP_Module_PlayerInfo_Relations[Royaume][perso] and TRP_Module_PlayerInfo_Relations[Royaume][perso][Joueur] then
 			color = relation_color[TRP_Module_PlayerInfo_Relations[Royaume][perso][Joueur]];
 		end
@@ -467,7 +467,7 @@ function AnalyserEmote(emote,perso,myChatFrame,event,coloredName)
 	-- Calcul de la couleur du perso + lien de whisp + nom
 	if TRP_Module_Configuration["Modules"]["Communication"]["UseColorName"] then
 		if perso == Joueur then
-			color = "{v}";
+			color = "{g}";
 		elseif TRP_Module_PlayerInfo_Relations[Royaume][perso] ~= nil and TRP_Module_PlayerInfo_Relations[Royaume][perso][Joueur] then
 			color = relation_color[TRP_Module_PlayerInfo_Relations[Royaume][perso][Joueur]];
 		end
@@ -556,7 +556,7 @@ function hookMyFrameEvent()
 				if onSort then
 					if TRP_Module_Configuration["Modules"]["Communication"]["SpamDetectFrame"] and TRP_Module_Configuration["Modules"]["Communication"]["SpamDetectFrame"] ~= "" then
 						local message = "{o}   --------------\nSpam from {w}|Hplayer:"..arg2.."|h["..arg2.."]|h\n{o}Message : {w}\n\"";
-						message = message..arg1.."\"\n{o}À {v}"..date("%Hh%M").."\n{o}--------------";
+						message = message..arg1.."\"\n{o}À {g}"..date("%Hh%M").."\n{o}--------------";
 						getglobal("ChatFrame"..TRP_Module_Configuration["Modules"]["Communication"]["SpamDetectFrame"]):AddMessage(setTRPColorToString(message),1,1,1);
 					end
 					return;

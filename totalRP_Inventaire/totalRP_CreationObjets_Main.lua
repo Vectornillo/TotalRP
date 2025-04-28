@@ -170,13 +170,13 @@ function ReferenceAskingObjet(objet,sender)
 		if TRP_Module_ObjetsPerso[ID] then
 			if TRP_Module_ObjetsPerso[ID]["Auteur"] == Auteur then -- Même auteur
 				if Auteur ~= sender then --L'auteur n'est pas l'envoyeur
-					Message = Message..Exchange["REFASKINGD"].."{v}Your version :\n ".."|TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[ID]["Icone"]..".blp:35:35|t".."\n{o}Name : {w}"..TRP_Module_ObjetsPerso[ID]["Nom"].."\n{o}Creator : {w}"..TRP_Module_ObjetsPerso[ID]["Auteur"];
+					Message = Message..Exchange["REFASKINGD"].."{g}Your version :\n ".."|TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[ID]["Icone"]..".blp:35:35|t".."\n{o}Name : {w}"..TRP_Module_ObjetsPerso[ID]["Nom"].."\n{o}Creator : {w}"..TRP_Module_ObjetsPerso[ID]["Auteur"];
 					Message = Message.."\n\n{r}"..sender.."'s version :\n"..iconeTex.."\n{o}Name : {w}"..Nom.."\n{o}Creator : {w}"..Auteur..Exchange["REFASKINGBWARNINGB"];
 				else -- L'auteur est l'envoyeur
 					Message = Message..Exchange["REFASKINGE"]..iconeTex.."\n{o}Name : {w}"..Nom.."\n{o}Creator : {w}"..Auteur..Exchange["REFASKINGC"];
 				end
 			else -- Changement d'auteur !
-				Message = Message..Exchange["REFASKINGD"].."{v}Your version :\n ".."|TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[ID]["Icone"]..".blp:35:35|t".."\n{o}Name : {w}"..TRP_Module_ObjetsPerso[ID]["Nom"].."\n{o}Creator : {w}"..TRP_Module_ObjetsPerso[ID]["Auteur"];
+				Message = Message..Exchange["REFASKINGD"].."{g}Your version :\n ".."|TInterface\\ICONS\\"..TRP_Module_ObjetsPerso[ID]["Icone"]..".blp:35:35|t".."\n{o}Name : {w}"..TRP_Module_ObjetsPerso[ID]["Nom"].."\n{o}Creator : {w}"..TRP_Module_ObjetsPerso[ID]["Auteur"];
 				Message = Message.."{r}\n\n"..sender.."'s version :\n"..iconeTex.."\n{o}Name : {w}"..Nom.."\n{o}Creator : {w}"..Auteur..Exchange["REFASKINGBWARNING"];
 			end
 		else -- Pas connaitre
@@ -331,7 +331,7 @@ function proceedGRS(tableau,sender)
 	
 	TRPSecureSendAddonMessage("GRI",ID.."|".."10",sender);
 	debugMess("ET8: " .. ID.."|".."10")
-	sendMessage("{v}"..Exchange["ECHANGEREFDONE"].." ( Item {w}["..TRP_Module_ObjetsPerso[ID]["Nom"].."]{v} )");
+	sendMessage("{g}"..Exchange["ECHANGEREFDONE"].." ( Item {w}["..TRP_Module_ObjetsPerso[ID]["Nom"].."]{g} )");
 end
 
 function proceedGRI(tableau,sender)
@@ -488,12 +488,12 @@ function proceedGRI(tableau,sender)
 	elseif etape == "10" then -- Fin
 		if TRPWaitingForInfos then
 			TRPWaitingForInfos = nil;
-			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully received from "..sender..".");
+			sendMessage("{g}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully received from "..sender..".");
 		elseif TRPWaitingForShow then
 			TRPWaitingForShow = nil;
 			ShowObjetDone(ID,sender);
 		else -- Notify updates to others
-			sendMessage("{v}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
+			sendMessage("{g}Item information \""..TRP_Module_ObjetsPerso[ID]["Nom"].."\" succefully refreshed from "..sender..".");
 			PlaySound(12867)
 		end
 		refreshInventaire();
@@ -511,7 +511,7 @@ function createEmptyObjet() --  Celui utilisé par le bouton +
 	TRP_Module_ObjetsPerso[ID]["SousType"] = 1;
 	TRP_Module_ObjetsPerso[ID]["Poids"] = 0;
 	TRP_Module_ObjetsPerso[ID]["Valeur"] = 0;
-	sendMessage("{j}"..NEWOBJETNOTIFY);
+	sendMessage("{y}"..NEWOBJETNOTIFY);
 	EditObjetPerso(ID);
 end
 
@@ -537,7 +537,7 @@ function createEmptyObjetForDocument(IDDocu) --  Objet pré-construit pour être
 	TRP_Module_ObjetsPerso[ID]["Utilisable"]["EmotePrivateOnDeath"] = "";
 	TRP_Module_ObjetsPerso[ID]["Utilisable"]["EmotePublicOnDeath"] = "";
 	TRP_Module_ObjetsPerso[ID]["Utilisable"]["LierAuDoc"] = IDDocu;
-	sendMessage("{j}"..NEWOBJETNOTIFY);
+	sendMessage("{y}"..NEWOBJETNOTIFY);
 	EditObjetPerso(ID);
 end
 
@@ -567,7 +567,7 @@ function createEmptyObjetWithOtherID(oID) -- Celui utilisé par la création dep
 		TotalRP_tcopy(TRP_Module_ObjetsPerso[ID], objet)
 		TRP_Module_ObjetsPerso[ID]["Auteur"] = Joueur;
 
-		sendMessage("{j}"..NEWOBJETNOTIFY);
+		sendMessage("{y}"..NEWOBJETNOTIFY);
 		EditObjetPerso(ID);
 	else
 		TRPError("Internal error : créer référence depuis, oID inconnu.\noID : "..tostring(oID));
@@ -610,7 +610,7 @@ function DeleteObjetPerso(ID)
 		TRP_Module_ObjetsPerso[ID] = nil;
 		ShowObjetPerso();
 		GameTooltip:Hide();
-		sendMessage("{j}"..DELOBJETNOTIFY,1,1,0);
+		sendMessage("{y}"..DELOBJETNOTIFY,1,1,0);
 	end
 end
 
@@ -1027,7 +1027,7 @@ function ChargerSliderObjetPersoVertical(num)
 								DonnerReference(ID);
 							elseif IsShiftKeyDown() and TRP_Module_ObjetsPerso[ID] ~= nil then
 								if not TRP_Module_ObjetsPerso[ID]["ButinOnly"] or TRP_Module_ObjetsPerso[ID]["Auteur"] == Joueur then
-									local message = "{v}["..TRP_Module_ObjetsPerso[ID]["Nom"].."]{w}\n";
+									local message = "{g}["..TRP_Module_ObjetsPerso[ID]["Nom"].."]{w}\n";
 									StaticPopupDialogs["TRP_INV_AJOUT_OBJ_PERSO"].text = setTRPColorToString(TRP_ENTETE.." \n "..message.."\nQuantity to add to your backpack ?");
 									TRP_ShowStaticPopup("TRP_INV_AJOUT_OBJ_PERSO",nil,nil,ID,nil,nil,nil,true,1);
 								else
