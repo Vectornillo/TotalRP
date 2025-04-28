@@ -379,8 +379,15 @@ function checkConditionStringContinent(arguments)
 		[4] = "Northrend"
 	}
 
+	local index = tonumber(arguments)
+		
+	if index < -1 or index > 4 then
+		TRPError("This object has an incorrect continent index for its use")
+		return nil;
+	end
+
 	if not inCorrectContinent then
-		TRPError("You can only use this in " .. map[arguments])
+		TRPError("You can only use this in " .. map[index])
 	end
 
 	return inCorrectContinent;
@@ -397,7 +404,15 @@ function checkConditionStringSousZone(arguments)
 	if arguments == "" or not arguments then
 		return nil;
 	end
-	return tostring(GetSubZoneText()) == arguments;
+
+	local zonetext = tostring(GetSubZoneText());
+	if zonetext == arguments then
+		return true;
+	else
+		TRPError("This object must be used in " .. arguments )
+		return nil;
+	end
+
 end
 
 function checkConditionStringStatutRP(arguments,cible)
@@ -435,29 +450,59 @@ function checkConditionStringHeure(arguments)
 	local heure = tonumber(date("%H"));
 	local heureDebut = tonumber(string.sub(arguments,1,2));
 	local heureFin = tonumber(string.sub(arguments,4,5));
-	if heureDebut < heureFin then
-		return heure >= heureDebut and heure <= heureFin;
+	if heure >= heureDebut and heure <= heureFin then
+		return true;
 	else
-		return not (heure < heureDebut and heure > heureFin);
+		TRPError(string.format("This object must be used between %dh and %dh (server time)",
+		heureDebut, heureFin))
 	end
+
 end
 
 function checkConditionStringEtat(arguments,cible)
-	if arguments ~= "m" and arguments ~= "v" then
+	if arguments ~= "d" and arguments ~= "a" then
 		return nil;
 	end
-	if arguments == "m" then
-		return UnitIsDead(cible);
-	elseif arguments == "v" then
-		return UnitIsAlive(cible);
+
+	if arguments == "d" and not UnitIsDead(cible) then
+		if cible == "target" then
+			TRPError(string.format("Your target must be dead, but it isn't", cible))
+		elseif cible == "player" then
+			TRPError(string.format("You must be dead, but you aren't", cible))
+		end
+		return nil;
 	end
+
+	if arguments == "a" and UnitIsDead(cible) then
+		if cible == "target" then
+			TRPError(string.format("Your target must be alive, but it isn't", cible))
+		elseif cible == "player" then
+			TRPError(string.format("You must be alive, but you aren't", cible))
+		end
+		return nil;
+	end
+
+	return true;
 end
 
 function checkConditionStringNom(arguments,cible)
 	if arguments == "" or not arguments then
 		return nil;
 	end
-	return UnitName(cible) == arguments;
+
+	local name = UnitName(cible)
+
+	if name ~= "arguments" then
+		if cible == "target" then
+			TRPError("Your target's name is not named \"" .. arguments .."\"")
+		elseif cible == "player" then
+			TRPError("Your name is not \"" .. arguments .."\"")
+		end
+		return nil
+	end
+
+	return true;
+
 end
 
 function checkConditionStringRandom(arguments)
@@ -470,16 +515,32 @@ function checkConditionStringRandom(arguments)
 end
 
 function checkConditionStringSex(arguments,cible)
-	if arguments == "" or not arguments then
+	if arguments ~= "m" and arguments ~= "f" then
 		return nil;
 	end
-	if (not string.find(arguments,"m") and not string.find(arguments,"f")) or string.len(arguments) > 1 then
-		return nil;
-	elseif arguments == "f" then
-		return UnitSex(cible) == 3;
-	elseif arguments == "m" then
-		return UnitSex(cible) == 2;
+
+	local sex = UnitSex(cible)
+
+	if arguments == "m" and sex == 3 then
+		if cible == "target" then
+			TRPError("Your target is male, but it needs to be female.")
+		elseif cible == "player" then
+			TRPError("You must be male, but you are female.")
+		end
+		return nil
 	end
+
+	if arguments == "f" and sex == 2 then
+		if cible == "target" then
+			TRPError("Your target is female, but it needs to be male.")
+		elseif cible == "player" then
+			TRPError("You must be female, but you are male.")
+		end
+		return nil
+	end
+
+	return true
+
 end
 
 function checkConditionStringType(arguments,cible)
