@@ -328,12 +328,12 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 								i = i + 1;
 								infoTab[i] = " ";
 								i = i + 1;
-								infoTab[i] = "{o}Mount : {v}"..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][monture]["Nom"];
+								infoTab[i] = "{o}Mount : {g}"..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][monture]["Nom"];
 							elseif TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][monture]["Description"] ~= "" then
 								i = i + 1;
 								infoTab[i] = " ";
 								i = i + 1;
-								infoTab[i] = "{o}Mount : {v}"..monture;
+								infoTab[i] = "{o}Mount : {g}"..monture;
 							end
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][monture]["Description"] ~= "" then
 								i = i + 1;
@@ -545,12 +545,12 @@ function MouseOverTooltip(bForce) -- Inspiriré de l'algorithme de FlagRSP2
 									i = i + 1;
 									infoTab[i] = " ";
 									i = i + 1;
-									infoTab[i] = "{o}Mount : {v}"..TRP_Module_Registre[Royaume][nom]["Pet"][monture]["Nom"];
+									infoTab[i] = "{o}Mount : {g}"..TRP_Module_Registre[Royaume][nom]["Pet"][monture]["Nom"];
 								elseif TRP_Module_Registre[Royaume][nom]["Pet"][monture]["Description"] ~= "" then
 									i = i + 1;
 									infoTab[i] = " ";
 									i = i + 1;
-									infoTab[i] = "{o}Mount : {v}"..monture;
+									infoTab[i] = "{o}Mount : {g}"..monture;
 								end
 								if TRP_Module_Registre[Royaume][nom]["Pet"][monture]["Description"] ~= "" then
 									i = i + 1;

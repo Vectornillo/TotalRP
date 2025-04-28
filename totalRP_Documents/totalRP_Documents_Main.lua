@@ -171,7 +171,7 @@ function AskingDocument(docu,sender)
 			if TRP_Module_Documents[ID]["Createur"] == Auteur then -- Meme auteur
 				if Auteur ~= sender then --L'auteur n'est pas l'envoyeur
 					Titre = Exchange["DOCUREFASKINGMAJ"];
-					Message = Message..Exchange["DOCUREFASKINGD"].."{v}Your version :\n {o}Name : {w}"..TRP_Module_Documents[ID]["VignetteTitre"].."\n{o}Creator : {w}"..TRP_Module_Documents[ID]["Createur"];
+					Message = Message..Exchange["DOCUREFASKINGD"].."{g}Your version :\n {o}Name : {w}"..TRP_Module_Documents[ID]["VignetteTitre"].."\n{o}Creator : {w}"..TRP_Module_Documents[ID]["Createur"];
 					Message = Message.."\n\n{r}"..sender.."'s version :\n {o}Name : {w}"..Nom.."\n{o}Creator : {w}"..Auteur..Exchange["DOCUREFASKINGBWARNINGB"];
 				else -- L'auteur est l'envoyeur
 					Titre = Exchange["DOCUREFASKINGMAJ"];
@@ -179,7 +179,7 @@ function AskingDocument(docu,sender)
 				end
 			else -- Changement d'auteur !
 				Titre = Exchange["DOCUREFASKINGMAJ"];
-				Message = Message..Exchange["DOCUREFASKINGD"].."{v}Votre version :\n {o}Name : {w}"..TRP_Module_Documents[ID]["VignetteTitre"].."\n{o}Creator : {w}"..TRP_Module_Documents[ID]["Createur"];
+				Message = Message..Exchange["DOCUREFASKINGD"].."{g}Votre version :\n {o}Name : {w}"..TRP_Module_Documents[ID]["VignetteTitre"].."\n{o}Creator : {w}"..TRP_Module_Documents[ID]["Createur"];
 				Message = Message.."{r}\n\n"..sender.."'s version :\n {o}Name : {w}"..Nom.."\n{o}Creator : {w}"..Auteur..Exchange["DOCUREFASKINGBWARNING"];
 			end
 		else -- Pas connaitre
@@ -334,12 +334,12 @@ function ReceiveDocument(docu,sender)
 			TRP_Module_Documents[ID]["Texte"]["Texte"][tonumber(docu[3])] = docu[4];
 		elseif etape == 10 then -- Fin de transaction
 			checkDocumentIntegrity(ID);
-			TRPSecureSendAddonMessage("SDM","{v}"..Joueur.." ha recibido correctamente tu documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\".",sender);
+			TRPSecureSendAddonMessage("SDM","{g}"..Joueur.." ha recibido correctamente tu documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\".",sender);
 			if TRPWaitingForInfos then
 				TRPWaitingForInfos = nil;
-				sendMessage("{v}Has recibido satisfactoriamente el documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
+				sendMessage("{g}Has recibido satisfactoriamente el documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
 			else -- Notify updates to others
-				sendMessage("{v}Has recibido una actualización del documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
+				sendMessage("{g}Has recibido una actualización del documento \""..TRP_Module_Documents[ID]["VignetteTitre"].."\" de "..sender..".");
 				PlaySound("QUESTADDED")
 			end
 			if PanelDocumentsConsulte:IsVisible() and PanelDocumentsNomHidden:GetText() == ID then

@@ -555,7 +555,7 @@ function initPetButton()
 						local ID, creatureName, creatureSpellID, icon, issummoned = GetCompanionInfo("CRITTER", i);
 						if ID == self.creatureID then
 							GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
-							GameTooltip:AddLine(setTRPColorToString("{v}"..creatureName));
+							GameTooltip:AddLine(setTRPColorToString("{g}"..creatureName));
 							GameTooltip:AddLine(setTRPColorToString("{w}Instantáneo"));
 							GameTooltip:AddLine(setTRPColorToString("{o}Click para invocar a tu compañero."));
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]
@@ -564,9 +564,9 @@ function initPetButton()
 								GameTooltip:AddLine(setTRPColorToString(" "));
 								GameTooltip:AddLine(setTRPColorToString("{o}Personalizar al compañero :"));
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{g} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
 								else
-									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..creatureName));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{g} "..creatureName));
 								end
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "" then
 									GameTooltip:AddLine(setTRPColorToString("{w}Descripción :"))
@@ -574,7 +574,7 @@ function initPetButton()
 								end
 							end
 							GameTooltip:AddLine(setTRPColorToString(" "));
-							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click para personalizar al compañero"));
+							GameTooltip:AddLine(setTRPColorToString("{g}Ctrl + click para personalizar al compañero"));
 							GameTooltip:Show();
 						end
 					end
@@ -583,7 +583,7 @@ function initPetButton()
 						local ID, creatureName, creatureSpellID, icon, issummoned = GetCompanionInfo("MOUNT", i);
 						if ID == self.creatureID then
 							GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
-							GameTooltip:AddLine(setTRPColorToString("{v}"..creatureName));
+							GameTooltip:AddLine(setTRPColorToString("{g}"..creatureName));
 							GameTooltip:AddLine(setTRPColorToString("{w}Instantáneo"));
 							GameTooltip:AddLine(setTRPColorToString("{o}Click para invocar a tu montura."));
 							if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]
@@ -592,9 +592,9 @@ function initPetButton()
 								GameTooltip:AddLine(setTRPColorToString(" "));
 								GameTooltip:AddLine(setTRPColorToString("{o}Personalizar tu montura :"));
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"] ~= "" then
-									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{g} "..TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Nom"]));
 								else
-									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{v} "..creatureName));
+									GameTooltip:AddLine(setTRPColorToString("{w}Nombre :{g} "..creatureName));
 								end
 								if TRP_Module_PlayerInfo[Royaume][Joueur]["Pet"][creatureName]["Description"] ~= "" then
 									GameTooltip:AddLine(setTRPColorToString("{w}Descripción :"))
@@ -602,7 +602,7 @@ function initPetButton()
 								end
 							end
 							GameTooltip:AddLine(setTRPColorToString(" "));
-							GameTooltip:AddLine(setTRPColorToString("{v}Ctrl + click para personalizar tu montura"));
+							GameTooltip:AddLine(setTRPColorToString("{g}Ctrl + click para personalizar tu montura"));
 							GameTooltip:Show();
 						end
 					end
@@ -705,7 +705,7 @@ function AjouterAuRegistre(nom, selected)
 	TRP_Module_Registre[Royaume][nom]["Actuellement"] = "";
 	TRP_Module_Registre[Royaume][nom]["Date"] = date("%d/%m/%y");
 	if TRP_Module_Configuration["Modules"]["Registre"]["bNotifyAjout"] then
-		sendMessage("{j}".."|Hplayer:"..nom.."|h[|cffaaaaff"..nom.."{j}]|h"..AJOUTREG);
+		sendMessage("{y}".."|Hplayer:"..nom.."|h[|cffaaaaff"..nom.."{y}]|h"..AJOUTREG);
 	end
 	if nom == UnitName("target") then
 		changeTarget();

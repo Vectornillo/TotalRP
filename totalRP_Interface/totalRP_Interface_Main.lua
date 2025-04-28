@@ -213,7 +213,7 @@ function SetTRP_Interface_OnLoad()
 			prename = Joueur;
 		end
 		if TRP_Module_PlayerInfo[Royaume][Joueur]["StatutRP"] ~= 1 then
-			prename = "{v}"..prename;
+			prename = "{g}"..prename;
 		else
 			prename = "{r}"..prename;
 		end
@@ -338,7 +338,7 @@ function SlashCmdList.TOTALRP(msg, editbox)
 			local description = string.sub(parametre1,2,string.len(parametre1)-1);
 			TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"] = string.sub(description,1,200);
 			IncrementerVerNum();
-			sendMessage("{v}New current description :\n{o}\""..string.sub(description,1,200).."\"");
+			sendMessage("{g}New current description :\n{o}\""..string.sub(description,1,200).."\"");
 		else
 			sendMessage("{o}Command 'Change Current description': Valid settings: New current description in quotes.");
 		end
@@ -380,17 +380,17 @@ function SlashCmdList.TOTALRP(msg, editbox)
 			sendMessage("{o}Command 'Item' : Invalid Parameter: Item ID.");
 		end
 	else
-		sendMessage("{j}Lista de los comandos válidos of Total RP :");
-		sendMessage("{j}--------------------------------");
-		sendMessage("{j}/trp statusrp #status");
-		sendMessage("{j}/trp character #slot");
-		sendMessage("{j}/trp currently \"Descripción Actual\"");
-		sendMessage("{j}/trp localSound \\Path\\");
-		sendMessage("{j}/trp globalSound \\Path\\");
-		sendMessage("{j}/trp item #Id");
-		sendMessage("{j}/trp pet");
-		sendMessage("{j}/trp gps");
-		sendMessage("{j}--------------------------------");
+		sendMessage("{y}Lista de los comandos válidos of Total RP :");
+		sendMessage("{y}--------------------------------");
+		sendMessage("{y}/trp statusrp #status");
+		sendMessage("{y}/trp character #slot");
+		sendMessage("{y}/trp currently \"Descripción Actual\"");
+		sendMessage("{y}/trp localSound \\Path\\");
+		sendMessage("{y}/trp globalSound \\Path\\");
+		sendMessage("{y}/trp item #Id");
+		sendMessage("{y}/trp pet");
+		sendMessage("{y}/trp gps");
+		sendMessage("{y}--------------------------------");
 	end
 end
 

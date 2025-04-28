@@ -339,9 +339,9 @@ function ChangeStatutRP(num)
 		FicheJoueurStatut:SetText(statut_color[num]..STATUT.." : "..STATUTRPSMALL[num]);
 	end
 	if num == 1 then
-		sendMessage("{j}Ya no estás interpretando a tu personaje {r}(ROF){j}.");
+		sendMessage("{y}Ya no estás interpretando a tu personaje {r}(ROF){y}.");
 	elseif num == 2 then
-		sendMessage("{j}Ahora estás interpretando a tu personaje {v}(RON){j}.");
+		sendMessage("{y}Ahora estás interpretando a tu personaje {g}(RON){y}.");
 	end
 	
 	if UnitName("target") == Joueur then
@@ -479,7 +479,7 @@ function SavePerso(slot,texte)
 	TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Description"] = TRP_Module_PlayerInfo[Royaume][Joueur]["Description"];
 	TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Actuellement"] = TRP_Module_PlayerInfo[Royaume][Joueur]["Actuellement"];
 	TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Texte"] = texte;
-	sendMessage("{j}Character succefully saved !");
+	sendMessage("{y}Character succefully saved !");
 	SavePersonnage:Hide();
 	if FicheJoueurRegistreButtonGeneral:IsEnabled() ~= 1 then
 		PanelOpen("FicheJoueurOngletFiche",GENERAL_TEXT,false)
@@ -512,7 +512,7 @@ function LoadPerso(slot)
 		if not TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Texte"] then
 			TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Texte"] = TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Prenom"]
 		end
-		sendMessage("{j}Character Information \""..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Texte"].."\" succefully loaded !");
+		sendMessage("{y}Character Information \""..TRP_Module_PlayerInfo[Royaume][Joueur]["Sauvegarde"][slot]["Texte"].."\" succefully loaded !");
 		LoadPersonnage:Hide();
 		if FicheJoueurPanelFiche:IsVisible() then
 			if FicheJoueurRegistreButtonGeneral:IsEnabled() ~= 1 then
@@ -524,6 +524,6 @@ function LoadPerso(slot)
 			end
 		end
 	else
-		sendMessage("{j}Unused character slot.");
+		sendMessage("{y}Unused character slot.");
 	end
 end

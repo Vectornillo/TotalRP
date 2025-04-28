@@ -329,9 +329,9 @@ function DeletePlanque()
 		end);
 		
 		PanelOpen("FicheJoueurOngletInventaire","InventaireOngletSacADos");
-		sendMessage("{j}El escondrijo ha sido destruído.");
+		sendMessage("{y}El escondrijo ha sido destruído.");
 		if plop then
-			sendMessage("{j}Uno o más items han sido destruídos.");
+			sendMessage("{y}Uno o más items han sido destruídos.");
 		end
 	else
 		TRPError(DeleteMessages["DELETEPLANQUEWARN"]);
@@ -375,7 +375,7 @@ function CreerPlanque(commentaire)
 		if commentaire and commentaire ~= "" then
 			TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["Planques"][ID]["Commentaire"] = commentaire;
 		end
-		sendMessage("{v}Has creado un nuevo escondrijo.");
+		sendMessage("{g}Has creado un nuevo escondrijo.");
 		PanelOpen("FicheJoueurOngletInventaire","InventaireOngletPlanques");
 	else
 		TRPError("Ya tienes un escondrijo aquí.");
@@ -730,7 +730,7 @@ function envoiToPerso(ID,Cible,Royaumes,Charges,Qte)
 			end
 			i = i+1;
 		end
-		sendMessage("{v}Has enviado un paquete a "..Cible.." del reino \""..Royaumes.."\".");
+		sendMessage("{g}Has enviado un paquete a "..Cible.." del reino \""..Royaumes.."\".");
 		refreshInventaire();
 	else
 		TRPError("Error interno: el personaje no existe.\nMe = "..tostring(Cible).."\nrealm = "..tostring(Royaumes))
@@ -759,7 +759,7 @@ function envoyerCourrier(slot)
 		end
 		message = message.."|"..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Commentaire"];
 		TRPSecureSendAddonMessage("SDC",message,TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"]);
-		sendMessage("{j}Tratando de enviar un paquete a "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"].." ...");
+		sendMessage("{y}Tratando de enviar un paquete a "..TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]["Cible"].." ...");
 	else
 		TRPError("Error interno: ranuna de envío no existnte.\nSlot "..slot);
 	end
@@ -773,7 +773,7 @@ function recupCourrier(slot)
 		if canReceiveObjet(ID,Qte) ~= 2 then
 			GetObjets(ID,-1,Qte,Charges);
 			deleteCourrier(slot,1);
-			sendMessage("{v}Has recogido tu paquete.");
+			sendMessage("{g}Has recogido tu paquete.");
 		else
 			TRPError(ExchangeError["CANTUNIQUESELF"]);
 		end
@@ -802,7 +802,7 @@ function receiveCourrier(ID,Qte,Charges,Comment,From,SlotTarget)
 		ProceedObjetRefExchange(1,ID,"","","");
 	end
 	TRPSecureSendAddonMessage("COK",SlotTarget,From);
-	sendMessage("{v}Has recibido un paquete de "..From..". Ve a un buzón a recogerlo.");
+	sendMessage("{g}Has recibido un paquete de "..From..". Ve a un buzón a recogerlo.");
 	PlaySound(12867)
 	refreshInventaire();
 end
@@ -812,7 +812,7 @@ function OKCourrier(tab, sender)
 	if TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot] then
 		wipe(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot]);
 		TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"][slot] = nil;
-		sendMessage("{v}"..sender.." ha recibido satisfactoriamente tu paquete.");
+		sendMessage("{g}"..sender.." ha recibido satisfactoriamente tu paquete.");
 		refreshInventaire();
 	else
 		TRPError("Error interno: No se pudo eliminar el paquete enviado.\nSlot "..slot);
@@ -833,26 +833,26 @@ function sendCourrier(ID,Qte,Charges,Comment,For)
 		end
 		i = i+1;
 	end
-	sendMessage("{j}Tu paquete está ahora esperando a ser enviado.");
+	sendMessage("{y}Tu paquete está ahora esperando a ser enviado.");
 end
 
 function CheckCourrier()
 	local count = 0;
-	local Message = "{v}Buzón:";
+	local Message = "{g}Buzón:";
 	table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["InBox"], function()
 		count = count + 1;
 	end);
 	if count > 0 then
-		Message = Message.."\n\n{j}Tienes "..count.." paquete(s) esperando a ser enviados. Ve al buzón.";
+		Message = Message.."\n\n{y}Tienes "..count.." paquete(s) esperando a ser enviados. Ve al buzón.";
 	end
 	count = 0;
 	table.foreach(TRP_Module_Inventaire[Royaume][Joueur]["Sacs"]["OutBox"], function()
 		count = count + 1;
 	end);
 	if count > 0 then
-		Message = Message.."\n\n{j}Tienes "..count.." paquetes esperando a ser recogidos. Ve al buzón.";
+		Message = Message.."\n\n{y}Tienes "..count.." paquetes esperando a ser recogidos. Ve al buzón.";
 	end
-	if Message ~= "{v}Buzón:" then
+	if Message ~= "{g}Buzón:" then
 		StaticPopupDialogs["TRP_TEXT_ONLY_SHADE"].text = setTRPColorToString(TRP_ENTETE..Message);
 		TRP_ShowStaticPopup("TRP_TEXT_ONLY_SHADE");
 	end
@@ -932,7 +932,7 @@ function ShowObjetDone(ID,sender)
 	end
 
 	local Message = sender.." is showing you this item :\n\n";
-	Message = Message.."{v}|TInterface\\ICONS\\"..objet["Icone"]..".blp:50:50|t".."\n["..objet["Nom"].."]\n";
+	Message = Message.."{g}|TInterface\\ICONS\\"..objet["Icone"]..".blp:50:50|t".."\n["..objet["Nom"].."]\n";
 	Message = Message.."\n{w}Description :\n{o}\""..objet["Description"].."\"\n\n";
 	if tonumber(objet["Poids"]) ~= 0 then
 		Message = Message.."{w}Peso : {o}"..objet["Poids"].." gramos\n\n";
@@ -1071,7 +1071,7 @@ function GiveObjectDone(objet,sender)
 					end
 					refreshInventaire();
 					ok = true;
-					sendMessage("{j} "..Qte.."x{v}["..object["Nom"].."]{j} entregado a "..sender..".");
+					sendMessage("{y} "..Qte.."x{g}["..object["Nom"].."]{y} entregado a "..sender..".");
 				end
 			end
 		end
@@ -1107,7 +1107,7 @@ function ProceedObjetExchange(num,ID,Nom,Qte,Charges)
 			local code = canReceiveObjet(ID,Qte);
 			if code == 1 then -- OK !
 				GetObjets(ID,"-1",tonumber(Qte),Charges);
-				sendMessage("{j} "..Qte.."x{v}["..Nom.."]{j} añadido a la mochila (recibido de "..targetSave..").");
+				sendMessage("{y} "..Qte.."x{g}["..Nom.."]{y} añadido a la mochila (recibido de "..targetSave..").");
 				if Charges then
 					TRPSecureSendAddonMessage("GOD",ID.."|"..Qte.."|"..Charges,targetSave);
 				else
@@ -1206,7 +1206,7 @@ function UseObjet(SlotNum)
 			if objet["Utilisable"]["Conditions"] then
 				if objet["Utilisable"]["Conditions"]["User"] then
 					if not VerifierConditions(objet["Utilisable"]["Conditions"]["User"],"player") then
-						TRPError("No puedes usar este item.");
+						TRPError("You can't use this item.");
 						return;
 					end
 				end
@@ -1214,6 +1214,7 @@ function UseObjet(SlotNum)
 					local nom = UnitName("target");
 					if not nom then
 						TRPError("No tienes ningún objetivo.");
+						PlaySound(soundsfiche[racesex].notarget);
 						return;
 					end
 					if objet["Utilisable"]["Conditions"]["Cible"]["Tests"] then
@@ -1265,7 +1266,7 @@ function UseObjet(SlotNum)
 				SendChatMessage(objet["Utilisable"]["EmotePublicOnUse"],"EMOTE");
 			end
 			if setTRPColorToString(objet["Utilisable"]["EmotePrivateOnUse"]) ~= "" and string.gsub(setTRPColorToString(objet["Utilisable"]["EmotePrivateOnUse"])," ","") ~= "" then
-				sendMessage("{j}["..objet["Nom"].."] :\n{o}\""..objet["Utilisable"]["EmotePrivateOnUse"].."{o}\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
+				sendMessage("{y}["..objet["Nom"].."] :\n{o}\""..objet["Utilisable"]["EmotePrivateOnUse"].."{o}\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
 				messaged = true;
 			end
 			-- On Death
@@ -1276,7 +1277,7 @@ function UseObjet(SlotNum)
 				if messaged then
 					sendMessage("{o}\""..objet["Utilisable"]["EmotePrivateOnDeath"].."\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
 				else
-					sendMessage("{j}["..objet["Nom"].."] :\n{o}\""..objet["Utilisable"]["EmotePrivateOnDeath"].."\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
+					sendMessage("{y}["..objet["Nom"].."] :\n{o}\""..objet["Utilisable"]["EmotePrivateOnDeath"].."\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
 				end
 			end
 			---- SOUND
@@ -1344,17 +1345,17 @@ function DelGameObjet(Slot)
 	local Message;
 		if TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] > 1 then -- Choix de quantité
 			if string.len(TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]) == 16 then
-				Message = JETER.."{v}["..TRP_Module_ObjetsPerso[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\nQuantity to drop ?\nMaximum : "..TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"];
+				Message = JETER.."{g}["..TRP_Module_ObjetsPerso[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\nQuantity to drop ?\nMaximum : "..TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"];
 			else
-				Message = JETER.."{v}["..TRP_Objects[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\nQuantity to drop ?.\nMaximum : "..TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"];
+				Message = JETER.."{g}["..TRP_Objects[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\nQuantity to drop ?.\nMaximum : "..TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"];
 			end
 			StaticPopupDialogs["TRP_INV_DELETE_OBJECT_AMOUNT"].text = setTRPColorToString(TRP_ENTETE.." \n "..Message);
 			TRP_ShowStaticPopup("TRP_INV_DELETE_OBJECT_AMOUNT",nil,nil,Slot,nil,nil,nil,1,TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"]);
 		else
 			if string.len(TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]) == 16 then
-				Message = JETER.."{v}["..TRP_Module_ObjetsPerso[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\n"..CONFIRMSUPPOBJET;
+				Message = JETER.."{g}["..TRP_Module_ObjetsPerso[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\n"..CONFIRMSUPPOBJET;
 			else
-				Message = JETER.."{v}["..TRP_Objects[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\n"..CONFIRMSUPPOBJET;
+				Message = JETER.."{g}["..TRP_Objects[TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]]["Nom"].."]{w} ?\n\n"..CONFIRMSUPPOBJET;
 			end
 			StaticPopupDialogs["TRP_INV_DELETE_OBJECT"].text = setTRPColorToString(TRP_ENTETE.." \n "..Message);
 			TRP_ShowStaticPopup("TRP_INV_DELETE_OBJECT",nil,nil,Slot,1);
@@ -1367,7 +1368,7 @@ function proceedDeleteObject(Slot,num)
 		if not num then return end;
 		local objet = GetObjectWithID(TRP_Module_Inventaire[Royaume][Joueur][Slot]["ID"]);
 		if objet and objet["Nom"] then
-			sendMessage("{j} "..num.."x{v}["..objet["Nom"].."]{j} ha sido eliminado de tu inventario.");
+			sendMessage("{y} "..num.."x{g}["..objet["Nom"].."]{y} ha sido eliminado de tu inventario.");
 		end
 		TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] = TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] - num;
 		if TRP_Module_Inventaire[Royaume][Joueur][Slot]["Qte"] < 1 then

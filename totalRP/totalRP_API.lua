@@ -60,28 +60,45 @@ function setTRPColorToString(text,colorDelete)
 
 	if colorDelete then
 		text = string.gsub(text,"{r}","");
-		text = string.gsub(text,"{v}","");
+		text = string.gsub(text,"{g}","");
 		text = string.gsub(text,"{b}","");
-		text = string.gsub(text,"{j}","");
-		text = string.gsub(text,"{p}","");
+		text = string.gsub(text,"{y}","");
+		text = string.gsub(text,"{m}","");
 		text = string.gsub(text,"{c}","");
 		text = string.gsub(text,"{w}","");
-		text = string.gsub(text,"{n}","");
+		text = string.gsub(text,"{bl}","");
 	    text = string.gsub(text,"{o}","");
+		text = string.gsub(text,"{g1}","");
+		text = string.gsub(text,"{g2}","");
+		text = string.gsub(text,"{g3}","");
+		text = string.gsub(text,"{g4}","");
 		text = string.gsub(text,"{(%x%x%x%x%x%x)}","");
-		text = string.gsub(text,"{li}","");
+		text = string.gsub(text,"{br}","");
+		text = string.gsub(text,"{minus}","");
+		text = string.gsub(text,"{plus}","");
+		text = string.gsub(text,"{im(.+):(%d+):(%d+)}","");
+
+
+
 	else
 		text = string.gsub(text,"{r}","|cffff0000");
-		text = string.gsub(text,"{v}","|cff00ff00");
+		text = string.gsub(text,"{g}","|cff00ff00");
 		text = string.gsub(text,"{b}","|cff0000ff");
-		text = string.gsub(text,"{j}","|cffffff00");
-		text = string.gsub(text,"{p}","|cffff00ff");
+		text = string.gsub(text,"{y}","|cffffff00");
+		text = string.gsub(text,"{m}","|cffff00ff");
 		text = string.gsub(text,"{c}","|cff00ffff");
 		text = string.gsub(text,"{w}","|cffffffff");
-		text = string.gsub(text,"{n}","|cff000000");
+		text = string.gsub(text,"{bl}","|cff000000");
 		text = string.gsub(text,"{o}","|cffffaa00");
+		text = string.gsub(text,"{g1}","|cff222222");
+		text = string.gsub(text,"{g2}","|cff666666");
+		text = string.gsub(text,"{g3}","|cffaaaaaa");
+		text = string.gsub(text,"{g4}","|cffdddddd");
 		text = string.gsub(text,"{(%x%x%x%x%x%x)}","|cff%1");
-		text = string.gsub(text,"{li}","\n");
+		text = string.gsub(text,"{br}","\n");
+		text = string.gsub(text,"{minus}","|TInterface/ICONS/Spell_ChargeNegative.blp:16:16|t");
+		text = string.gsub(text,"{plus}","|TInterface/ICONS/Spell_ChargePositive.blp:16:16|t");
+		text = string.gsub(text,"{im(.+):(%d+):(%d+)}","|TInterface/ICONS/%1.blp:%2:%3|t");
 	end
 	
 	text = string.gsub(text,"{ba}","||");
@@ -337,14 +354,36 @@ function checkConditionStringCoord(arguments)
 	local y = tonumber(string.sub(arguments,string.find(arguments,"%-")+1,string.find(arguments,"%-",string.find(arguments,"%-")+1)-1));
 	local aire = tonumber(string.sub(arguments,string.find(arguments,"%-",string.find(arguments,"%-")+1)+1));
 	local actuX,actuY = generateCoordonnees();
-	return actuX-aire <= x and actuX+aire >= x  and actuY-aire <= y and actuY+aire >= y;
+	local inrange = actuX-aire <= x and actuX+aire >= x  and actuY-aire <= y and actuY+aire >= y;
+
+	if not inrage then
+		TRPError("You cannot use that here.")
+	end
+
+
+	return inrage;
 end
 
 function checkConditionStringContinent(arguments)
 	if arguments == "" or not arguments then
 		return nil;
 	end
-	return tostring(GetCurrentMapContinent()) == arguments;
+	local inCorrectContinent = tostring(GetCurrentMapContinent()) == arguments;
+
+	local map = {
+		[-1] = "Cosmic map",
+		[0] = "Entire Azeroth map",
+		[1] = "Kalimdor",
+		[2] = "Eastern Kingdoms",
+		[3] = "Outland",
+		[4] = "Northrend"
+	}
+
+	if not inCorrectContinent then
+		TRPError("You can only use this in " .. map[arguments])
+	end
+
+	return inCorrectContinent;
 end
 
 function checkConditionStringZone(arguments)
@@ -1053,6 +1092,6 @@ end
 
 function TRPGPS()
 	local x,y = generateCoordonnees();
-	sendMessage("{j}Localización Actual :\nContinente : "..tostring(GetCurrentMapContinent()).."\nZona : "..tostring(GetCurrentMapZone()).."\nSubzona : "..tostring(GetSubZoneText()).."\nX : "..tostring(x).."  , Y : "..tostring(y));
+	sendMessage("{y}Localización Actual :\nContinente : "..tostring(GetCurrentMapContinent()).."\nZona : "..tostring(GetCurrentMapZone()).."\nSubzona : "..tostring(GetSubZoneText()).."\nX : "..tostring(x).."  , Y : "..tostring(y));
 end
 
