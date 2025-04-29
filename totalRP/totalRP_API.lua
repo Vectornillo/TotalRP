@@ -357,7 +357,7 @@ function checkConditionStringCoord(arguments)
 	local inrange = actuX-aire <= x and actuX+aire >= x  and actuY-aire <= y and actuY+aire >= y;
 
 	if not inrage then
-		TRPError("You cannot use that here.")
+		TRPError("No puedes usar esto aquí.")
 	end
 
 
@@ -371,23 +371,23 @@ function checkConditionStringContinent(arguments)
 	local inCorrectContinent = tostring(GetCurrentMapContinent()) == arguments;
 
 	local map = {
-		[-1] = "Cosmic map",
-		[0] = "Entire Azeroth map",
+		[-1] = "Mapa cósmico",
+		[0] = "Planeta de Azeroth",
 		[1] = "Kalimdor",
-		[2] = "Eastern Kingdoms",
-		[3] = "Outland",
-		[4] = "Northrend"
+		[2] = "Reinos del Este",
+		[3] = "Terrallende",
+		[4] = "Rasganorte"
 	}
 
 	local index = tonumber(arguments)
 		
 	if index < -1 or index > 4 then
-		TRPError("This object has an incorrect continent index for its use")
+		TRPError("Este objeto contiene un índice erróneo de continente para su uso")
 		return nil;
 	end
 
 	if not inCorrectContinent then
-		TRPError("You can only use this in " .. map[index])
+		TRPError("Sólo puede estar esto en " .. map[index])
 	end
 
 	return inCorrectContinent;
@@ -409,7 +409,7 @@ function checkConditionStringSousZone(arguments)
 	if zonetext == arguments then
 		return true;
 	else
-		TRPError("This object must be used in " .. arguments )
+		TRPError("Este objeto debe ser usado en " .. arguments )
 		return nil;
 	end
 
@@ -453,7 +453,7 @@ function checkConditionStringHeure(arguments)
 	if heure >= heureDebut and heure <= heureFin then
 		return true;
 	else
-		TRPError(string.format("This object must be used between %dh and %dh (server time)",
+		TRPError(string.format("Este objeto debe ser usado entre las %dh y las %dh (hora servidor)",
 		heureDebut, heureFin))
 	end
 
@@ -466,18 +466,18 @@ function checkConditionStringEtat(arguments,cible)
 
 	if arguments == "d" and not UnitIsDead(cible) then
 		if cible == "target" then
-			TRPError(string.format("Your target must be dead, but it isn't", cible))
+			TRPError(string.format("Tu objetivo debe estar muerto, pero no lo está.", cible))
 		elseif cible == "player" then
-			TRPError(string.format("You must be dead, but you aren't", cible))
+			TRPError(string.format("Debes estar muerto, peor no lo estás.", cible))
 		end
 		return nil;
 	end
 
 	if arguments == "a" and UnitIsDead(cible) then
 		if cible == "target" then
-			TRPError(string.format("Your target must be alive, but it isn't", cible))
+			TRPError(string.format("Tu objetivo debe estar vivo, pero no lo está.", cible))
 		elseif cible == "player" then
-			TRPError(string.format("You must be alive, but you aren't", cible))
+			TRPError(string.format("Debes estar vivo, peor no lo estás.", cible))
 		end
 		return nil;
 	end
@@ -494,9 +494,9 @@ function checkConditionStringNom(arguments,cible)
 
 	if name ~= "arguments" then
 		if cible == "target" then
-			TRPError("Your target's name is not named \"" .. arguments .."\"")
+			TRPError("Tu objetivo no se llama \"" .. arguments .."\"")
 		elseif cible == "player" then
-			TRPError("Your name is not \"" .. arguments .."\"")
+			TRPError("No te llamas \"" .. arguments .."\"")
 		end
 		return nil
 	end
@@ -523,18 +523,18 @@ function checkConditionStringSex(arguments,cible)
 
 	if arguments == "m" and sex == 3 then
 		if cible == "target" then
-			TRPError("Your target is male, but it needs to be female.")
+			TRPError("Tu objetivo debe ser hombre, pero es mujer.")
 		elseif cible == "player" then
-			TRPError("You must be male, but you are female.")
+			TRPError("Debes ser hombre, pero eres mujer.")
 		end
 		return nil
 	end
 
 	if arguments == "f" and sex == 2 then
 		if cible == "target" then
-			TRPError("Your target is female, but it needs to be male.")
+			TRPError("Tu objetivo es mujer, pero debe ser hombre.")
 		elseif cible == "player" then
-			TRPError("You must be female, but you are male.")
+			TRPError("Debes ser mujer, pero eres hombre.")
 		end
 		return nil
 	end
