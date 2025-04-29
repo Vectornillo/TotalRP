@@ -199,7 +199,7 @@
 				</OnClick>
 				<OnEnter>
 					GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
-					GameTooltip:AddLine("Communication", 1, 1, 1);
+					GameTooltip:AddLine("Comunicación", 1, 1, 1);
 					GameTooltip:Show();
 				</OnEnter>
 				<OnLeave>

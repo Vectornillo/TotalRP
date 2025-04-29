@@ -1206,7 +1206,7 @@ function UseObjet(SlotNum)
 			if objet["Utilisable"]["Conditions"] then
 				if objet["Utilisable"]["Conditions"]["User"] then
 					if not VerifierConditions(objet["Utilisable"]["Conditions"]["User"],"player") then
-						TRPError("You can't use this item.");
+						TRPError("No puedes usar este objeto.");
 						return;
 					end
 				end
