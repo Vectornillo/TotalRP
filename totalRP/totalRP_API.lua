@@ -66,7 +66,7 @@ function setTRPColorToString(text,colorDelete)
 		text = string.gsub(text,"{m}","");
 		text = string.gsub(text,"{c}","");
 		text = string.gsub(text,"{w}","");
-		text = string.gsub(text,"{bl}","");
+		text = string.gsub(text,"{k}","");
 	    text = string.gsub(text,"{o}","");
 		text = string.gsub(text,"{g1}","");
 		text = string.gsub(text,"{g2}","");
@@ -88,7 +88,7 @@ function setTRPColorToString(text,colorDelete)
 		text = string.gsub(text,"{m}","|cffff00ff");
 		text = string.gsub(text,"{c}","|cff00ffff");
 		text = string.gsub(text,"{w}","|cffffffff");
-		text = string.gsub(text,"{bl}","|cff000000");
+		text = string.gsub(text,"{k}","|cff000000");
 		text = string.gsub(text,"{o}","|cffffaa00");
 		text = string.gsub(text,"{g1}","|cff222222");
 		text = string.gsub(text,"{g2}","|cff666666");
