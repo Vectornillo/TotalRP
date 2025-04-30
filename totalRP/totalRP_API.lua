@@ -333,6 +333,8 @@ function checkConditionString(options,cible)
 				condition = condition and checkConditionStringCoord(arguments);
 			elseif prefixe == "sta" then
 				condition = condition and checkConditionStringStatutRP(arguments,cible);
+			elseif prefixe == "lvl" then
+				condition = condition and checkConditionStringLevel(arguments,cible);
 			elseif string.len(prefixe) == 3 then
 				TRPError("Synthax error in test : Unknown prefix \""..tostring(prefixe).."\".");
 				condition = nil;
@@ -502,6 +504,29 @@ function checkConditionStringNom(arguments,cible)
 	end
 
 	return true;
+
+end
+
+function checkConditionStringLevel(arguments,cible)
+	if arguments == "" or not arguments or not string.find(arguments,"%d+%-%d+") then
+		return nil;
+	end
+
+	local minlvl = tonumber(string.sub(arguments,1,string.find(arguments,"%-")-1));
+	local maxlvl = tonumber(string.sub(arguments,string.find(arguments,"%-")+1));
+
+	local lvl = tonumber(UnitLevel(cible))
+
+	if lvl >= minlvl and lvl <= maxlvl then
+		return true
+	end
+
+	if cible == "target" then
+		TRPError(string.format("Your target must be between level %i and %i", minlvl, maxlvl))
+	elseif cible == "player" then
+		TRPError(string.format("You must be between level %i and %i", minlvl, maxlvl))
+	end
+	return nil
 
 end
 
