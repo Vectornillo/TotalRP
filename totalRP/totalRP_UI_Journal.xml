@@ -1141,10 +1141,10 @@
 													if string.find(this:GetText(),"%D") then
 														this:SetText(string.gsub(this:GetText(),"|",""));
 													end
-													if string.len(this:GetText()) > 3500 then
-														this:SetText(string.sub(this:GetText(),0,3500));
+													if string.len(this:GetText()) > 7000 then
+														this:SetText(string.sub(this:GetText(),0,7000));
 													end
-													DocumentCreateTexteScrollCount:SetText("( "..string.len(this:GetText()).." / 3500 )");
+													DocumentCreateTexteScrollCount:SetText("( "..string.len(this:GetText()).." / 7000 )");
 													refreshApercu();
 												</OnTextChanged>
 												<OnEscapePressed>
