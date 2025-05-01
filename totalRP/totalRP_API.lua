@@ -378,7 +378,7 @@ function Collides(point, points)
         points[i].x, points[i].y, norm.x, norm.y, trans.x, trans.y))
 
         if Dot(norm, trans) > 0 then
-			TRPError("Éste no es el luegar en el que se usa ese objeto.")
+			TRPError("Éste no es el lugar en el que se usa ese objeto.")
             return false
         end
 
