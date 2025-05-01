@@ -342,7 +342,7 @@ function generatePlanqueID()
 	if WorldMapFrame:IsVisible() and not bForce then
 		return nil;
 	end
-	SetMapToCurrentZone();
+	
 	local x,y = generateCoordonnees();
 	local zoneNum = GetCurrentMapZone();
 	local continentNum = GetCurrentMapContinent();
@@ -351,7 +351,7 @@ function generatePlanqueID()
 end
 
 function CreerPlanque(commentaire)
-	SetMapToCurrentZone();
+	
 	local zoneNum = GetCurrentMapZone();
 	local continentNum = GetCurrentMapContinent();
 	local continent = { GetMapContinents() };
@@ -383,7 +383,7 @@ function CreerPlanque(commentaire)
 end
 
 function getZoneNum()
-	SetMapToCurrentZone();
+	
 	local zone = { GetMapZones(GetCurrentMapContinent()) };
 	
 	for k=1,#zone,1 do
@@ -1245,6 +1245,7 @@ function UseObjet(SlotNum)
 				end
 				if can == 2 then
 					TRPError("You can not have more unity of this object.");
+					PlaySound(soundsfiche[racesex].cantcarry);
 					return;
 				end
 			end

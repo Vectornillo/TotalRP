@@ -11,6 +11,8 @@ function totalRP_OnLoad()
 	this:RegisterEvent("PLAYER_REGEN_DISABLED");
 	this:RegisterEvent("PLAYER_REGEN_DISABLED");
 	this:RegisterEvent("UPDATE_MOUSEOVER_UNIT");
+	this:RegisterEvent("ZONE_CHANGED_NEW_AREA") -- Fires on login, zone change, continent switch
+	this:RegisterEvent("PLAYER_ENTERING_WORLD") -- Just in case, for extra safety
 end
 
 function totalRP_OnEvent()
@@ -60,6 +62,10 @@ function totalRP_OnEvent()
 			DonnerInfosPet(nom);
 		end
 		MouseOverTooltip();
+	elseif(event=="ZONE_CHANGED_NEW_AREA") or event == "PLAYER_ENTERING_WORLD" then
+		-- Planques scanned the current map every update cycle. This is a bad idea, so we set the map on
+		-- area change (not subzones) and on login
+		SetMapToCurrentZone()
 	end
 end
 
