@@ -331,6 +331,8 @@ function checkConditionString(options,cible)
 				condition = condition and checkConditionStringSousZone(arguments);
 			elseif prefixe == "coo" then
 				condition = condition and checkConditionStringCoord(arguments);
+			elseif prefixe == "qua" then
+				condition = condition and checkConditionStringCollision2D(arguments);
 			elseif prefixe == "sta" then
 				condition = condition and checkConditionStringStatutRP(arguments,cible);
 			elseif prefixe == "lvl" then
@@ -346,6 +348,79 @@ function checkConditionString(options,cible)
 	end);
 		
 	return condition;
+end
+
+function Dot(pointA, pointB)
+    return pointA.x * pointB.x + pointA.y * pointB.y
+end
+
+function GetNormalVector(vector)
+    return {x = -vector.y, y = vector.x}
+end
+
+function Collides(point, points)
+
+    local next = 0
+
+    for i = 1, 4 do
+
+        if i == 4 then
+            next = 1
+        else
+            next = i+1
+        end
+
+        local vec = {x=points[next].x - points[i].x, y = points[next].y - points[i].y}
+        local norm = GetNormalVector(vec)
+        local trans = {x = point.x - points[i].x, y = point.y - points[i].y}
+
+		debugMess(string.format("  - vec: (%i, %i), norm: (%i, %i), trans: (%i, %i)",
+        points[i].x, points[i].y, norm.x, norm.y, trans.x, trans.y))
+
+        if Dot(norm, trans) > 0 then
+			TRPError("This is not the place where you should use that.")
+            return false
+        end
+
+		 debugMess("  - (" .. i .. ")" .. "Dot da negativo, INTERIOR")
+
+    end
+    return true
+end
+
+
+-- qua:0,4-5,6-12,2-6,0$
+function checkConditionStringCollision2D(arguments)
+    if arguments == "" and not arguments.find(arguments, "%d+,%d+%-%d+,%d+%-%d+,%d+%-%d+,%d+") then
+        return nil
+    end
+
+    local beg = 1
+    local en
+
+    beg, en = string.find(arguments, "%d+,%d+", beg)
+
+    local points = {}
+
+    while beg and en do
+
+        local point = {}
+
+        local xi, xe = string.find(arguments, "%d+", beg)
+        local yi, ye = string.find(arguments, "%d+", xe+1)
+
+        point.x = tonumber(string.sub(arguments,xi,xe))
+        point.y = tonumber(string.sub(arguments,yi,ye))
+
+        table.insert(points, point)
+
+        beg = en
+        beg, en = string.find(arguments, "%d+,%d+", beg)
+    end
+
+     local actuX,actuY = generateCoordonnees();
+	 debugMess(string.format("+ Estás en (%i, %i)", actuX, actuY))
+     return Collides({x=actuX, y=actuY}, points)
 end
 
 function checkConditionStringCoord(arguments)
