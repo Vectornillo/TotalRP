@@ -1,7 +1,7 @@
 ﻿-------------------------------------------------------------------------------
 -- [ Variables Systeme de l'add-on ] -- 
 -------------------------------------------------------------------------------
-TRP_version = "1107";
+TRP_version = "1108";
 TRP_version_EN = "1.000";
 hasBeenAlerted = false;
 Joueur = UnitName("player");
