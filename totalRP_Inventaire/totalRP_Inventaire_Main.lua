@@ -776,6 +776,8 @@ function recupCourrier(slot)
 			sendMessage("{g}You picked up your package.");
 		else
 			TRPError(ExchangeError["CANTUNIQUESELF"]);
+			PlaySound(soundsfiche[racesex].cantcarry);
+			
 		end
 	else
 		TRPError("Internal error: recup mail slot non existent.\nSlot "..slot);
@@ -1116,6 +1118,7 @@ function ProceedObjetExchange(num,ID,Nom,Qte,Charges)
 			elseif code == 2 then -- Unique
 				TRPSecureSendAddonMessage("SDM","{r}"..Joueur..ExchangeError["CANTUNIQUE"],targetSave);
 				TRPError(ExchangeError["CANTUNIQUESELF"]);
+				PlaySound(soundsfiche[racesex].cantcarry);
 			end
 	else
 		TRPSecureSendAddonMessage("SDM",ExchangeError["REFUSAL"]..Joueur..".",ExchangeTarget);
@@ -1227,6 +1230,7 @@ function UseObjet(SlotNum)
 				end
 				if objet["Utilisable"]["Conditions"]["Composants"] then
 					if not VerifierInventaire(objet["Utilisable"]["Conditions"]["Composants"]) then
+						TRPError("You lack one or more components in order to use that.");
 						return;
 					end
 				end
@@ -1459,6 +1463,7 @@ function GetObjets(ObjetID,bagType,Qte,Charges)
 		end
 	elseif code == 2 then
 		TRPError(ExchangeError["CANTUNIQUESELF"]);
+		PlaySound(soundsfiche[racesex].cantcarry);
 	end
 end
 
