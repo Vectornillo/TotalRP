@@ -1239,7 +1239,7 @@ function generateCoordonnees()
 	if WorldMapFrame:IsVisible() then
 		return 0,0;
 	end
-	SetMapToCurrentZone();
+
 	local x,y = GetPlayerMapPosition("player");
 	if x and y then
 		x = math.floor(x * 250);

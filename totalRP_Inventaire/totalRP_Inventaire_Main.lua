@@ -342,7 +342,7 @@ function generatePlanqueID()
 	if WorldMapFrame:IsVisible() and not bForce then
 		return nil;
 	end
-	SetMapToCurrentZone();
+	
 	local x,y = generateCoordonnees();
 	local zoneNum = GetCurrentMapZone();
 	local continentNum = GetCurrentMapContinent();
@@ -351,7 +351,7 @@ function generatePlanqueID()
 end
 
 function CreerPlanque(commentaire)
-	SetMapToCurrentZone();
+	
 	local zoneNum = GetCurrentMapZone();
 	local continentNum = GetCurrentMapContinent();
 	local continent = { GetMapContinents() };
@@ -383,7 +383,7 @@ function CreerPlanque(commentaire)
 end
 
 function getZoneNum()
-	SetMapToCurrentZone();
+	
 	local zone = { GetMapZones(GetCurrentMapContinent()) };
 	
 	for k=1,#zone,1 do
@@ -776,6 +776,8 @@ function recupCourrier(slot)
 			sendMessage("{g}Has recogido tu paquete.");
 		else
 			TRPError(ExchangeError["CANTUNIQUESELF"]);
+			PlaySound(soundsfiche[racesex].cantcarry);
+			
 		end
 	else
 		TRPError("Internal error: recup mail slot non existent.\nSlot "..slot);
@@ -1116,6 +1118,7 @@ function ProceedObjetExchange(num,ID,Nom,Qte,Charges)
 			elseif code == 2 then -- Unique
 				TRPSecureSendAddonMessage("SDM","{r}"..Joueur..ExchangeError["CANTUNIQUE"],targetSave);
 				TRPError(ExchangeError["CANTUNIQUESELF"]);
+				PlaySound(soundsfiche[racesex].cantcarry);
 			end
 	else
 		TRPSecureSendAddonMessage("SDM",ExchangeError["REFUSAL"]..Joueur..".",ExchangeTarget);
@@ -1226,6 +1229,7 @@ function UseObjet(SlotNum)
 				end
 				if objet["Utilisable"]["Conditions"]["Composants"] then
 					if not VerifierInventaire(objet["Utilisable"]["Conditions"]["Composants"]) then
+						TRPError("You lack one or more components in order to use that.");
 						return;
 					end
 				end
@@ -1240,6 +1244,7 @@ function UseObjet(SlotNum)
 				end
 				if can == 2 then
 					TRPError("No puedes tener más unidades de este objeto.");
+					PlaySound(soundsfiche[racesex].cantcarry);
 					return;
 				end
 			end
@@ -1458,6 +1463,7 @@ function GetObjets(ObjetID,bagType,Qte,Charges)
 		end
 	elseif code == 2 then
 		TRPError(ExchangeError["CANTUNIQUESELF"]);
+		PlaySound(soundsfiche[racesex].cantcarry);
 	end
 end
 

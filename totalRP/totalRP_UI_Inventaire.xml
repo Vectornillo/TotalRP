@@ -2371,8 +2371,14 @@
 									end
 								else
 									InventaireOngletPlanquesIcon:SetTexture("Interface\\Icons\\INV_Misc_Map07.blp");
+									if PanelCoffreSacFrameType:GetText() == PLANQUE then
+									InventaireOpen("InventaireOngletSacADos")
+									PlaySoundFile("Sound\\Interface\\PickUp\\PickUpBag.wav")
+									end
 								end
+								
 							end
+
 						</OnUpdate>
 					</Scripts>
 				</Button>
