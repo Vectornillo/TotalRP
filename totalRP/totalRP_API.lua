@@ -76,9 +76,7 @@ function setTRPColorToString(text,colorDelete)
 		text = string.gsub(text,"{br}","");
 		text = string.gsub(text,"{minus}","");
 		text = string.gsub(text,"{plus}","");
-		text = string.gsub(text,"{im(.+):(%d+):(%d+)}","");
-
-
+		text = string.gsub(text,"{im([%w_]+):(%d+):(%d+)}","");
 
 	else
 		text = string.gsub(text,"{r}","|cffff0000");
@@ -98,7 +96,7 @@ function setTRPColorToString(text,colorDelete)
 		text = string.gsub(text,"{br}","\n");
 		text = string.gsub(text,"{minus}","|TInterface/ICONS/Spell_ChargeNegative.blp:16:16|t");
 		text = string.gsub(text,"{plus}","|TInterface/ICONS/Spell_ChargePositive.blp:16:16|t");
-		text = string.gsub(text,"{im(.+):(%d+):(%d+)}","|TInterface/ICONS/%1.blp:%2:%3|t");
+		text = string.gsub(text,"{im([%w_]+):(%d+):(%d+)}","|TInterface/ICONS/%1.blp:%2:%3|t");
 	end
 	
 	text = string.gsub(text,"{ba}","||");

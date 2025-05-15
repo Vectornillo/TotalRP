@@ -1268,7 +1268,12 @@ function UseObjet(SlotNum)
 			--On Use
 			local messaged = false;
 			if setTRPColorToString(objet["Utilisable"]["EmotePublicOnUse"]) ~= "" and string.gsub(setTRPColorToString(objet["Utilisable"]["EmotePublicOnUse"])," ","") ~= "" then
-				SendChatMessage(objet["Utilisable"]["EmotePublicOnUse"],"EMOTE");
+				-- Originally send the emote text as plain uninterpreted text.
+				--SendChatMessage(objet["Utilisable"]["EmotePublicOnUse"],"EMOTE");
+
+				-- Now, do it interpreting sequences.
+				SendChatMessage(setTRPColorToString(objet["Utilisable"]["EmotePublicOnUse"]),"EMOTE");
+				
 			end
 			if setTRPColorToString(objet["Utilisable"]["EmotePrivateOnUse"]) ~= "" and string.gsub(setTRPColorToString(objet["Utilisable"]["EmotePrivateOnUse"])," ","") ~= "" then
 				sendMessage("{y}["..objet["Nom"].."] :\n{o}\""..objet["Utilisable"]["EmotePrivateOnUse"].."{o}\"",TRP_Module_Configuration["Modules"]["Inventaire"]["Frame"],true);
