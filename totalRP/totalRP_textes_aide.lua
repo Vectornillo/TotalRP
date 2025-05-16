@@ -186,7 +186,7 @@ TRP_TEXT_STATIC_POPUP = {
 	TRP_REG_EPURER_LISTE = "Esto eliminará del Registro a todos los personajes "
 							.."con los que te cruzaste en este Reino.";
 	TRP_REG_DELETE_PERSO = "Esta acción eliminará a esta persona del Registro . Recuerda que las notas y las relaciones no son borradas. Así que puedes eliminar a un personaje ignorado, él seguirá siendo ignorado";
-	TRP_AVERT_USE_CHAT = "Debes desactivar el marco de chat mejorado. Pero algunos enlaces no puede ser deshabilitados sin recargar la interfaz. Te recomendamos reiniciar la interfaz para eliminar estos enlaces.\n\n{v}¿Reiniciar la interfaz?";
+	TRP_AVERT_USE_CHAT = "Debes desactivar el marco de chat mejorado. Pero algunos enlaces no puede ser deshabilitados sin recargar la interfaz. Te recomendamos reiniciar la interfaz para eliminar estos enlaces.\n\n{g}¿Reiniciar la interfaz?";
 }
 
 TRPCheckOptionTooltip = {
